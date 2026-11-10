@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibrahim Ahmed · Software Engineer</title>
+<meta name="description" content="Software engineer building full-stack products, event-driven backends and applied AI: React, NestJS, .NET, Python, Kafka and LangGraph. Open to new roles.">
+<meta name="author" content="Ibrahim Ahmed">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="canonical" href="https://ibrahimahmed237.github.io/">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ibrahimahmed237.github.io/">
+<meta property="og:title" content="Ibrahim Ahmed · Software Engineer">
+<meta property="og:description" content="Software engineer building full-stack products, event-driven backends and applied AI: React, NestJS, .NET, Python, Kafka and LangGraph. Open to new roles.">
+<meta property="og:image" content="https://ibrahimahmed237.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ibrahim Ahmed · Software Engineer">
+<meta name="twitter:description" content="Software engineer building full-stack products, event-driven backends and applied AI: React, NestJS, .NET, Python, Kafka and LangGraph. Open to new roles.">
+<meta name="twitter:image" content="https://ibrahimahmed237.github.io/assets/og.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Ibrahim Ahmed", "jobTitle": "Software Engineer", "url": "https://ibrahimahmed237.github.io/", "image": "https://ibrahimahmed237.github.io/assets/ibrahim.jpg", "sameAs": ["https://linkedin.com/in/ibrahim-ahmed-ib", "https://github.com/ibrahimahmed237"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+html{scroll-behavior:smooth}
+
+/* Dark: Dimmed (default), a calm mid-dark slate in the spirit of GitHub Dark Dimmed */
+.pf{--bg:#22272E;--bg2:#1E232A;--surface:#2D333B;--surface2:#272D35;--well:#1C2128;--glass:rgba(45,51,59,.62);--header:rgba(34,39,46,.72);--hl:rgba(255,255,255,.06);--line-soft:#30363F;--line:#373E47;--line-strong:#444C56;--line-hover:#545D68;--fg:#CDD9E5;--fg2:#ADBAC7;--fg3:#A9B5C1;--muted:#A7B3BF;--muted2:#9DA9B5;--dim:#98A4B0;--faint:#929EAA;--grid:rgba(205,217,229,.04);--accent:var(--dk-accent,#E8CF8F);--ink:color-mix(in srgb,var(--accent) 78%,#fff);--accent-strong:var(--accent);--btn-bg:var(--accent);--btn-fg:#221C0E;--warm:var(--accent);--warm-ink:var(--ink);--c-ui:#F2E3B8;--c-data:#B9A167;--c-queue:#768390;--c-llm:#A7A3C8;--shadow:rgba(0,0,0,.4);--orb1:rgba(232,207,143,.08);--orb2:rgba(150,160,175,.05);--orb3:transparent}
+.pf.dk-catppuccin:not(.theme-light){--bg:#1E1E2E;--bg2:#181825;--surface:#313244;--surface2:#2A2A3C;--well:#181825;--glass:rgba(49,50,68,.6);--header:rgba(30,30,46,.74);--line-soft:#313244;--line:#3B3D52;--line-strong:#45475A;--line-hover:#585B70;--fg:#CDD6F4;--fg2:#BAC2DE;--fg3:#B4BBD8;--muted:#A6ADC8;--muted2:#A0A7C2;--dim:#9AA1BC;--faint:#979DB7;--accent:#CBA6F7;--btn-fg:#1E1E2E;--warm:#CBA6F7;--warm-ink:#CBA6F7;--c-ui:#F5C2E7;--c-data:#94E2D5;--c-queue:#7F849C;--c-llm:#FAB387;--orb1:rgba(203,166,247,.1);--orb2:rgba(137,180,250,.07);--orb3:transparent}
+.pf.dk-nord:not(.theme-light){--bg:#2E3440;--bg2:#2B303B;--surface:#3B4252;--surface2:#353C4A;--well:#292E39;--glass:rgba(59,66,82,.6);--header:rgba(46,52,64,.74);--line-soft:#3B4252;--line:#434C5E;--line-strong:#4C566A;--line-hover:#616E88;--fg:#ECEFF4;--fg2:#E5E9F0;--fg3:#D8DEE9;--muted:#D0D6E0;--muted2:#C2C9D4;--dim:#B8C0CC;--faint:#AEB6C3;--accent:#88C0D0;--btn-fg:#2E3440;--warm:#88C0D0;--warm-ink:#88C0D0;--c-ui:#B48EAD;--c-data:#A3BE8C;--c-queue:#81A1C1;--c-llm:#EBCB8B;--orb1:rgba(136,192,208,.1);--orb2:rgba(180,142,173,.07);--orb3:transparent}
+.pf.dk-rosepine:not(.theme-light){--bg:#191724;--bg2:#1B1928;--surface:#1F1D2E;--surface2:#1D1B2B;--well:#16141F;--glass:rgba(31,29,46,.62);--header:rgba(25,23,36,.74);--line-soft:#26233A;--line:#2E2A44;--line-strong:#403D52;--line-hover:#524F67;--fg:#E0DEF4;--fg2:#CFCCE6;--fg3:#C2BFDB;--muted:#B0ADC8;--muted2:#A29EBB;--dim:#9A96B3;--faint:#938FAD;--accent:#C4A7E7;--btn-fg:#191724;--warm:#C4A7E7;--warm-ink:#C4A7E7;--c-ui:#EBBCBA;--c-data:#9CCFD8;--c-queue:#6E6A86;--c-llm:#F6C177;--orb1:rgba(196,167,231,.1);--orb2:rgba(156,207,216,.06);--orb3:transparent}
+.pf.dk-graphite:not(.theme-light),.pf.dk-midnight:not(.theme-light),.pf.dk-mocha:not(.theme-light),.pf.dk-mono:not(.theme-light),.pf.dk-catppuccin:not(.theme-light),.pf.dk-nord:not(.theme-light),.pf.dk-rosepine:not(.theme-light){--ink:var(--accent);--accent-strong:var(--accent);--btn-bg:var(--accent);--hl:rgba(255,255,255,.07);--shadow:rgba(0,0,0,.6);--grid:rgba(255,255,255,.035)}
+/* Dark: Graphite */
+.pf.dk-graphite:not(.theme-light){--bg:#0B0B0C;--bg2:#0F0F11;--surface:#141416;--surface2:#111113;--well:#0D0D0F;--glass:rgba(22,22,25,.62);--header:rgba(20,20,23,.62);--hl:rgba(255,255,255,.07);--line-soft:#1C1C1F;--line:#242428;--line-strong:#303035;--line-hover:#43434A;--fg:#EDEDEF;--fg2:#D4D4D8;--fg3:#C4C4CA;--muted:#A6A6AE;--muted2:#96969E;--dim:#8E8E96;--faint:#85858D;--grid:rgba(255,255,255,.035);--accent:#34D399;--ink:var(--accent);--accent-strong:var(--accent);--btn-bg:var(--accent);--btn-fg:#04140D;--warm:#FB923C;--warm-ink:#FDA766;--c-ui:#F87171;--c-data:#FB923C;--c-queue:#A1A1AA;--c-llm:#A78BFA;--shadow:rgba(0,0,0,.6);--orb1:rgba(52,211,153,.16);--orb2:rgba(167,139,250,.12);--orb3:rgba(251,146,60,.09)}
+/* Dark: Midnight */
+.pf.dk-midnight:not(.theme-light){--bg:#0A0E1A;--bg2:#0D1220;--surface:#111729;--surface2:#0E1424;--well:#0B1020;--glass:rgba(17,23,41,.62);--header:rgba(15,20,36,.62);--line-soft:#172036;--line:#1E2842;--line-strong:#2A3654;--line-hover:#3B4A6E;--fg:#EEF1F8;--fg2:#D3D9E8;--fg3:#C0C8DB;--muted:#A3ADC4;--muted2:#939EB7;--dim:#8892AC;--faint:#838EA8;--accent:#A5B4FC;--btn-fg:#0A0E1A;--warm:#FDBA74;--warm-ink:#FDBA74;--c-ui:#FCA5A5;--c-data:#FDBA74;--c-queue:#94A3B8;--c-llm:#C4B5FD;--orb1:rgba(165,180,252,.16);--orb2:rgba(196,181,253,.11);--orb3:rgba(253,186,116,.07)}
+/* Dark: Mocha */
+.pf.dk-mocha:not(.theme-light){--bg:#141110;--bg2:#181413;--surface:#1E1A18;--surface2:#1A1615;--well:#161211;--glass:rgba(30,26,24,.62);--header:rgba(28,24,22,.62);--line-soft:#241F1D;--line:#2D2724;--line-strong:#3A332F;--line-hover:#4D4440;--fg:#F2EDEA;--fg2:#DCD4CF;--fg3:#CBC2BC;--muted:#B0A69F;--muted2:#A0958E;--dim:#968B83;--faint:#8E837B;--accent:#E9A07A;--btn-fg:#1A0F0A;--warm:#E9A07A;--warm-ink:#EDB091;--c-ui:#E07A6B;--c-data:#C9B8A6;--c-queue:#9A9089;--c-llm:#B9A3D9;--orb1:rgba(233,160,122,.14);--orb2:rgba(185,163,217,.1);--orb3:rgba(224,122,107,.07)}
+/* Dark: Mono */
+.pf.dk-mono:not(.theme-light){--bg:#0A0A0A;--bg2:#0E0E0E;--surface:#131313;--surface2:#101010;--well:#0C0C0C;--glass:rgba(20,20,20,.62);--header:rgba(18,18,18,.62);--line-soft:#1B1B1B;--line:#242424;--line-strong:#2F2F2F;--line-hover:#454545;--fg:#EDEDED;--fg2:#D4D4D4;--fg3:#C2C2C2;--muted:#A3A3A3;--muted2:#949494;--dim:#8A8A8A;--faint:#838383;--accent:#FAFAFA;--btn-fg:#0A0A0A;--warm:#FAFAFA;--warm-ink:#FAFAFA;--c-ui:#E5E5E5;--c-data:#A3A3A3;--c-queue:#6B6B6B;--c-llm:#CFCFCF;--orb1:rgba(255,255,255,.06);--orb2:rgba(255,255,255,.04);--orb3:rgba(255,255,255,.03)}
+/* Light */
+.pf.theme-light{--accent:#D4AF4F;--bg:#F6F7F9;--bg2:#EDF0F3;--surface:#FFFFFF;--surface2:#F2F4F7;--well:#F6F7F9;--glass:rgba(255,255,255,.7);--header:rgba(255,255,255,.74);--hl:rgba(255,255,255,.95);--line-soft:#E4E8EE;--line:#DDE2E9;--line-strong:#C9D0DA;--line-hover:#AEB7C3;--fg:#0C1117;--fg2:#232C36;--fg3:#323C47;--muted:#4A5562;--muted2:#56616E;--dim:#5E6875;--faint:#6B7582;--grid:rgba(12,17,23,.07);--ink:#86651A;--accent-strong:#C49A2C;--btn-bg:#1F1D1A;--btn-fg:#FFFFFF;--warm:#C49A2C;--warm-ink:#86651A;--c-ui:#C2255C;--c-data:#3A4250;--c-queue:#8A94A3;--c-llm:#7C3AED;--shadow:rgba(20,30,50,.12);--orb1:rgba(232,207,143,.3);--orb2:rgba(100,116,139,.06);--orb3:transparent}
+/* Light, previous mint style (Tweaks: lightAccent = mint) */
+.pf.theme-light.lt-mint{--accent:#38E0B0;--ink:color-mix(in srgb,var(--accent) 52%,#000);--accent-strong:color-mix(in srgb,var(--accent) 70%,#000);--btn-bg:color-mix(in srgb,var(--accent) 58%,#000);--btn-fg:#FFFFFF;--warm:#F08C2E;--warm-ink:#A55A0B;--c-data:#E8590C;--c-queue:#3A4250;--orb1:rgba(56,224,176,.16)}
+
+.pf *{transition:background-color .4s ease,border-color .4s ease,color .4s ease}
+.pf ::selection{background:var(--accent);color:var(--btn-fg)}
+a{color:var(--ink)}a:hover{color:var(--fg)}
+.pf{position:relative;isolation:isolate;font-family:'Inter',system-ui,sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
+.pf h1,.pf h2,.pf h3,.disp{font-family:'Space Grotesk',system-ui,sans-serif}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+.navlink{color:var(--muted);text-decoration:none;transition:color .2s,background-color .2s}
+.navlink:hover{color:var(--fg);background:var(--surface)}
+.menu-btn{display:none}
+.mobile-menu{display:none}
+@media (max-width:920px){.nav-cta{display:none!important}.brand-sub{display:none}.nav-links .navlink{padding:8px 10px!important;font-size:13.5px!important}}
+@media (max-width:640px){.nav-links{display:none!important}.menu-btn{display:inline-flex!important}.mobile-menu.is-open{display:flex}}
+.navdot{width:0;height:6px;border-radius:50%;background:var(--accent-strong);transition:width .3s ease;margin-right:-7px}
+.navlink.is-active{color:var(--fg);background:var(--surface);box-shadow:inset 0 1px 0 var(--hl),0 1px 3px rgba(0,0,0,.08)}
+.navlink.is-active .navdot{width:6px;margin-right:0}
+.mark img{transition:box-shadow .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.brand:hover .mark img{box-shadow:0 0 0 2px var(--accent-strong)}
+@supports (animation-timeline: scroll()){.navbar{animation:navshrink linear both;animation-timeline:scroll(root);animation-range:0 180px}}
+@keyframes navshrink{to{max-width:1080px;padding-top:5px;padding-bottom:5px}}
+.theme-btn{cursor:pointer}
+.theme-btn:hover{border-color:var(--accent)}
+.mark{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.brand:hover .mark{transform:rotate(-8deg) scale(1.05)}
+.progress{position:absolute;left:18px;right:18px;bottom:0;height:2px;border-radius:2px;background:var(--accent-strong);transform-origin:left center;transform:scaleX(0)}
+
+.btn{transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease;text-decoration:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid:hover{box-shadow:0 10px 30px -12px var(--accent)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--fg)}
+.card{box-shadow:inset 0 1px 0 var(--hl)}
+.lift{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s ease,background .35s ease}
+.lift:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 50%,transparent)}
+.chip{transition:border-color .2s,color .2s,background .2s}
+.chip:hover{border-color:var(--accent);color:var(--fg);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.gridbg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 55% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse at 55% 40%,#000 20%,transparent 75%)}
+.orbs{-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.orb{position:absolute;border-radius:50%;filter:blur(90px)}
+.orb-a{width:560px;height:560px;left:-140px;top:-120px;background:var(--orb1);animation:drift-a 40s ease-in-out infinite alternate}
+.orb-b{width:480px;height:480px;right:-120px;top:10%;background:var(--orb2);animation:drift-b 46s ease-in-out infinite alternate}
+.orb-c{width:420px;height:420px;left:38%;top:40%;background:var(--orb3);animation:drift-c 52s ease-in-out infinite alternate}
+.pulse{animation:pulse 2.4s ease-out infinite}
+
+.line{display:block;overflow:hidden;padding-bottom:.06em}
+.ch{display:inline-block;animation:up 1s cubic-bezier(.2,.85,.1,1) backwards;transition:transform .3s cubic-bezier(.2,.8,.2,1),color .3s}
+.ch:hover{transform:translateY(-.08em);color:var(--ink)}
+.role{animation:fd .6s ease backwards}
+.rot{display:inline-block;height:1.15em;overflow:hidden;vertical-align:bottom}
+.rot-inner{display:flex;flex-direction:column;animation:rot 11s cubic-bezier(.7,0,.2,1) infinite}
+.rot-inner span{display:block;height:1.15em;line-height:1.15em;white-space:nowrap}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track{display:flex;width:max-content;animation:marquee 70s linear infinite}
+
+.ttab{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted2);transition:all .2s ease}
+.ttab:hover{color:var(--fg);border-color:var(--line-hover)}
+.ttab.is-on{color:var(--btn-fg);background:var(--btn-bg);border-color:var(--btn-bg)}
+.srow{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);align-items:center;gap:12px;width:100%;padding:2px 8px;border:0;border-radius:7px;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.srow:hover{background:var(--surface2)}
+.srow.is-on{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.srow.is-on .sname{color:var(--fg);font-weight:600}
+.srow.is-on .snum{color:var(--ink)}
+.srow.is-done .sname{color:var(--fg3)}
+.bar{height:10px;border-radius:3px;transform-origin:left center;animation:trace 7s cubic-bezier(.2,.7,.2,1) infinite backwards}
+.bar-http{background:var(--accent-strong)}
+.bar-db{background:var(--c-data)}
+.bar-queue{background:var(--c-queue)}
+.bar-llm{background:var(--c-llm)}
+.bar-ui{background:var(--c-ui)}
+.replay{cursor:pointer}
+.replay:hover{border-color:var(--accent);color:var(--fg)}
+
+.tline{animation:line-in .5s ease-out backwards}
+.cursor{display:inline-block;width:9px;height:1.1em;background:var(--accent-strong);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+.track{position:relative}
+.run{position:absolute;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--accent-strong);animation:run 2.4s linear infinite}
+.drop{position:absolute;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--accent-strong);animation:drop 2.2s ease-in-out infinite}
+.ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--c-llm);animation:ring 2.4s ease-out infinite}
+.sk{border-radius:4px;background:linear-gradient(90deg,var(--line) 0%,var(--line-strong) 50%,var(--line) 100%);background-size:200% 100%;animation:shimmer 1.6s linear infinite}
+.cur{animation:cur 4s ease-in-out infinite}
+.press{animation:press 4s ease-in-out infinite}
+.gbar{transform-origin:bottom;animation:gbar 2.6s ease-in-out infinite alternate}
+.chk{animation:chk 4s ease-in-out infinite}
+.panel-in{animation:fadeup .45s cubic-bezier(.2,.7,.2,1) backwards}
+.flowline{stroke-dasharray:4 4;animation:dash 1s linear infinite}
+.tl-draw{transform-origin:top center}
+.focus-card{transition:border-color .3s ease}
+.focus-card:hover{border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.focus-card li::marker{color:var(--ink)}
+.wcard{display:flex;flex-direction:column;gap:14px}
+.wcard:hover .warrow{transform:translate(3px,-3px)}
+.warrow{transition:transform .3s ease}
+.outline{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(64px,12vw,176px);font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1px var(--line-hover);white-space:nowrap;padding-right:.3em}
+.outline-track{animation-duration:90s;animation-direction:reverse}
+.avatar-ring{animation:spin 24s linear infinite}
+
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+.progress{animation:grow linear both;animation-timeline:scroll(root)}
+.tl-draw{animation:grow-y linear both;animation-timeline:view();animation-range:entry 20% exit 60%}
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 50%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@keyframes up{from{transform:translateY(110%) rotate(5deg)}to{transform:none}}
+@keyframes fd{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes rot{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-1.15em)}50%,68%{transform:translateY(-2.3em)}75%,93%{transform:translateY(-3.45em)}100%{transform:translateY(-4.6em)}}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes trace{0%{transform:scaleX(0);opacity:0}6%{opacity:1}22%{transform:scaleX(1)}88%{opacity:1;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1)}}
+@keyframes line-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes blink{50%{opacity:0}}
+@keyframes run{0%{left:0;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:calc(100% - 8px);opacity:0}}
+@keyframes drop{0%{top:0;opacity:0}12%{opacity:1}88%{opacity:1}100%{top:calc(100% - 8px);opacity:0}}
+@keyframes ring{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+@keyframes shimmer{to{background-position:-200% 0}}
+@keyframes cur{0%,15%{transform:translate(60px,46px)}45%,70%{transform:translate(0,0)}100%{transform:translate(60px,46px)}}
+@keyframes press{0%,48%,62%,100%{transform:scale(1)}54%{transform:scale(.92)}}
+@keyframes gbar{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+@keyframes chk{0%,12%{opacity:.25}20%,85%{opacity:1}100%{opacity:.25}}
+@keyframes fadeup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes dash{to{stroke-dashoffset:-16}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes grow-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift-a{to{transform:translate(200px,120px) scale(1.12)}}
+@keyframes drift-b{to{transform:translate(-180px,100px) scale(.92)}}
+@keyframes drift-c{to{transform:translate(140px,-120px) scale(1.08)}}
+::view-transition-old(root){animation:none}
+::view-transition-new(root){animation:vt .75s cubic-bezier(.7,0,.2,1)}
+@keyframes vt{from{clip-path:circle(0% at 96% 4%)}to{clip-path:circle(150% at 96% 4%)}}
+@media (max-width:640px){.li-card{grid-column:auto!important}}
+.no-motion *{animation:none!important;transition:none!important}
+.no-motion .packet{display:none}
+@media (prefers-reduced-motion:reduce){.pf *{animation:none!important;transition:none!important}.pf .packet{display:none}html{scroll-behavior:auto}}
+</style>
+<style>body{background:#F6F7F9}</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="font-family:system-ui;padding:24px">Ibrahim Ahmed, Software Engineer. Email: ibrahim.ahmed.iam@gmail.com · <a href="https://linkedin.com/in/ibrahim-ahmed-ib">LinkedIn</a> · <a href="https://github.com/ibrahimahmed237">GitHub</a></p></noscript>
+<template id="tpl">
+<div class="pf {{motionClass}} {{themeClass}} {{paletteClass}} {{lightClass}}" style="--dk-accent: {{darkAccent}}; min-height: 100vh; overflow-x: clip">
+
+  <!-- NAV (glass) -->
+  <header style="position: sticky; top: 0; z-index: 20; padding: 12px clamp(10px, 3vw, 24px)">
+    <nav class="navbar" aria-label="Main" style="position: relative; overflow: hidden; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 8px 8px 8px 10px; border: 1px solid var(--line); border-radius: 18px; background: var(--header); backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 10px 40px -24px var(--shadow)">
+      <a href="#top" class="brand" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg)">
+        <span class="mark" style="position: relative; width: 44px; height: 44px; flex: none">
+          <img src="assets/ibrahim.jpg" alt="" style="display: block; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line-strong)">
+        </span>
+        <span style="display: flex; flex-direction: column; line-height: 1.2">
+          <span class="disp" style="font-size: 17px; font-weight: 600">Ibrahim Ahmed</span>
+          <span class="mono brand-sub" style="font-size: 11.5px; color: var(--dim)">Software Engineer</span>
+        </span>
+      </a>
+      <div class="nav-links" style="display: flex; flex-wrap: nowrap; gap: 2px; padding: 4px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft)">
+        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="5">
+          <a class="navlink {{n.cls}}" href="{{n.href}}" aria-current="{{n.current}}" style="position: relative; display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border-radius: 9px; font-size: 14px; font-weight: 500"><span class="navdot" aria-hidden="true"></span>{{n.label}}</a>
+        </sc-for>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px">
+        <a href="#contact" class="btn btn-solid nav-cta" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 14px">Let's talk</a>
+        <button type="button" class="theme-btn" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--fg)">
+          <sc-if value="{{isDark}}" hint-placeholder-val="{{true}}">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+          </sc-if>
+          <sc-if value="{{isLight}}" hint-placeholder-val="{{false}}">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+          </sc-if>
+        </button>
+        <button type="button" class="menu-btn theme-btn" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExpanded}}" style="align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--fg)">
+          <sc-if value="{{notMenuOpen}}" hint-placeholder-val="{{true}}">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+          </sc-if>
+          <sc-if value="{{menuOpen}}" hint-placeholder-val="{{false}}">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+          </sc-if>
+        </button>
+      </div>
+      <div class="mobile-menu {{menuCls}}" style="flex-basis: 100%; flex-direction: column; gap: 2px; padding: 8px 2px 4px; margin-top: 2px; border-top: 1px solid var(--line-soft)">
+        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="5">
+          <a class="navlink {{n.cls}}" href="{{n.href}}" onClick="{{closeMenu}}" style="display: flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 12px; border-radius: 10px; font-size: 16px; font-weight: 500"><span class="navdot" aria-hidden="true"></span>{{n.label}}</a>
+        </sc-for>
+        <a href="#contact" onClick="{{closeMenu}}" class="btn btn-solid" style="margin-top: 6px; display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">Let's talk</a>
+      </div>
+      <span class="progress" aria-hidden="true"></span>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="position: relative; overflow: hidden; border-bottom: 1px solid var(--line-soft); margin-top: -82px; padding-top: 82px; min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center">
+    <div class="orbs" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+    </div>
+    <div class="gridbg" aria-hidden="true" style="position: absolute; inset: 0"></div>
+    <svg aria-hidden="true" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .35">
+      <path id="p1" d="M-40 200 C 300 200, 420 440, 760 440 S 1180 240, 1500 280" fill="none" style="stroke: var(--line)" stroke-width="1"></path>
+      <path id="p2" d="M-40 600 C 260 600, 520 320, 820 320 S 1240 600, 1500 560" fill="none" style="stroke: var(--line)" stroke-width="1"></path>
+      <circle class="packet" r="2.5" style="fill: var(--accent-strong)"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#p1"></mpath></animateMotion></circle>
+      <circle class="packet" r="2.5" style="fill: var(--c-llm)"><animateMotion dur="12s" begin="3s" repeatCount="indefinite"><mpath href="#p2"></mpath></animateMotion></circle>
+    </svg>
+
+    <div style="position: relative; width: 100%; box-sizing: border-box; max-width: 1200px; margin: 0 auto; padding: clamp(20px, 4vh, 48px) clamp(16px, 5vw, 64px) clamp(28px, 5vh, 56px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 4vw, 56px)">
+      <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: clamp(14px, 2.2vh, 22px)">
+        <div class="rise mono" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--glass); font-size: 12.5px; color: var(--fg3)">
+          <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-strong)"></span>
+          Open to new roles · relocation-ready
+        </div>
+
+        <h1 aria-label="Ibrahim Ahmed" style="margin: 0; font-size: clamp(52px, min(7.2vw, 11.5vh), 108px); line-height: .9; letter-spacing: -0.045em; font-weight: 700">
+          <span class="line" aria-hidden="true"><sc-for list="{{first}}" as="c" hint-placeholder-count="7"><span class="ch" style="animation-delay: {{c.d}}">{{c.ch}}</span></sc-for></span>
+          <span class="line" aria-hidden="true"><sc-for list="{{last}}" as="c" hint-placeholder-count="5"><span class="ch" style="animation-delay: {{c.d}}">{{c.ch}}</span></sc-for><span class="ch" style="animation-delay: .95s; color: var(--warm-ink)">.</span></span>
+        </h1>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+          <span class="role disp" style="animation-delay: .9s; margin-right: 6px; font-size: 19px; font-weight: 600">Software Engineer</span>
+          <sc-for list="{{roles}}" as="r" hint-placeholder-count="4">
+            <span class="role mono" style="animation-delay: {{r.d}}; display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--glass); font-size: 12.5px; color: var(--fg2)"><span style="width: 7px; height: 7px; border-radius: 50%; background: {{r.color}}"></span>{{r.label}}</span>
+          </sc-for>
+        </div>
+
+        <p class="rise disp" style="animation-delay: 1.2s; margin: 2px 0 0; font-size: clamp(21px, min(2.3vw, 4vh), 32px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 600; color: var(--fg2)">I build software that stays correct under <span class="rot" style="color: var(--ink)"><span class="rot-inner"><span>concurrency.</span><span>retries.</span><span>peak traffic.</span><span>partial failure.</span><span>concurrency.</span></span></span></p>
+        <p class="rise" style="animation-delay: 1.3s; margin: 0; max-width: 560px; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.65; color: var(--muted)">From React screens to Kafka pipelines to LLM agents: I design, test and ship the whole feature, and keep owning it in production.</p>
+        <div class="rise" style="animation-delay: 1.4s; display: flex; flex-wrap: wrap; gap: 12px">
+          <a href="#work" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">See my work
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-weight: 600; font-size: 15px; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)">Get in touch</a>
+        </div>
+      </div>
+
+      <!-- Trace panel (glass) -->
+      <div class="rise" style="animation-delay: .4s; flex: 1 1 440px; min-width: 0; max-width: 580px; background: var(--glass); border: 1px solid var(--line); border-radius: 18px; backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 30px 80px -30px var(--shadow); overflow: hidden">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 18px; border-bottom: 1px solid var(--line)">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-strong)"></span>
+            <span class="mono" style="font-size: 12px; color: var(--dim)">live system trace</span>
+          </div>
+          <div style="display: flex; gap: 6px">
+            <button type="button" class="replay mono" onClick="{{toggleAuto}}" aria-label="{{autoLabel}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted2); font-size: 12px">
+              <sc-if value="{{auto}}" hint-placeholder-val="{{true}}">
+                <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1"></rect><rect x="14" y="4" width="5" height="16" rx="1"></rect></svg>
+              </sc-if>
+              <sc-if value="{{notAuto}}" hint-placeholder-val="{{false}}">
+                <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"></path></svg>
+              </sc-if>
+              {{autoText}}
+            </button>
+            <button type="button" class="replay mono" onClick="{{replay}}" aria-label="Start this scenario again" style="display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted2); font-size: 12px">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>
+              replay
+            </button>
+          </div>
+        </div>
+        <div style="padding: 12px 18px 4px; display: flex; flex-direction: column; gap: 8px">
+          <div>
+            <p class="disp" style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">What happens behind one click</p>
+            <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.45; color: var(--muted)">Watch each step light up. Click any step to read what it does.</p>
+          </div>
+          <div role="tablist" aria-label="Scenarios" style="display: flex; flex-wrap: wrap; gap: 6px">
+            <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="4">
+              <button type="button" role="tab" class="ttab {{sc.cls}}" aria-selected="{{sc.ariaSel}}" onClick="{{sc.pick}}" title="{{sc.caption}}" style="min-height: 34px; padding: 0 11px; border-radius: 8px; font: inherit; font-size: 12.5px; font-weight: 500">{{sc.label}}</button>
+            </sc-for>
+          </div>
+        </div>
+        <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
+          <sc-if value="{{sc.show}}" hint-placeholder-val="{{true}}">
+            <div class="panel-in" style="padding: 6px 10px 12px; display: flex; flex-direction: column; gap: 1px">
+              <sc-for list="{{sc.spans}}" as="sp" hint-placeholder-count="8">
+                <button type="button" class="srow {{sp.cls}}" onClick="{{sp.pick}}" aria-pressed="{{sp.pressed}}">
+                  <span class="sname" style="display: flex; align-items: center; gap: 7px; min-width: 0; font-size: 12.5px; color: var(--muted2)">
+                    <span class="snum mono" style="flex: none; width: 18px; font-size: 10.5px; color: var(--faint)">{{sp.num}}</span>
+                    <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{sp.plain}}</span>
+                  </span>
+                  <span style="position: relative; height: 16px; display: flex; align-items: center; border-left: 1px solid var(--line)">
+                    <span class="bar bar-{{sp.kind}}" style="display: block; margin-left: {{sp.left}}; width: {{sp.width}}; animation-delay: {{sp.delay}}"></span>
+                  </span>
+                </button>
+              </sc-for>
+              <div class="mono" style="display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 12px; padding: 2px 8px 0; font-size: 10.5px; color: var(--faint)">
+                <span></span>
+                <span style="display: flex; justify-content: space-between"><span>request starts</span><span>done</span></span>
+              </div>
+              <div class="panel-in" style="margin: 8px 8px 0; padding: 10px 14px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 4px">
+                <span class="mono" style="font-size: 11px; color: var(--ink)">Step {{sc.activeNum}} of {{sc.total}} · <span style="color: var(--dim)">{{sc.activeTech}}</span></span>
+                <p class="disp" style="margin: 0; font-size: 15.5px; font-weight: 600">{{sc.activePlain}}</p>
+                <p style="margin: 0; font-size: 13px; line-height: 1.5; color: var(--fg2)">{{sc.activeDesc}}</p>
+              </div>
+            </div>
+          </sc-if>
+        </sc-for>
+        <div class="mono" style="display: flex; flex-wrap: wrap; gap: 6px 12px; padding: 9px 18px; border-top: 1px solid var(--line); font-size: 11px; color: var(--dim)">
+          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-ui)"></span>screen</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--accent-strong)"></span>server</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-data)"></span>database</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-queue)"></span>background job</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-llm)"></span>AI</span>
+          <span style="margin-left: auto">illustrative</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true" style="overflow: hidden; border-bottom: 1px solid var(--line-soft); padding: 16px 0; background: var(--bg2)">
+    <div class="marquee-track">
+      <sc-for list="{{marquee}}" as="m" hint-placeholder-count="12">
+        <span class="disp" style="display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; font-size: 20px; font-weight: 500; color: var(--faint); white-space: nowrap">{{m}}<span style="width: 5px; height: 5px; border-radius: 50%; background: var(--line-hover)"></span></span>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- 01 WORK -->
+  <section id="work" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">01 — GET /work</p>
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 24px; margin: 0 0 28px">
+      <h2 class="reveal" style="margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">Selected work.</h2>
+      <div role="group" aria-label="Filter work" style="display: flex; flex-wrap: wrap; gap: 6px">
+        <sc-for list="{{filters}}" as="fl" hint-placeholder-count="5">
+          <button type="button" class="ttab {{fl.cls}}" aria-pressed="{{fl.pressed}}" onClick="{{fl.pick}}" style="min-height: 38px; padding: 0 14px; border-radius: 999px; font: inherit; font-size: 13.5px; font-weight: 500">{{fl.label}} <span class="mono" style="font-size: 11px; opacity: .7">{{fl.count}}</span></button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px">
+      <sc-for list="{{works}}" as="w" hint-placeholder-count="6">
+        <article class="card lift wcard" style="padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
+            <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{w.color}}"></span>{{w.tag}}</span>
+            <span class="mono" style="font-size: 12px; color: var(--faint)">{{w.num}}</span>
+          </div>
+          <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.01em">{{w.title}}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{w.body}}</p>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px; border-radius: 10px; background: var(--well); border: 1px solid var(--line-soft)">
+            <sc-for list="{{w.flow}}" as="f" hint-placeholder-count="4">
+              <span style="display: inline-flex; align-items: center; gap: 6px">
+                <span class="mono" style="padding: 5px 9px; border-radius: 6px; border: 1px solid var(--line-strong); background: var(--surface); font-size: 11.5px; color: var(--fg2)">{{f.label}}</span>
+                <sc-if value="{{f.more}}" hint-placeholder-val="{{true}}">
+                  <svg aria-hidden="true" width="16" height="10" viewBox="0 0 16 10"><path d="M0 5 H13" fill="none" style="stroke: var(--line-hover)"></path><path d="M10 1.5 L14 5 L10 8.5" fill="none" style="stroke: var(--line-hover)"></path></svg>
+                </sc-if>
+              </span>
+            </sc-for>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto">
+            <sc-for list="{{w.stack}}" as="s" hint-placeholder-count="5">
+              <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
+            </sc-for>
+          </div>
+          <sc-if value="{{w.link}}" hint-placeholder-val="{{false}}">
+            <a href="{{w.link}}" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; text-decoration: none">View on GitHub
+              <svg class="warrow" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+            </a>
+          </sc-if>
+        </article>
+      </sc-for>
+    </div>
+    <sc-if value="{{hasMore}}" hint-placeholder-val="{{true}}">
+      <div style="display: flex; justify-content: center; margin-top: 22px">
+        <button type="button" class="btn btn-ghost" onClick="{{showAllWork}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">{{moreLabel}}
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+      </div>
+    </sc-if>
+  </section>
+
+  <!-- 02 EXPERIENCE -->
+  <section id="experience" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">02 — GET /experience</p>
+    <h2 class="reveal" style="margin: 0 0 40px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">Where I've shipped.</h2>
+    <ol style="position: relative; list-style: none; margin: 0; padding: 0 0 0 28px; display: flex; flex-direction: column; gap: 52px">
+      <span aria-hidden="true" style="position: absolute; left: 0; top: 10px; bottom: 0; width: 1px; background: var(--line)"></span>
+      <span class="tl-draw" aria-hidden="true" style="position: absolute; left: 0; top: 10px; bottom: 0; width: 1px; background: var(--accent-strong)"></span>
+
+      <li style="position: relative">
+        <span aria-hidden="true" style="position: absolute; left: -35px; top: 10px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent-strong)"></span>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; align-items: baseline">
+          <h3 style="margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; font-size: clamp(24px, 2.4vw, 30px); font-weight: 600">Software Engineer · <span style="color: var(--ink)">Rabbit</span>
+            <span class="mono" style="padding: 4px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warm) 55%, transparent); color: var(--warm-ink); font-size: 11.5px; font-weight: 500">current</span>
+          </h3>
+          <span class="mono" style="font-size: 13px; color: var(--muted2)">Mar 2025 – Present · Cairo, Egypt</span>
+        </div>
+        <p style="margin: 10px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.65; color: var(--muted)">Quick-commerce grocery delivery. I work across the supply chain and CX automation teams, full stack, from scoping with the business owner to production.</p>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px">
+          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c-data)"></span>supply chain</p>
+            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+              <li>Demand planning platform, end to end: NestJS APIs, React UI, BigQuery sync, purchase orders.</li>
+              <li>Supplier follow-ups that rank at-risk orders by value and put them in the planner's day.</li>
+              <li>Smart supplier receiving queue over WhatsApp, with dock prioritization.</li>
+              <li>Moved supplier returns off a legacy monolith with a rehearsed, reversible cutover.</li>
+              <li>Transfer recommendations from forecasts and live stock, with job-health alerts.</li>
+            </ul>
+          </div>
+          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c-llm)"></span>CX automation &amp; AI</p>
+            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+              <li>Multi-agent support bot on LangGraph and pgvector, live in Freshchat.</li>
+              <li>Langfuse tracing, editable prompts, and a guardrail that hands off to a human.</li>
+              <li>LLM vision that reads supplier delivery documents from WhatsApp photos.</li>
+              <li>Late-order handover policy with configurable pushback and decision analytics.</li>
+            </ul>
+          </div>
+          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--accent-strong)"></span>platform &amp; reliability</p>
+            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+              <li>Idempotent notifications with Redis locks and debounced BullMQ jobs.</li>
+              <li>Hybrid search: semantic embeddings plus Elasticsearch keywords.</li>
+              <li>CI/CD, Docker and Helm on AWS, alerts, and technical hiring interviews.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px">
+          <sc-for list="{{rabbitStack}}" as="s" hint-placeholder-count="12">
+            <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--muted2)">{{s}}</span>
+          </sc-for>
+        </div>
+      </li>
+
+      <li style="position: relative">
+        <span aria-hidden="true" style="position: absolute; left: -35px; top: 10px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-hover); box-sizing: border-box"></span>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; align-items: baseline">
+          <h3 style="margin: 0; font-size: clamp(24px, 2.4vw, 30px); font-weight: 600">Backend Engineer · <span style="color: var(--fg2)">Numinix</span></h3>
+          <span class="mono" style="font-size: 13px; color: var(--muted2)">Apr 2024 – Mar 2025 · Remote</span>
+        </div>
+        <p style="margin: 10px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.65; color: var(--muted)">E-commerce development company running high-traffic online stores.</p>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px">
+          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--accent-strong)"></span>APIs &amp; performance</p>
+            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+              <li>GraphQL and REST APIs at high listing and transaction volume.</li>
+              <li>Moved critical paths from REST to gRPC to cut latency.</li>
+            </ul>
+          </div>
+          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--warm)"></span>payments &amp; data</p>
+            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+              <li>Stripe, PayPal and EPN across multi-currency stores.</li>
+              <li>Python recommendation engine for product discovery.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px">
+          <sc-for list="{{numinixStack}}" as="s" hint-placeholder-count="8">
+            <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--muted2)">{{s}}</span>
+          </sc-for>
+        </div>
+      </li>
+
+      <li style="position: relative">
+        <span aria-hidden="true" style="position: absolute; left: -35px; top: 8px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-hover); box-sizing: border-box"></span>
+        <h3 style="margin: 0; font-size: clamp(20px, 2vw, 24px); font-weight: 600">B.Sc. Computer Science &amp; IT</h3>
+        <p class="mono" style="margin: 8px 0 0; font-size: 13px; color: var(--muted2)">Damanhur University · 2020 – 2024</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 03 CAPABILITIES -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">03 — GET /capabilities</p>
+    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; max-width: 800px">Whatever the team needs, end to end.</h2>
+    <p style="margin: 0 0 36px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">I've worked across the whole product, so I can pick up the part that moves the team forward: the UI, the API, the pipeline or the model.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px">
+
+      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center">
+          <div style="position: relative; width: 190px; height: 112px; border-radius: 9px; border: 1px solid var(--line-strong); background: var(--surface)">
+            <div style="display: flex; gap: 4px; padding: 7px 8px; border-bottom: 1px solid var(--line)"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong)"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong)"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong)"></span></div>
+            <div style="padding: 9px 10px; display: flex; flex-direction: column; gap: 7px">
+              <span class="sk" style="display: block; width: 70%; height: 8px"></span>
+              <span class="sk" style="display: block; width: 92%; height: 8px"></span>
+              <span class="sk" style="display: block; width: 55%; height: 8px"></span>
+              <span class="press" style="display: block; align-self: flex-start; width: 52px; height: 16px; border-radius: 5px; background: var(--accent-strong)"></span>
+            </div>
+            <svg class="cur" width="16" height="16" viewBox="0 0 24 24" style="position: absolute; left: 34px; top: 74px; color: var(--fg)"><path d="M4 3l7 17 2.5-7L21 10.5z" fill="currentColor"></path></svg>
+          </div>
+        </div>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Full-stack product</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">React and TypeScript front ends with React Query, forms and RTL support, wired to APIs I design myself, so a feature ships as one piece.</p>
+      </article>
+
+      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center">
+          <div class="track" style="width: 150px; height: 118px; display: flex; flex-direction: column; justify-content: space-between">
+            <div class="mono" style="height: 30px; border: 1px solid var(--line-strong); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--fg3); background: var(--surface)">API</div>
+            <div class="mono" style="height: 30px; border: 1px solid var(--line-strong); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--fg3); background: var(--surface)">domain</div>
+            <div class="mono" style="height: 30px; border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink); background: var(--surface)">data</div>
+            <span class="drop" style="left: -14px"></span>
+          </div>
+        </div>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Backend services &amp; APIs</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">REST, GraphQL and gRPC services on NestJS, .NET and Python, with clean data models, clear module boundaries, and tests that run on every change.</p>
+      </article>
+
+      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; padding: 0 18px">
+          <div class="mono" style="flex: none; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 6px; font-size: 11px; color: var(--fg3); background: var(--surface)">event</div>
+          <div class="track" style="flex: 1 1 auto; height: 2px; background: var(--line)">
+            <span class="run"></span><span class="run" style="animation-delay: .8s"></span><span class="run" style="animation-delay: 1.6s"></span>
+          </div>
+          <div class="mono" style="flex: none; padding: 8px 10px; border: 1px solid var(--c-queue); border-radius: 6px; font-size: 11px; color: var(--fg2); background: var(--surface)">queue</div>
+          <div class="track" style="flex: 1 1 auto; height: 2px; background: var(--line)">
+            <span class="run" style="animation-delay: .4s"></span><span class="run" style="animation-delay: 1.2s"></span>
+          </div>
+          <div class="mono" style="flex: none; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 6px; font-size: 11px; color: var(--fg3); background: var(--surface)">worker</div>
+        </div>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Event-driven systems</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">Kafka and BullMQ pipelines with an outbox, retries, distributed locks and deduplication, so a retried message never becomes a duplicate record.</p>
+      </article>
+
+      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; gap: 26px">
+          <div style="position: relative; width: 58px; height: 58px; flex: none">
+            <span class="ring"></span><span class="ring" style="animation-delay: 1.2s"></span>
+            <div class="mono" style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--c-llm); background: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--fg2)">agent</div>
+          </div>
+          <svg width="34" height="96" viewBox="0 0 34 96" style="flex: none"><path class="flowline" d="M0 48 L34 12" fill="none" style="stroke: var(--line-hover)"></path><path class="flowline" d="M0 48 L34 48" fill="none" style="stroke: var(--line-hover)"></path><path class="flowline" d="M0 48 L34 84" fill="none" style="stroke: var(--line-hover)"></path></svg>
+          <div class="mono" style="display: flex; flex-direction: column; gap: 10px; font-size: 10.5px; color: var(--fg3)">
+            <span style="padding: 5px 9px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface)">retrieve</span>
+            <span style="padding: 5px 9px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface)">tools</span>
+            <span style="padding: 5px 9px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface)">guardrail</span>
+          </div>
+        </div>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Applied AI</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">LangGraph agents, RAG on pgvector and LLM vision, shipped with Langfuse tracing, guardrails, and a handover to a human when the model isn't sure.</p>
+      </article>
+
+      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: flex-end; justify-content: center; gap: 10px; padding: 0 0 26px">
+          <span class="gbar" style="display: block; width: 18px; height: 70px; border-radius: 4px 4px 0 0; background: var(--c-data)"></span>
+          <span class="gbar" style="animation-delay: .3s; display: block; width: 18px; height: 96px; border-radius: 4px 4px 0 0; background: var(--line-strong)"></span>
+          <span class="gbar" style="animation-delay: .6s; display: block; width: 18px; height: 54px; border-radius: 4px 4px 0 0; background: var(--c-data)"></span>
+          <span class="gbar" style="animation-delay: .9s; display: block; width: 18px; height: 88px; border-radius: 4px 4px 0 0; background: var(--accent-strong)"></span>
+          <span class="gbar" style="animation-delay: 1.2s; display: block; width: 18px; height: 62px; border-radius: 4px 4px 0 0; background: var(--line-strong)"></span>
+          <span class="gbar" style="animation-delay: 1.5s; display: block; width: 18px; height: 100px; border-radius: 4px 4px 0 0; background: var(--c-data)"></span>
+        </div>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Data &amp; performance</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">Relational modeling in PostgreSQL, MySQL and SQL Server, query tuning, Redis caching, BigQuery syncs, and heavy jobs that stay within memory.</p>
+      </article>
+
+      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px">
+          <sc-for list="{{pipeline}}" as="p" hint-placeholder-count="4">
+            <span style="display: inline-flex; align-items: center; gap: 6px">
+              <span class="mono" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 9px; border-radius: 7px; border: 1px solid var(--line-strong); background: var(--surface); font-size: 11px; color: var(--fg3)">
+                <svg class="chk" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--accent-strong); animation-delay: {{p.d}}"><path d="M20 6 9 17l-5-5"></path></svg>{{p.label}}
+              </span>
+              <sc-if value="{{p.more}}" hint-placeholder-val="{{true}}"><span style="width: 8px; height: 1px; background: var(--line-hover)"></span></sc-if>
+            </span>
+          </sc-for>
+        </div>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Engineering practice</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">Clean architecture, unit and integration tests, code review, and CI/CD with GitHub Actions, Docker and Helm. I also interview engineers.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 04 STACK -->
+  <section id="stack" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">04 — GET /stack</p>
+    <h2 class="reveal" style="margin: 0 0 36px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">Tools I reach for.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
+      <sc-for list="{{stack}}" as="g" hint-placeholder-count="6">
+        <div class="card lift" style="padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 600">{{g.name}}</h3>
+            <span class="mono" style="font-size: 11.5px; color: var(--dim)">{{g.count}}</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{g.items}}" as="t" hint-placeholder-count="6">
+              <span class="chip mono" style="padding: 6px 11px; border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; color: var(--fg3); background: var(--surface2)">{{t}}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 18px">
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)">Background in competitive programming: ECPC Finals qualifier in 2022 and 2023, and <a href="https://codeforces.com/profile/IbrahimAhmed" target="_blank" rel="noopener">Codeforces</a> Pupil.</p>
+    </div>
+  </section>
+
+  <!-- 05 ABOUT -->
+  <section id="about" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">05 — GET /about</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <h2 class="reveal" style="margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">A software engineer who's comfortable anywhere in the stack.</h2>
+        <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.7; color: var(--muted)">I build complete features: the React screen, the API behind it, the data model, the background jobs and events, and the monitoring once it's live. Most of my depth is on the backend, and I'm just as happy shipping the UI.</p>
+        <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.7; color: var(--muted)">A big part of my recent work is applied AI: multi-agent support bots, retrieval over company data, and vision pipelines that read documents from photos. I treat them like any other service: traced, tested, and with a safe handover to a human.</p>
+      </div>
+      <div class="card" style="flex: 1 1 440px; min-width: 0; background: var(--surface2); border: 1px solid var(--line); border-radius: 14px; overflow: hidden">
+        <div style="display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--line)">
+          <span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong)"></span>
+          <span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong)"></span>
+          <span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong)"></span>
+          <span class="mono" style="margin-left: 8px; font-size: 12px; color: var(--dim)">~/ibrahim</span>
+        </div>
+        <div class="mono" style="padding: 18px 20px 22px; font-size: 13.5px; line-height: 1.85; color: var(--fg2)">
+          <div class="tline" style="animation-delay: .2s"><span style="color: var(--ink)">$</span> whoami</div>
+          <div class="tline" style="animation-delay: .5s; color: var(--muted2)">ibrahim · software engineer · Cairo, EG</div>
+          <div class="tline" style="animation-delay: .9s"><span style="color: var(--ink)">$</span> cat focus.txt</div>
+          <div class="tline" style="animation-delay: 1.2s; color: var(--muted2)">frontend · APIs · data · events · applied AI</div>
+          <div class="tline" style="animation-delay: 1.4s; color: var(--muted2)">React · NestJS · .NET · Python · Kafka · LangGraph</div>
+          <div class="tline" style="animation-delay: 1.8s"><span style="color: var(--ink)">$</span> cat principles.txt</div>
+          <div class="tline" style="animation-delay: 2.1s; color: var(--muted2)">→ correct under concurrency and retries</div>
+          <div class="tline" style="animation-delay: 2.3s; color: var(--muted2)">→ clean architecture, easy to change</div>
+          <div class="tline" style="animation-delay: 2.5s; color: var(--muted2)">→ tests and CI/CD on every change</div>
+          <div class="tline" style="animation-delay: 2.7s; color: var(--muted2)">→ own it in production</div>
+          <div class="tline" style="animation-delay: 3s"><span style="color: var(--ink)">$</span> <span class="cursor" aria-hidden="true"></span></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px">
+      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
+        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">experience</p>
+        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">2+ years in production</p>
+      </div>
+      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
+        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">based in</p>
+        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Cairo · open to relocation</p>
+      </div>
+      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
+        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">languages</p>
+        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Arabic native · English fluent</p>
+      </div>
+      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
+        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">education</p>
+        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">B.Sc. CS &amp; IT · 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTLINE BAND -->
+  <div class="marquee" aria-hidden="true" style="overflow: hidden; margin-top: clamp(72px, 10vw, 120px)">
+    <div class="marquee-track outline-track">
+      <span class="outline">FULL STACK · BACKEND · APPLIED AI · EVENTS ·&nbsp;</span>
+      <span class="outline">FULL STACK · BACKEND · APPLIED AI · EVENTS ·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- 06 CONTACT -->
+  <section id="contact" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) clamp(16px, 5vw, 64px) clamp(56px, 7vw, 88px)">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">06 — POST /contact</p>
+    <h2 class="reveal" style="margin: 0; font-size: clamp(40px, 7vw, 96px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; max-width: 1000px">Let's build something that <span style="color: var(--warm-ink)">stays up.</span></h2>
+    <p style="margin: 22px 0 0; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">Hiring a software engineer for full-stack, backend or AI work? Send me a message. I'm open to relocation.</p>
+    <div style="margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+      <a href="mailto:ibrahim.ahmed.iam@gmail.com" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 16px">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+        ibrahim.ahmed.iam@gmail.com
+      </a>
+      <button type="button" onClick="{{copyEmail}}" class="btn btn-ghost mono" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 18px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-size: 13.5px; cursor: pointer; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)">
+        <sc-if value="{{copied}}" hint-placeholder-val="{{false}}">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        </sc-if>
+        <sc-if value="{{notCopied}}" hint-placeholder-val="{{true}}">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>
+        </sc-if>
+        {{copyLabel}}
+      </button>
+    </div>
+
+    <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px">
+      <a href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener" class="card lift li-card" style="grid-column: span 2; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg); text-decoration: none">
+        <span style="position: relative; width: 92px; height: 92px; flex: none">
+          <svg class="avatar-ring" aria-hidden="true" width="92" height="92" viewBox="0 0 92 92" style="position: absolute; inset: 0"><circle cx="46" cy="46" r="44" fill="none" stroke-width="2" stroke-dasharray="6 6" style="stroke: var(--accent-strong)"></circle></svg>
+          <img src="assets/ibrahim.jpg" alt="Ibrahim Ahmed" style="position: absolute; left: 8px; top: 8px; width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line-strong)">
+        </span>
+        <span style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 13h18"></path></svg>LinkedIn</span>
+          <span class="disp" style="font-size: 24px; font-weight: 600">Ibrahim Ahmed</span>
+          <span style="font-size: 14.5px; color: var(--muted)">Software Engineer · Full stack, Backend &amp; AI</span>
+        </span>
+        <span class="btn" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--fg); color: var(--bg); font-weight: 600; font-size: 14px">Connect
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+      </a>
+      <div class="card lift" style="display: flex; flex-direction: column; justify-content: space-between; gap: 14px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg)">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+          <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Phone</span>
+          <span class="mono" style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); font-size: 11px; color: var(--ink)"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-strong)"></span>also on WhatsApp</span>
+        </span>
+        <span class="disp" style="font-size: 21px; font-weight: 600">+20 112 204 2430</span>
+        <span style="display: flex; flex-wrap: wrap; gap: 8px">
+          <a href="https://wa.me/201122042430" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border-radius: 10px; background: var(--btn-bg); color: var(--btn-fg); font-size: 13.5px; font-weight: 600">
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp
+          </a>
+          <a href="tel:+201122042430" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-hover); color: var(--fg); font-size: 13.5px; font-weight: 600">
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call
+          </a>
+        </span>
+      </div>
+      <a href="https://github.com/ibrahimahmed237" target="_blank" rel="noopener" class="card lift" style="display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg); text-decoration: none">
+        <span style="display: flex; align-items: center; justify-content: space-between">
+          <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>GitHub</span>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span class="disp" style="font-size: 21px; font-weight: 600">ibrahimahmed237</span>
+      </a>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--line-soft)">
+    <div class="mono" style="max-width: 1200px; margin: 0 auto; padding: 22px clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--dim)">
+      <span>© 2026 Ibrahim Ahmed</span>
+      <span>200 OK · built in Cairo</span>
+    </div>
+  </footer>
+</div>
+</template>
+<script src="assets/morphdom.min.js"></script>
+<script src="assets/runtime.js"></script>
+<script src="assets/app.js"></script>
+<script>window.__dc.boot(Component, {"lightAccent": "gold", "darkAccent": "#E8CF8F", "darkPalette": "dimmed", "theme": "light", "motion": true});</script>
+</body>
+</html>
