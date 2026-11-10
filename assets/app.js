@@ -286,18 +286,20 @@ class Component extends DCLogic {
     const theme = s.theme || this.props.theme || 'light';
     const toggleTheme = () => {
       const next = theme === 'light' ? 'dark' : 'light';
-      const apply = () => new Promise((resolve) => this.setState({ theme: next }, resolve));
+      const apply = () => new Promise((resolve) => this.setState({ theme: next, switching: true }, resolve));
+      const done = () => setTimeout(() => this.setState({ switching: false }), 30);
       let reduce = false;
       try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
       if (motion && !reduce && document.startViewTransition) {
-        try { document.startViewTransition(apply); return; } catch (e) {}
+        try { const vt = document.startViewTransition(apply); vt.finished.then(done, done); return; } catch (e) {}
       }
-      this.setState({ theme: next });
+      this.setState({ theme: next, switching: true }, done);
     };
 
     return {
       motionClass: motion ? '' : 'no-motion',
       themeClass: theme === 'light' ? 'theme-light' : '',
+      switchClass: s.switching ? 'switching' : '',
       paletteClass: palette === 'dimmed' ? '' : 'dk-' + palette,
       darkAccent: this.props.darkAccent ?? '#E8CF8F',
       lightClass: (this.props.lightAccent || 'gold') === 'mint' ? 'lt-mint' : '',

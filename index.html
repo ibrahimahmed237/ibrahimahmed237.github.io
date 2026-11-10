@@ -47,7 +47,7 @@ html{scroll-behavior:smooth}
 /* Light, previous mint style (Tweaks: lightAccent = mint) */
 .pf.theme-light.lt-mint{--accent:#38E0B0;--ink:color-mix(in srgb,var(--accent) 52%,#000);--accent-strong:color-mix(in srgb,var(--accent) 70%,#000);--btn-bg:color-mix(in srgb,var(--accent) 58%,#000);--btn-fg:#FFFFFF;--warm:#F08C2E;--warm-ink:#A55A0B;--c-data:#E8590C;--c-queue:#3A4250;--orb1:rgba(56,224,176,.16)}
 
-.pf *{transition:background-color .4s ease,border-color .4s ease,color .4s ease}
+.pf.switching *,.pf.switching *::before,.pf.switching *::after{transition:none!important}
 .pf ::selection{background:var(--accent);color:var(--btn-fg)}
 a{color:var(--ink)}a:hover{color:var(--fg)}
 .pf{position:relative;isolation:isolate;font-family:'Inter',system-ui,sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
@@ -174,7 +174,8 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 @keyframes drift-b{to{transform:translate(-180px,100px) scale(.92)}}
 @keyframes drift-c{to{transform:translate(140px,-120px) scale(1.08)}}
 ::view-transition-old(root){animation:none}
-::view-transition-new(root){animation:vt .75s cubic-bezier(.7,0,.2,1)}
+::view-transition-old(root),::view-transition-new(root){mix-blend-mode:normal}
+::view-transition-new(root){animation:vt .5s cubic-bezier(.4,0,.2,1)}
 @keyframes vt{from{clip-path:circle(0% at 96% 4%)}to{clip-path:circle(150% at 96% 4%)}}
 @media (max-width:640px){.li-card{grid-column:auto!important}}
 .no-motion *{animation:none!important;transition:none!important}
@@ -187,7 +188,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 <div id="app"></div>
 <noscript><p style="font-family:system-ui;padding:24px">Ibrahim Ahmed, Software Engineer. Email: ibrahim.ahmed.iam@gmail.com · <a href="https://linkedin.com/in/ibrahim-ahmed-ib">LinkedIn</a> · <a href="https://github.com/ibrahimahmed237">GitHub</a></p></noscript>
 <template id="tpl">
-<div class="pf {{motionClass}} {{themeClass}} {{paletteClass}} {{lightClass}}" style="--dk-accent: {{darkAccent}}; min-height: 100vh; overflow-x: clip">
+<div class="pf {{motionClass}} {{themeClass}} {{paletteClass}} {{lightClass}} {{switchClass}}" style="--dk-accent: {{darkAccent}}; min-height: 100vh; overflow-x: clip">
 
   <!-- NAV (glass) -->
   <header style="position: sticky; top: 0; z-index: 20; padding: 0 clamp(10px, 3vw, 24px)">
