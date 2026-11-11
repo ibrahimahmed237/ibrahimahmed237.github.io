@@ -28,9 +28,17 @@ class Component extends DCLogic {
         this.topSpy.observe(top);
       }
     } catch (e) {}
+    this.outside = (e) => {
+      if (this.state.contactOpen && !(e.target.closest && e.target.closest('.cmenu-wrap'))) this.setState({ contactOpen: false });
+    };
+    this.escape = (e) => { if (e.key === 'Escape' && this.state.contactOpen) this.setState({ contactOpen: false }); };
+    document.addEventListener('click', this.outside);
+    document.addEventListener('keydown', this.escape);
   }
 
   componentWillUnmount() {
+    document.removeEventListener('click', this.outside);
+    document.removeEventListener('keydown', this.escape);
     if (this.copyTimer) clearTimeout(this.copyTimer);
     if (this.replayTimer) clearTimeout(this.replayTimer);
     if (this.autoTimer) clearInterval(this.autoTimer);
@@ -48,8 +56,8 @@ class Component extends DCLogic {
     // [technical name, plain label, kind, start %, width %, plain explanation]
     const scenarioData = [
       {
-        label: 'Page load',
-        caption: 'What happens in the second after you open a page: the screen, the server and the database working together.',
+        label: 'Demand planning', project: 'Demand forecasting & replenishment platform',
+        caption: 'A planner opens the forecast screen. The screen, the server and the database work together in under a second.',
         spans: [
           ['GET /planner', 'Open the page', 'ui', 0, 100, 'The page shows its layout right away, then asks the server for the data.'],
           ['react-query cache', 'Reuse saved data', 'ui', 3, 34, 'If you have been here before, the saved data appears instantly while fresh data loads.'],
@@ -63,8 +71,8 @@ class Component extends DCLogic {
         ]
       },
       {
-        label: 'Stock transfer',
-        caption: 'How a stock transfer is handled so nothing gets lost or done twice, even if something fails halfway.',
+        label: 'Inventory', project: 'Inventory rebalancing engine',
+        caption: 'Stock moves from the warehouse to a store. Nothing gets lost or done twice, even if a step fails halfway.',
         spans: [
           ['POST /transfers', 'Receive the request', 'http', 0, 100, 'The system accepts a request to move stock and replies quickly. The heavy work happens in the background.'],
           ['auth.verify', 'Check permissions', 'http', 2, 8, 'Only people who are allowed can create transfers.'],
@@ -79,8 +87,8 @@ class Component extends DCLogic {
         ]
       },
       {
-        label: 'AI chat',
-        caption: 'How the AI support bot answers a customer: understand the request, look up the facts, reply, then double-check.',
+        label: 'Support bot', project: 'Multi-agent customer support',
+        caption: 'A customer writes to support. The AI understands the request, checks the real order, replies, then double-checks.',
         spans: [
           ['chat.webhook', 'Customer sends a message', 'http', 0, 100, 'A customer writes to support and the message reaches the bot.'],
           ['supervisor.route', 'Understand the request', 'llm', 4, 14, 'A lead AI agent works out what the customer needs and picks the right specialist.'],
@@ -92,8 +100,8 @@ class Component extends DCLogic {
         ]
       },
       {
-        label: 'Invoice check',
-        caption: 'How a supplier invoice is checked before anyone pays it (from Mawrid, my open-source project).',
+        label: 'Invoices', project: 'Mawrid (open source)',
+        caption: 'A supplier sends an invoice. It is checked against the order and the delivery before anyone pays it.',
         spans: [
           ['POST /invoices', 'Receive the invoice', 'http', 0, 100, 'A supplier sends an invoice, as an e-invoice file or a PDF.'],
           ['ubl.parse', 'Read the file', 'http', 3, 10, 'The invoice file is read safely, line by line.'],
@@ -114,6 +122,7 @@ class Component extends DCLogic {
       const active = sc.spans[idx];
       return {
         label: sc.label,
+        project: sc.project,
         caption: sc.caption,
         show: on && !s.replaying,
         ariaSel: on ? 'true' : 'false',
@@ -145,68 +154,75 @@ class Component extends DCLogic {
     // cats: ai, backend, fullstack, data
     const workData = [
       {
-        title: 'Multi-agent support bot', tag: 'Rabbit · Applied AI', color: 'var(--c-llm)', cats: ['ai', 'backend', 'data'],
+        title: 'Multi-agent customer support (LLM)', tag: 'Rabbit · Applied AI', color: 'var(--c-llm)', cats: ['ai', 'backend', 'data'],
         body: 'A supervisor agent routes customer chats to specialist agents for order lookup, cancellation and compensation, grounded by pgvector retrieval over a knowledge base the team manages from a web UI. Its late-order handover policy decides when a chat goes to a human: it detects escalation conditions, applies a configurable pushback level and logs every decision, measured with before-and-after analyses of contact rate, wait time and handling time. Traced in Langfuse and cached in Redis across pods.',
         flow: ['Freshchat', 'Supervisor', 'Tools + RAG', 'Handover policy', 'Reply or human'],
         stack: ['Python', 'LangGraph', 'FastAPI', 'pgvector', 'Redis', 'Langfuse']
       },
       {
-        title: 'Smart supplier receiving queue', tag: 'Rabbit · Backend + AI', color: 'var(--accent-strong)', cats: ['backend', 'ai', 'fullstack'],
+        title: 'Warehouse receiving queue with vision OCR', tag: 'Rabbit · Backend + AI', color: 'var(--accent-strong)', cats: ['backend', 'ai', 'fullstack'],
         body: 'Supplier drivers check in at the warehouse over WhatsApp. The service confirms they are at the dock, reads their delivery documents with LLM vision, places them in a prioritized queue, and keeps them updated as their wait drops. Built time-zone safe, with a live queue screen for the dock team.',
         flow: ['WhatsApp', 'Location check', 'Vision LLM', 'Queue placement', 'Serve next'],
         stack: ['NestJS', 'Redis', 'BullMQ', 'Kafka', 'OpenAI', 'Gemini', 'React']
       },
       {
-        title: 'Supplier returns, rebuilt and migrated', tag: 'Rabbit · Full stack', color: 'var(--c-data)', cats: ['backend', 'fullstack', 'data'],
+        title: 'Returns-to-vendor service: monolith migration', tag: 'Rabbit · Full stack', color: 'var(--c-data)', cats: ['backend', 'fullstack', 'data'],
         body: 'Moved the return-to-supplier workflow off a legacy monolith into its own service: requests, warehouse handover, proof photos with automatic checks, problem-item cases, supplier emails and printable sheets, and a nightly no-show job. Shipped with a rehearsed, reversible data cutover that keeps record numbers continuous.',
         flow: ['Request', 'Handover', 'Proof photos', 'Close + email', 'Audit trail'],
         stack: ['NestJS', 'Prisma', 'BullMQ', 'AWS S3', 'React', 'Outbox']
       },
       {
-        title: 'Demand planning platform', tag: 'Rabbit · Full stack', color: 'var(--c-ui)', cats: ['fullstack', 'backend'],
+        title: 'Demand forecasting & replenishment platform', tag: 'Rabbit · Full stack', color: 'var(--c-ui)', cats: ['fullstack', 'backend'],
         body: 'Built with planners end to end: data model, REST APIs and the React UI, BigQuery forecast sync, override reasons and a pre-PO review. Supplier groups are built automatically from category, brand and storage condition and checked daily, each group gets a planner and an ordering schedule, and the purchase-order engine uses locks and a submission log so an order is never duplicated or lost.',
         flow: ['BigQuery', 'Auto supplier groups', 'Planner schedule', 'Pre-PO review', 'PO log'],
         stack: ['NestJS', 'React', 'TypeScript', 'PostgreSQL', 'BigQuery']
       },
       {
-        title: 'Supplier follow-ups', tag: 'Rabbit · Demand planning', color: 'var(--c-ui)', cats: ['fullstack', 'backend', 'data'],
+        title: 'At-risk purchase order monitor', tag: 'Rabbit · Demand planning', color: 'var(--c-ui)', cats: ['fullstack', 'backend', 'data'],
         body: 'An early-morning job finds supplier orders at risk from fill rate, lead time and what is still in transit, ranks them by value at risk, and puts follow-up orders straight into each planner’s day, with a case view, outcomes and a dashboard. Runs once across pods and reads big data in chunks.',
         flow: ['Morning job', 'Risk check', 'Rank by value', 'Planner follow-up', 'Outcome'],
         stack: ['NestJS', 'BigQuery', 'PostgreSQL', 'React', 'Scheduled jobs']
       },
       {
-        title: 'Inventory transfer recommendations', tag: 'Rabbit · Backend', color: 'var(--accent-strong)', cats: ['backend', 'data'],
+        title: 'Inventory rebalancing engine', tag: 'Rabbit · Backend', color: 'var(--accent-strong)', cats: ['backend', 'data'],
         body: 'Joins forecasts with live warehouse stock to recommend and draft store transfers automatically, with fair allocation when stock is short. Event-driven and idempotent, with schedules changeable without a restart and Slack alerts when a job fails or never runs.',
         flow: ['Forecasts', 'Live stock', 'Allocate', 'Draft transfers', 'Job health'],
         stack: ['NestJS', 'Kafka', 'Prisma', 'Redis', 'BullMQ']
       },
       {
-        title: 'Hybrid product search', tag: 'Rabbit · Search', color: 'var(--c-data)', cats: ['ai', 'data'],
+        title: 'Hybrid semantic + keyword search', tag: 'Rabbit · Search', color: 'var(--c-data)', cats: ['ai', 'data'],
         body: 'Search that fuses semantic embeddings with Elasticsearch keyword matching, so results match both what the customer means and the exact words they typed.',
         flow: ['Query', 'Embed', 'Vector + keyword', 'Fuse ranks', 'Results'],
         stack: ['Elasticsearch', 'Embeddings', 'Hybrid ranking']
       },
       {
-        title: 'Recommendation engine', tag: 'Numinix · ML', color: 'var(--c-llm)', cats: ['ai', 'data'],
+        title: 'Product recommendation engine (ML)', tag: 'Numinix · ML', color: 'var(--c-llm)', cats: ['ai', 'data'],
         body: 'A machine-learning recommendation engine in Python for high-traffic e-commerce stores, with behavioural event logging through Matomo, to improve product discovery.',
         flow: ['Store events', 'Matomo', 'Model', 'Recommendations'],
         stack: ['Python', 'Machine learning', 'Matomo']
       },
       {
-        title: 'Payments, shipping & gRPC', tag: 'Numinix · Backend', color: 'var(--accent-strong)', cats: ['backend'],
+        title: 'Payment gateways & gRPC migration', tag: 'Numinix · Backend', color: 'var(--accent-strong)', cats: ['backend'],
         body: 'Stripe, PayPal and EPN across multi-currency stores, ShipStation shipping, and critical service-to-service paths moved from legacy REST to gRPC to cut latency.',
         flow: ['Checkout', 'Payment gateway', 'Order', 'ShipStation'],
         stack: ['GraphQL', 'REST', 'gRPC', 'Stripe', 'PayPal']
       },
       {
-        title: 'Baton', tag: 'Open source · Python + SwiftUI', color: 'var(--c-ui)', cats: ['backend', 'fullstack', 'ai'],
+        title: 'Baton: AI coding-agent chat handoff', tag: 'Open source · Python + SwiftUI', color: 'var(--c-ui)', cats: ['backend', 'fullstack', 'ai'],
         body: 'A Mac menu-bar app that hands a conversation between AI coding agents (Claude Code, Codex, OpenCode and Cursor) and keeps the same chat going on each side. Only linked chats are touched, every write is journaled first and can be undone, and conflicts are merged with a preview. A dependency-free Python engine backed by hundreds of tests. In progress.',
         flow: ['Link two chats', 'Reply ends', 'Plan the sync', 'Journal + write', 'Undo anytime'],
         stack: ['Python', 'SwiftUI', 'macOS', 'Agent hooks', 'Zero dependencies'],
         link: 'https://github.com/ibrahimahmed237/baton'
       },
       {
-        title: 'Mawrid', tag: 'Open source · .NET', color: 'var(--c-data)', cats: ['backend'],
+        title: 'Qist: buy-now-pay-later platform', tag: 'Open source · Java + Spring Boot', color: 'var(--accent-strong)', cats: ['backend', 'data'],
+        body: 'A buy-now-pay-later platform for Saudi merchants: six Spring Boot services that talk over Kafka. A purchase is an orchestrated saga with timeouts and undo steps, card charges run outside database transactions with idempotency keys, and every riyal lands in a double-entry ledger. One request id follows a purchase through every service. About 300 tests on real PostgreSQL and Kafka, plus end-to-end tests in Docker Compose.',
+        flow: ['Checkout', 'Credit check', 'First payment', 'Installment plan', 'Ledger'],
+        stack: ['Java 21', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Redis', 'Testcontainers'],
+        link: 'https://github.com/ibrahimahmed237/qist'
+      },
+      {
+        title: 'Mawrid: procure-to-pay API', tag: 'Open source · .NET', color: 'var(--c-data)', cats: ['backend'],
         body: 'An open-source procure-to-pay API for Saudi companies: approvals, sealed RFQs, purchase orders, receipts and ZATCA invoices checked with a three-way match. About 370 tests.',
         flow: ['Requisition', 'RFQ', 'PO', 'Receipt', '3-way match'],
         stack: ['.NET 10', 'ASP.NET Core', 'EF Core', 'SQL Server', 'Hangfire'],
@@ -215,17 +231,18 @@ class Component extends DCLogic {
     ];
     // Strongest work first
     const rankOrder = [
-      'Demand planning platform',
-      'Multi-agent support bot',
-      'Inventory transfer recommendations',
-      'Supplier follow-ups',
-      'Supplier returns, rebuilt and migrated',
-      'Smart supplier receiving queue',
-      'Baton',
-      'Mawrid',
-      'Hybrid product search',
-      'Recommendation engine',
-      'Payments, shipping & gRPC'
+      'Demand forecasting & replenishment platform',
+      'Multi-agent customer support (LLM)',
+      'Inventory rebalancing engine',
+      'At-risk purchase order monitor',
+      'Returns-to-vendor service: monolith migration',
+      'Warehouse receiving queue with vision OCR',
+      'Qist: buy-now-pay-later platform',
+      'Baton: AI coding-agent chat handoff',
+      'Mawrid: procure-to-pay API',
+      'Hybrid semantic + keyword search',
+      'Product recommendation engine (ML)',
+      'Payment gateways & gRPC migration'
     ];
     workData.sort((a, b) => rankOrder.indexOf(a.title) - rankOrder.indexOf(b.title));
     const filterDefs = [['all', 'All'], ['fullstack', 'Full stack'], ['backend', 'Backend'], ['ai', 'AI'], ['data', 'Data']];
@@ -315,6 +332,10 @@ class Component extends DCLogic {
       menuLabel: s.menuOpen ? 'Close menu' : 'Open menu',
       toggleMenu: () => this.setState({ menuOpen: !s.menuOpen }),
       closeMenu: () => this.setState({ menuOpen: false }),
+      contactOpen: !!s.contactOpen,
+      contactExpanded: s.contactOpen ? 'true' : 'false',
+      toggleContact: (e) => { if (e) e.stopPropagation(); this.setState({ contactOpen: !s.contactOpen }); },
+      closeContact: () => this.setState({ contactOpen: false }),
       isLight: theme === 'light',
       isDark: theme !== 'light',
       themeLabel: theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme',

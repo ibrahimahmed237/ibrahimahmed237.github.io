@@ -181,6 +181,11 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 .no-motion *{animation:none!important;transition:none!important}
 .no-motion .packet{display:none}
 @media (prefers-reduced-motion:reduce){.pf *{animation:none!important;transition:none!important}.pf .packet{display:none}html{scroll-behavior:auto}}
+.cmenu{position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:280px;padding:6px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 18px 50px -18px var(--shadow);display:flex;flex-direction:column;gap:2px}
+.cmenu-item{display:flex;align-items:center;gap:12px;width:100%;min-height:48px;padding:6px 12px;border:0;border-radius:10px;background:transparent;color:var(--fg);font:inherit;text-align:left;text-decoration:none;cursor:pointer}
+.cmenu-item:hover,.cmenu-item:focus-visible{background:var(--surface2)}
+.qchip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 11px;border:1px solid var(--line-strong);border-radius:999px;background:var(--glass);color:var(--fg2);font:inherit;font-size:13.5px;font-weight:500;text-decoration:none;cursor:pointer}
+.qchip:hover{border-color:var(--line-hover);color:var(--fg)}
 </style>
 <style>body{background:#F6F7F9}</style>
 </head>
@@ -192,7 +197,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 
   <!-- NAV (glass) -->
   <header style="position: sticky; top: 0; z-index: 20; padding: 0 clamp(10px, 3vw, 24px)">
-    <nav class="navbar" aria-label="Main" style="position: relative; overflow: hidden; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 10px 10px 10px 12px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 18px 18px; background: var(--header); backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 10px 40px -24px var(--shadow)">
+    <nav class="navbar" aria-label="Main" style="position: relative; overflow: visible; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 10px 10px 10px 12px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 18px 18px; background: var(--header); backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 10px 40px -24px var(--shadow)">
       <a href="#top" class="brand" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg)">
         <span class="mark" style="position: relative; width: 44px; height: 44px; flex: none">
           <img src="assets/ibrahim.jpg" alt="" style="display: block; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line-strong)">
@@ -208,7 +213,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
         </sc-for>
       </div>
       <div style="display: flex; align-items: center; gap: 8px">
-        <a href="#contact" class="btn btn-solid nav-cta" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 14px">Let's talk</a>
+        <div class="cmenu-wrap" style="position: relative"><button type="button" onClick="{{toggleContact}}" aria-expanded="{{contactExpanded}}" aria-haspopup="true" class="btn btn-solid nav-cta" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: var(--btn-bg); color: var(--btn-fg); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer">Let's talk<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button><sc-if value="{{contactOpen}}" hint-placeholder-val="{{false}}"><div class="cmenu" role="menu"><a href="mailto:ibrahim.ahmed.iam@gmail.com" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">Email</span><span class="mono" style="font-size:11.5px;color:var(--dim)">ibrahim.ahmed.iam@gmail.com</span></span></a><a href="https://wa.me/201122042430" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">WhatsApp</span><span class="mono" style="font-size:11.5px;color:var(--dim)">+20 112 204 2430</span></span></a><a href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">LinkedIn</span><span class="mono" style="font-size:11.5px;color:var(--dim)">ibrahim-ahmed-ib</span></span></a><button type="button" class="cmenu-item" onClick="{{copyEmail}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><span style="font-weight:600;font-size:14px">{{copyLabel}}</span></button></div></sc-if></div>
         <button type="button" class="theme-btn" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--fg)">
           <sc-if value="{{isDark}}" hint-placeholder-val="{{true}}">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
@@ -276,7 +281,14 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           <a href="#work" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">See my work
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
           </a>
-          <a href="#contact" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-weight: 600; font-size: 15px; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)">Get in touch</a>
+          <a href="mailto:ibrahim.ahmed.iam@gmail.com" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-weight: 600; font-size: 15px; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email me</a>
+        </div>
+        <div class="rise quick" style="animation-delay: 1.5s; display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+          <span class="mono" style="font-size: 12px; color: var(--dim); margin-right: 2px">or</span>
+          <a class="qchip" href="https://wa.me/201122042430" target="_blank" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp</a>
+          <a class="qchip" href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg>LinkedIn</a>
+          <a class="qchip" href="https://github.com/ibrahimahmed237" target="_blank" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>GitHub</a>
+          <button type="button" class="qchip" onClick="{{copyEmail}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>{{copyLabel}}</button>
         </div>
       </div>
 
@@ -285,7 +297,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 18px; border-bottom: 1px solid var(--line)">
           <div style="display: flex; align-items: center; gap: 10px">
             <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-strong)"></span>
-            <span class="mono" style="font-size: 12px; color: var(--dim)">live system trace</span>
+            <span class="mono" style="font-size: 12px; color: var(--dim)">interactive demo</span>
           </div>
           <div style="display: flex; gap: 6px">
             <button type="button" class="replay mono" onClick="{{toggleAuto}}" aria-label="{{autoLabel}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted2); font-size: 12px">
@@ -306,13 +318,18 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
         <div style="padding: 12px 18px 4px; display: flex; flex-direction: column; gap: 8px">
           <div>
             <p class="disp" style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">What happens behind one click</p>
-            <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.45; color: var(--muted)">Watch each step light up. Click any step to read what it does.</p>
+            <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted)">Pick a project. You see the steps the system runs, in order, when someone uses it. Each bar is one step: where it starts is when it starts, and its length is how long it takes. Click a step to read it in plain words.</p>
           </div>
           <div role="tablist" aria-label="Scenarios" style="display: flex; flex-wrap: wrap; gap: 6px">
             <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="4">
               <button type="button" role="tab" class="ttab {{sc.cls}}" aria-selected="{{sc.ariaSel}}" onClick="{{sc.pick}}" title="{{sc.caption}}" style="min-height: 34px; padding: 0 11px; border-radius: 8px; font: inherit; font-size: 12.5px; font-weight: 500">{{sc.label}}</button>
             </sc-for>
           </div>
+          <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
+            <sc-if value="{{sc.show}}" hint-placeholder-val="{{true}}">
+              <p style="margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--fg2)"><span class="mono" style="font-size: 11px; color: var(--ink)">{{sc.project}} ·</span> {{sc.caption}}</p>
+            </sc-if>
+          </sc-for>
         </div>
         <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
           <sc-if value="{{sc.show}}" hint-placeholder-val="{{true}}">
@@ -330,7 +347,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
               </sc-for>
               <div class="mono" style="display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 12px; padding: 2px 8px 0; font-size: 10.5px; color: var(--faint)">
                 <span></span>
-                <span style="display: flex; justify-content: space-between"><span>request starts</span><span>done</span></span>
+                <span style="display: flex; justify-content: space-between"><span>start</span><span>time →</span><span>done</span></span>
               </div>
               <div class="panel-in" style="margin: 8px 8px 0; padding: 10px 14px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 4px">
                 <span class="mono" style="font-size: 11px; color: var(--ink)">Step {{sc.activeNum}} of {{sc.total}} · <span style="color: var(--dim)">{{sc.activeTech}}</span></span>
@@ -341,12 +358,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           </sc-if>
         </sc-for>
         <div class="mono" style="display: flex; flex-wrap: wrap; gap: 6px 12px; padding: 9px 18px; border-top: 1px solid var(--line); font-size: 11px; color: var(--dim)">
+          <span style="color: var(--muted2)">colour = where it runs:</span>
           <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-ui)"></span>screen</span>
           <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--accent-strong)"></span>server</span>
           <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-data)"></span>database</span>
           <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-queue)"></span>background job</span>
           <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-llm)"></span>AI</span>
-          <span style="margin-left: auto">illustrative</span>
+          <span style="margin-left: auto">timings are illustrative</span>
         </div>
       </div>
     </div>
@@ -434,11 +452,11 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
             <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c-data)"></span>supply chain</p>
             <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
-              <li>Demand planning platform, end to end: NestJS APIs, React UI, BigQuery sync, purchase orders.</li>
-              <li>Supplier follow-ups that rank at-risk orders by value and put them in the planner's day.</li>
-              <li>Smart supplier receiving queue over WhatsApp, with dock prioritization.</li>
-              <li>Moved supplier returns off a legacy monolith with a rehearsed, reversible cutover.</li>
-              <li>Transfer recommendations from forecasts and live stock, with job-health alerts.</li>
+              <li>Demand forecasting &amp; replenishment platform, end to end: NestJS APIs, React UI, BigQuery sync, purchase orders.</li>
+              <li>At-risk purchase order monitor that ranks late supplier orders by value and put them in the planner's day.</li>
+              <li>Warehouse receiving queue over WhatsApp, with vision OCR and dock prioritization.</li>
+              <li>Moved the returns-to-vendor service off a legacy monolith with a rehearsed, reversible cutover.</li>
+              <li>Inventory rebalancing engine: transfers from forecasts and live stock, with job-health alerts.</li>
             </ul>
           </div>
           <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
