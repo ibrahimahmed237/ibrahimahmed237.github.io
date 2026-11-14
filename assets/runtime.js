@@ -134,12 +134,21 @@
       this.tpl.content.childNodes.forEach(function (c) { renderNode(c, [vals], root); });
       this.handlers = handlers;
       window.morphdom(this.app, root, {
-        onBeforeElUpdated: function (from, to) { return !from.isEqualNode(to); }
+        onBeforeElUpdated: function (from, to) {
+          // A number counting up is left alone until it is done.
+          if (from.hasAttribute('data-counting')) return false;
+          // Classes and styles that motion.js adds are kept: the template does not know them.
+          if (from.classList.contains('in')) to.classList.add('in');
+          if (from.classList.contains('done')) to.classList.add('done');
+          if (from.hasAttribute('data-keep-style') && from.hasAttribute('style')) to.setAttribute('style', from.getAttribute('style'));
+          return !from.isEqualNode(to);
+        }
       });
       this.afterRender();
     },
 
     afterRender: function () {
+      if (window.__motion) window.__motion.scan();
       var theme = this.comp.state.theme;
       if (theme && theme !== this.lastTheme) {
         this.lastTheme = theme;
