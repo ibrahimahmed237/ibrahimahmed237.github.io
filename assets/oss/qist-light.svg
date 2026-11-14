@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" role="img" aria-labelledby="t d">
+  <title id="t">One purchase moving through Qist</title>
+  <desc id="d">The merchant creates a checkout session. Checkout asks credit to hold the amount, then asks billing to open the plan and charge the first payment at the payment provider. The purchase is approved, the merchant gets a webhook, and the events are recorded in the ledger.</desc>
+  <style>
+    :root {
+      --bg: #F6F7F9; --card: #FFFFFF; --line: #D0D7DE; --text: #1F2328; --muted: #59636E;
+      --accent: #B58A1B; --accent-soft: #F6ECCB; --ok: #1A7F37; --ok-soft: #DAFBE1;
+    }
+    
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .frame { fill: var(--bg); stroke: var(--line); }
+    .heading { fill: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .node { fill: var(--card); stroke: var(--line); stroke-width: 2; }
+    .title { fill: var(--text); font-size: 16px; font-weight: 600; text-anchor: middle; }
+    .sub { fill: var(--muted); font-size: 12px; text-anchor: middle; }
+    .edge { stroke: var(--line); stroke-width: 2; fill: none; }
+    .edge.events { stroke-dasharray: 5 6; }
+    .label { fill: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .dot { fill: var(--accent); opacity: 0; }
+    .badge rect { fill: var(--ok-soft); }
+    .badge text { fill: var(--ok); font-size: 11px; font-weight: 600; text-anchor: middle; }
+    .badge { opacity: 0; }
+    .caption { fill: var(--text); font-size: 16px; text-anchor: middle; opacity: 0; }
+    .caption tspan { fill: var(--accent); font-weight: 700; }
+
+    .dot, .node, .badge, .caption { animation-duration: 14s; animation-iteration-count: infinite; }
+    .dot { animation-timing-function: linear; }
+    .dot.main { animation-name: dot-main; }
+    .dot.ledger-a { animation-name: dot-ledger-a; }
+    .dot.ledger-b { animation-name: dot-ledger-b; }
+    .n-merchant { animation-name: visit-merchant; }
+    .n-checkout { animation-name: visit-checkout; }
+    .n-credit { animation-name: visit-credit; }
+    .n-billing { animation-name: visit-billing; }
+    .n-psp { animation-name: visit-psp; }
+    .n-ledger { animation-name: visit-ledger; }
+    .b-credit { animation-name: badge-credit; }
+    .b-psp { animation-name: badge-psp; }
+    .b-checkout { animation-name: badge-checkout; }
+    .b-ledger { animation-name: badge-ledger; }
+    .c1 { animation-name: caption-1; }
+    .c2 { animation-name: caption-2; }
+    .c3 { animation-name: caption-3; }
+    .c4 { animation-name: caption-4; }
+
+@keyframes dot-main {
+  0% { transform: translate(180px, 190px); opacity: 0; }
+  3.43% { transform: translate(180px, 190px); opacity: 0; }
+  3.57% { transform: translate(180px, 190px); opacity: 1; }
+  10.71% { transform: translate(270px, 190px); opacity: 1; }
+  10.86% { transform: translate(270px, 190px); opacity: 0; }
+  14.14% { transform: translate(410px, 172px); opacity: 0; }
+  14.29% { transform: translate(410px, 172px); opacity: 1; }
+  21.43% { transform: translate(520px, 82px); opacity: 1; }
+  21.57% { transform: translate(520px, 82px); opacity: 0; }
+  24.86% { transform: translate(520px, 82px); opacity: 0; }
+  25.00% { transform: translate(520px, 82px); opacity: 1; }
+  32.14% { transform: translate(410px, 172px); opacity: 1; }
+  32.29% { transform: translate(410px, 172px); opacity: 0; }
+  35.57% { transform: translate(410px, 190px); opacity: 0; }
+  35.71% { transform: translate(410px, 190px); opacity: 1; }
+  42.86% { transform: translate(520px, 190px); opacity: 1; }
+  43.00% { transform: translate(520px, 190px); opacity: 0; }
+  44.86% { transform: translate(660px, 190px); opacity: 0; }
+  45.00% { transform: translate(660px, 190px); opacity: 1; }
+  50.71% { transform: translate(760px, 190px); opacity: 1; }
+  50.86% { transform: translate(760px, 190px); opacity: 0; }
+  54.14% { transform: translate(760px, 190px); opacity: 0; }
+  54.29% { transform: translate(760px, 190px); opacity: 1; }
+  60.00% { transform: translate(660px, 190px); opacity: 1; }
+  60.14% { transform: translate(660px, 190px); opacity: 0; }
+  62.00% { transform: translate(520px, 190px); opacity: 0; }
+  62.14% { transform: translate(520px, 190px); opacity: 1; }
+  67.86% { transform: translate(410px, 190px); opacity: 1; }
+  68.00% { transform: translate(410px, 190px); opacity: 0; }
+  70.57% { transform: translate(270px, 190px); opacity: 0; }
+  70.71% { transform: translate(270px, 190px); opacity: 1; }
+  77.86% { transform: translate(180px, 190px); opacity: 1; }
+  78.00% { transform: translate(180px, 190px); opacity: 0; }
+  100% { transform: translate(180px, 190px); opacity: 0; }
+}
+@keyframes dot-ledger-a {
+  0% { transform: translate(410px, 208px); opacity: 0; }
+  70.57% { transform: translate(410px, 208px); opacity: 0; }
+  70.71% { transform: translate(410px, 208px); opacity: 1; }
+  77.86% { transform: translate(520px, 298px); opacity: 1; }
+  78.00% { transform: translate(520px, 298px); opacity: 0; }
+  100% { transform: translate(520px, 298px); opacity: 0; }
+}
+@keyframes dot-ledger-b {
+  0% { transform: translate(590px, 220px); opacity: 0; }
+  70.57% { transform: translate(590px, 220px); opacity: 0; }
+  70.71% { transform: translate(590px, 220px); opacity: 1; }
+  77.86% { transform: translate(590px, 280px); opacity: 1; }
+  78.00% { transform: translate(590px, 280px); opacity: 0; }
+  100% { transform: translate(590px, 280px); opacity: 0; }
+}
+@keyframes visit-merchant {
+  0%, 3.50% { stroke: var(--line); }
+  5.36%, 97.14% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+@keyframes visit-checkout {
+  0%, 10.64% { stroke: var(--line); }
+  12.50%, 97.14% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+@keyframes visit-credit {
+  0%, 21.36% { stroke: var(--line); }
+  23.21%, 97.14% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+@keyframes visit-billing {
+  0%, 42.79% { stroke: var(--line); }
+  44.64%, 97.14% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+@keyframes visit-psp {
+  0%, 50.64% { stroke: var(--line); }
+  52.50%, 97.14% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+@keyframes visit-ledger {
+  0%, 77.79% { stroke: var(--line); }
+  79.64%, 97.14% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+@keyframes badge-credit {
+  0%, 22.07% { opacity: 0; }
+  23.93%, 97.14% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes badge-psp {
+  0%, 51.36% { opacity: 0; }
+  53.21%, 97.14% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes badge-checkout {
+  0%, 67.79% { opacity: 0; }
+  69.64%, 97.14% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes badge-ledger {
+  0%, 78.50% { opacity: 0; }
+  80.36%, 97.14% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes caption-1 {
+  0%, 0.00% { opacity: 0; }
+  2.14%, 12.86% { opacity: 1; }
+  15.00%, 100% { opacity: 0; }
+}
+@keyframes caption-2 {
+  0%, 12.86% { opacity: 0; }
+  15.00%, 34.29% { opacity: 1; }
+  36.43%, 100% { opacity: 0; }
+}
+@keyframes caption-3 {
+  0%, 34.29% { opacity: 0; }
+  36.43%, 66.43% { opacity: 1; }
+  68.57%, 100% { opacity: 0; }
+}
+@keyframes caption-4 {
+  0%, 66.43% { opacity: 0; }
+  68.57%, 95.71% { opacity: 1; }
+  97.86%, 100% { opacity: 0; }
+}
+
+    @media (prefers-reduced-motion: reduce) {
+      .dot, .node, .badge, .caption { animation: none; }
+      .badge, .c4 { opacity: 1; }
+      .node { stroke: var(--accent); }
+    }
+  </style>
+
+  <rect class="frame" x="1" y="1" width="958" height="408" rx="16"/>
+  <text class="heading" x="40" y="36">One purchase through Qist</text>
+
+  <path class="edge" d="M180 190 H270"/>
+  <path class="edge" d="M410 172 L520 82"/>
+  <path class="edge" d="M410 190 H520"/>
+  <path class="edge" d="M660 190 H760"/>
+  <path class="edge events" d="M410 208 L520 298"/>
+  <path class="edge events" d="M590 220 V280"/>
+
+  <text class="label" x="225" y="180" text-anchor="middle">HTTP</text>
+  <text class="label" x="452" y="112" text-anchor="end">ReserveCredit</text>
+  <text class="label" x="465" y="180" text-anchor="middle">OpenPlan</text>
+  <text class="label" x="710" y="180" text-anchor="middle">charge</text>
+  <text class="label" x="452" y="276" text-anchor="end">events</text>
+
+  <g>
+    <rect class="node n-merchant" x="40" y="160" width="140" height="60" rx="12"/>
+    <text class="title" x="110" y="187">Merchant</text>
+    <text class="sub" x="110" y="205">store backend</text>
+  </g>
+  <g>
+    <rect class="node n-checkout" x="270" y="160" width="140" height="60" rx="12"/>
+    <text class="title" x="340" y="187">checkout</text>
+    <text class="sub" x="340" y="205">runs the saga</text>
+  </g>
+  <g>
+    <rect class="node n-credit" x="520" y="40" width="140" height="60" rx="12"/>
+    <text class="title" x="590" y="67">credit</text>
+    <text class="sub" x="590" y="85">limit and rules</text>
+  </g>
+  <g>
+    <rect class="node n-billing" x="520" y="160" width="140" height="60" rx="12"/>
+    <text class="title" x="590" y="187">billing</text>
+    <text class="sub" x="590" y="205">plans and payments</text>
+  </g>
+  <g>
+    <rect class="node n-psp" x="760" y="160" width="140" height="60" rx="12"/>
+    <text class="title" x="830" y="187">PSP</text>
+    <text class="sub" x="830" y="205">card provider</text>
+  </g>
+  <g>
+    <rect class="node n-ledger" x="520" y="280" width="140" height="60" rx="12"/>
+    <text class="title" x="590" y="307">ledger</text>
+    <text class="sub" x="590" y="325">double-entry books</text>
+  </g>
+
+  <g class="badge b-credit">
+    <rect x="672" y="60" width="82" height="20" rx="10"/>
+    <text x="713.0" y="74">limit held</text>
+  </g>
+  <g class="badge b-psp">
+    <rect x="794" y="228" width="86" height="20" rx="10"/>
+    <text x="837.0" y="242">paid 1 of 4</text>
+  </g>
+  <g class="badge b-checkout">
+    <rect x="297" y="228" width="86" height="20" rx="10"/>
+    <text x="340.0" y="242">APPROVED</text>
+  </g>
+  <g class="badge b-ledger">
+    <rect x="672" y="300" width="76" height="20" rx="10"/>
+    <text x="710.0" y="314">balanced</text>
+  </g>
+
+  <circle class="dot main" r="7"/>
+  <circle class="dot ledger-a" r="6"/>
+  <circle class="dot ledger-b" r="6"/>
+
+  <text class="caption c1" x="480" y="380"><tspan>1</tspan>  The merchant creates a checkout session. The shopper confirms it.</text>
+  <text class="caption c2" x="480" y="380"><tspan>2</tspan>  Credit checks the rules and holds part of the shopper's limit.</text>
+  <text class="caption c3" x="480" y="380"><tspan>3</tspan>  Billing opens a plan of 4 payments and charges the first one.</text>
+  <text class="caption c4" x="480" y="380"><tspan>4</tspan>  Approved. The merchant gets a webhook and the ledger records every halala.</text>
+</svg>

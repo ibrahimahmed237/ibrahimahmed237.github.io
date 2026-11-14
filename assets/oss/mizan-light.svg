@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="t d">
+  <title id="t">One payment through Mizan, with a lost answer</title>
+  <desc id="d">The store asks Mizan for a payment of 150 riyals. Mizan chooses the payment's id and asks the card gateway. The gateway charges the card, but its answer is lost on the way back. Mizan asks the gateway again by its own id, learns the payment was captured, and records it once. The ledger posts it once, and the gateway's payout file is later matched against the ledger.</desc>
+  <style>
+    :root {
+      --bg: #F6F7F9; --card: #FFFFFF; --line: #D0D7DE; --text: #1F2328; --muted: #59636E;
+      --accent: #B58A1B; --accent-soft: #F6ECCB; --ok: #1A7F37; --ok-soft: #DAFBE1; --bad: #CF222E; --bad-soft: #FFEBE9;
+    }
+    
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .frame { fill: var(--bg); stroke: var(--line); }
+    .heading { fill: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .node { fill: var(--card); stroke: var(--line); stroke-width: 2; }
+    .title { fill: var(--text); font-size: 16px; font-weight: 600; text-anchor: middle; }
+    .sub { fill: var(--muted); font-size: 12px; text-anchor: middle; }
+    .edge { stroke: var(--line); stroke-width: 2; fill: none; }
+    .edge.dashed { stroke-dasharray: 5 6; }
+    .label { fill: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .dot { fill: var(--accent); opacity: 0; }
+    .badge { opacity: 0; }
+    .badge text { font-size: 11px; font-weight: 600; text-anchor: middle; }
+    .badge.ok rect { fill: var(--ok-soft); } .badge.ok text { fill: var(--ok); }
+    .badge.bad rect { fill: var(--bad-soft); } .badge.bad text { fill: var(--bad); }
+    .cross { opacity: 0; }
+    .cross circle { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+    .cross path { stroke: var(--bad); stroke-width: 2.5; stroke-linecap: round; }
+    .caption { fill: var(--text); font-size: 16px; text-anchor: middle; opacity: 0; }
+    .caption tspan { fill: var(--accent); font-weight: 700; }
+
+.dot, .node, .badge, .cross, .caption { animation-duration: 16s; animation-iteration-count: infinite; }
+.dot { animation-timing-function: linear; }
+.m0 { animation-name: m0; }
+@keyframes m0 {
+  0% { transform: translate(180px, 140px); opacity: 0; }
+  3.00% { transform: translate(180px, 140px); opacity: 0; }
+  3.12% { transform: translate(180px, 140px); opacity: 1; }
+  9.38% { transform: translate(300px, 140px); opacity: 1; }
+  9.50% { transform: translate(300px, 140px); opacity: 0; }
+  100% { transform: translate(300px, 140px); opacity: 0; }
+}
+.m1 { animation-name: m1; }
+@keyframes m1 {
+  0% { transform: translate(470px, 140px); opacity: 0; }
+  14.88% { transform: translate(470px, 140px); opacity: 0; }
+  15.00% { transform: translate(470px, 140px); opacity: 1; }
+  21.25% { transform: translate(640px, 140px); opacity: 1; }
+  21.38% { transform: translate(640px, 140px); opacity: 0; }
+  100% { transform: translate(640px, 140px); opacity: 0; }
+}
+.m2 { animation-name: m2; }
+@keyframes m2 {
+  0% { transform: translate(640px, 140px); opacity: 0; }
+  27.38% { transform: translate(640px, 140px); opacity: 0; }
+  27.50% { transform: translate(640px, 140px); opacity: 1; }
+  33.12% { transform: translate(555px, 140px); opacity: 0; }
+  33.25% { transform: translate(555px, 140px); opacity: 0; }
+  100% { transform: translate(555px, 140px); opacity: 0; }
+}
+.m3 { animation-name: m3; }
+@keyframes m3 {
+  0% { transform: translate(470px, 140px); opacity: 0; }
+  49.25% { transform: translate(470px, 140px); opacity: 0; }
+  49.38% { transform: translate(470px, 140px); opacity: 1; }
+  54.37% { transform: translate(640px, 140px); opacity: 1; }
+  54.50% { transform: translate(640px, 140px); opacity: 0; }
+  100% { transform: translate(640px, 140px); opacity: 0; }
+}
+.m4 { animation-name: m4; }
+@keyframes m4 {
+  0% { transform: translate(640px, 140px); opacity: 0; }
+  55.50% { transform: translate(640px, 140px); opacity: 0; }
+  55.62% { transform: translate(640px, 140px); opacity: 1; }
+  60.62% { transform: translate(470px, 140px); opacity: 1; }
+  60.75% { transform: translate(470px, 140px); opacity: 0; }
+  100% { transform: translate(470px, 140px); opacity: 0; }
+}
+.m5 { animation-name: m5; }
+@keyframes m5 {
+  0% { transform: translate(385px, 170px); opacity: 0; }
+  71.12% { transform: translate(385px, 170px); opacity: 0; }
+  71.25% { transform: translate(385px, 170px); opacity: 1; }
+  75.62% { transform: translate(385px, 250px); opacity: 1; }
+  75.75% { transform: translate(385px, 250px); opacity: 0; }
+  100% { transform: translate(385px, 250px); opacity: 0; }
+}
+.m6 { animation-name: m6; }
+@keyframes m6 {
+  0% { transform: translate(640px, 280px); opacity: 0; }
+  80.50% { transform: translate(640px, 280px); opacity: 0; }
+  80.62% { transform: translate(640px, 280px); opacity: 1; }
+  86.88% { transform: translate(470px, 280px); opacity: 1; }
+  87.00% { transform: translate(470px, 280px); opacity: 0; }
+  100% { transform: translate(470px, 280px); opacity: 0; }
+}
+.n-store { animation-name: n-store; }
+@keyframes n-store {
+  0%, 0.31% { stroke: var(--line); }
+  1.88%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-mizan { animation-name: n-mizan; }
+@keyframes n-mizan {
+  0%, 7.81% { stroke: var(--line); }
+  9.38%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-gateway { animation-name: n-gateway; }
+@keyframes n-gateway {
+  0%, 19.69% { stroke: var(--line); }
+  21.25%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-ledger { animation-name: n-ledger; }
+@keyframes n-ledger {
+  0%, 74.06% { stroke: var(--line); }
+  75.62%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-payout { animation-name: n-payout; }
+@keyframes n-payout {
+  0%, 77.81% { stroke: var(--line); }
+  79.38%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.b0 { animation-name: b0; }
+@keyframes b0 {
+  0%, 10.62% { opacity: 0; }
+  12.19%, 46.25% { opacity: 1; }
+  47.81%, 100% { opacity: 0; }
+}
+.b1 { animation-name: b1; }
+@keyframes b1 {
+  0%, 22.50% { opacity: 0; }
+  24.06%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b2 { animation-name: b2; }
+@keyframes b2 {
+  0%, 61.25% { opacity: 0; }
+  62.81%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b3 { animation-name: b3; }
+@keyframes b3 {
+  0%, 76.88% { opacity: 0; }
+  78.44%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b4 { animation-name: b4; }
+@keyframes b4 {
+  0%, 87.50% { opacity: 0; }
+  89.06%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.x0 { animation-name: x0; }
+@keyframes x0 {
+  0%, 33.12% { opacity: 0; }
+  34.69%, 97.50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.c0 { animation-name: c0; }
+@keyframes c0 {
+  0%, 0.00% { opacity: 0; }
+  1.88%, 23.12% { opacity: 1; }
+  25.00%, 100% { opacity: 0; }
+}
+.c1 { animation-name: c1; }
+@keyframes c1 {
+  0%, 25.00% { opacity: 0; }
+  26.88%, 45.62% { opacity: 1; }
+  47.50%, 100% { opacity: 0; }
+}
+.c2 { animation-name: c2; }
+@keyframes c2 {
+  0%, 47.50% { opacity: 0; }
+  49.38%, 68.12% { opacity: 1; }
+  70.00%, 100% { opacity: 0; }
+}
+.c3 { animation-name: c3; }
+@keyframes c3 {
+  0%, 70.00% { opacity: 0; }
+  71.88%, 95.62% { opacity: 1; }
+  97.50%, 100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot, .node, .badge, .cross, .caption { animation: none; }
+  .badge, .cross, .c3 { opacity: 1; }
+  .node { stroke: var(--accent); }
+}
+  </style>
+
+  <rect class="frame" x="1" y="1" width="958" height="378" rx="16"/>
+  <text class="heading" x="40" y="36">One payment through Mizan, when the answer is lost</text>
+  <g transform="translate(55 0)">
+  <path class="edge" d="M180 140 H300"/>
+  <path class="edge" d="M470 140 H640"/>
+  <path class="edge" d="M385 170 V250"/>
+  <path class="edge dashed" d="M640 280 H470"/>
+  <text class="label" x="240" y="130" text-anchor="middle">pay 150.00</text>
+  <text class="label" x="555" y="126" text-anchor="middle">create · Mizan's id</text>
+  <text class="label" x="555" y="164" text-anchor="middle">fetch by that id</text>
+  <text class="label" x="395" y="200" text-anchor="start">post once</text>
+  <text class="label" x="555" y="270" text-anchor="middle">matched against</text>
+  <g>
+    <rect class="node n-store" x="40" y="110" width="140" height="60" rx="12"/>
+    <text class="title" x="110" y="137">Store</text>
+    <text class="sub" x="110" y="155">shop backend</text>
+  </g>
+  <g>
+    <rect class="node n-mizan" x="300" y="110" width="170" height="60" rx="12"/>
+    <text class="title" x="385" y="137">Mizan</text>
+    <text class="sub" x="385" y="155">payments service</text>
+  </g>
+  <g>
+    <rect class="node n-gateway" x="640" y="110" width="170" height="60" rx="12"/>
+    <text class="title" x="725" y="137">Card gateway</text>
+    <text class="sub" x="725" y="155">mada · Visa · Apple Pay</text>
+  </g>
+  <g>
+    <rect class="node n-ledger" x="300" y="250" width="170" height="60" rx="12"/>
+    <text class="title" x="385" y="277">Ledger</text>
+    <text class="sub" x="385" y="295">double entry</text>
+  </g>
+  <g>
+    <rect class="node n-payout" x="640" y="250" width="170" height="60" rx="12"/>
+    <text class="title" x="725" y="277">Payout file</text>
+    <text class="sub" x="725" y="295">what the bank got</text>
+  </g>
+  <g class="badge ok b0">
+    <rect x="326.5" y="80" width="117" height="20" rx="10"/>
+    <text x="385" y="94">id chosen first</text>
+  </g>
+  <g class="badge ok b1">
+    <rect x="676.5" y="80" width="97" height="20" rx="10"/>
+    <text x="725" y="94">card charged</text>
+  </g>
+  <g class="badge ok b2">
+    <rect x="330" y="80" width="110" height="20" rx="10"/>
+    <text x="385" y="94">captured, once</text>
+  </g>
+  <g class="badge ok b3">
+    <rect x="349.5" y="220" width="71" height="20" rx="10"/>
+    <text x="385" y="234">balanced</text>
+  </g>
+  <g class="badge ok b4">
+    <rect x="656.5" y="220" width="137" height="20" rx="10"/>
+    <text x="725" y="234">every line matched</text>
+  </g>
+  <g class="cross x0">
+    <circle cx="555" cy="140" r="10"/>
+    <path d="M551 136 L559 144 M559 136 L551 144"/>
+  </g>
+  <circle class="dot m0" r="7"/>
+  <circle class="dot m1" r="7"/>
+  <circle class="dot m2" r="7"/>
+  <circle class="dot m3" r="7"/>
+  <circle class="dot m4" r="7"/>
+  <circle class="dot m5" r="7"/>
+  <circle class="dot m6" r="7"/>
+  </g>
+  <text class="caption c0" x="480" y="346">The store asks for <tspan>150.00 SAR</tspan>. Mizan picks the payment's id before it calls.</text>
+  <text class="caption c1" x="480" y="346">The gateway charges the card, but <tspan>the answer is lost</tspan> on the way back.</text>
+  <text class="caption c2" x="480" y="346">Mizan asks again <tspan>by its own id</tspan>: paid. The card is charged once, not twice.</text>
+  <text class="caption c3" x="480" y="346">Posted to the ledger <tspan>once</tspan>. The gateway's payout is checked against it.</text>
+</svg>

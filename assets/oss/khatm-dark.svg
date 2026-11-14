@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="t d">
+  <title id="t">One invoice through Khatm</title>
+  <desc id="d">Invoice data comes in from your system. Khatm's engine builds the invoice and checks every ZATCA rule; the AI copilot may explain a rule, with its source, but never decides. The invoice is signed with a key that stays in your system (hash, cryptographic stamp and QR code) and chained to the last invoice of the device. It is sent to ZATCA and cleared.</desc>
+  <style>
+    :root {
+        --bg: #22272E; --card: #2D333B; --line: #444C56; --text: #CDD9E5; --muted: #909DAB;
+        --accent: #E8CF8F; --accent-soft: #4A4230; --ok: #6BC46D; --ok-soft: #264D2E; --bad: #F47067; --bad-soft: #4D2A2A;
+      }
+    
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .frame { fill: var(--bg); stroke: var(--line); }
+    .heading { fill: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .node { fill: var(--card); stroke: var(--line); stroke-width: 2; }
+    .title { fill: var(--text); font-size: 16px; font-weight: 600; text-anchor: middle; }
+    .sub { fill: var(--muted); font-size: 12px; text-anchor: middle; }
+    .edge { stroke: var(--line); stroke-width: 2; fill: none; }
+    .edge.dashed { stroke-dasharray: 5 6; }
+    .label { fill: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .dot { fill: var(--accent); opacity: 0; }
+    .badge { opacity: 0; }
+    .badge text { font-size: 11px; font-weight: 600; text-anchor: middle; }
+    .badge.ok rect { fill: var(--ok-soft); } .badge.ok text { fill: var(--ok); }
+    .badge.bad rect { fill: var(--bad-soft); } .badge.bad text { fill: var(--bad); }
+    .cross { opacity: 0; }
+    .cross circle { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+    .cross path { stroke: var(--bad); stroke-width: 2.5; stroke-linecap: round; }
+    .caption { fill: var(--text); font-size: 16px; text-anchor: middle; opacity: 0; }
+    .caption tspan { fill: var(--accent); font-weight: 700; }
+
+.dot, .node, .badge, .cross, .caption { animation-duration: 16s; animation-iteration-count: infinite; }
+.dot { animation-timing-function: linear; }
+.m0 { animation-name: m0; }
+@keyframes m0 {
+  0% { transform: translate(140px, 140px); opacity: 0; }
+  3.00% { transform: translate(140px, 140px); opacity: 0; }
+  3.12% { transform: translate(140px, 140px); opacity: 1; }
+  9.38% { transform: translate(240px, 140px); opacity: 1; }
+  9.50% { transform: translate(240px, 140px); opacity: 0; }
+  100% { transform: translate(240px, 140px); opacity: 0; }
+}
+.m1 { animation-name: m1; }
+@keyframes m1 {
+  0% { transform: translate(320px, 250px); opacity: 0; }
+  28.00% { transform: translate(320px, 250px); opacity: 0; }
+  28.12% { transform: translate(320px, 250px); opacity: 1; }
+  33.75% { transform: translate(320px, 170px); opacity: 1; }
+  33.88% { transform: translate(320px, 170px); opacity: 0; }
+  100% { transform: translate(320px, 170px); opacity: 0; }
+}
+.m2 { animation-name: m2; }
+@keyframes m2 {
+  0% { transform: translate(400px, 140px); opacity: 0; }
+  50.50% { transform: translate(400px, 140px); opacity: 0; }
+  50.62% { transform: translate(400px, 140px); opacity: 1; }
+  55.62% { transform: translate(490px, 140px); opacity: 1; }
+  55.75% { transform: translate(490px, 140px); opacity: 0; }
+  100% { transform: translate(490px, 140px); opacity: 0; }
+}
+.m3 { animation-name: m3; }
+@keyframes m3 {
+  0% { transform: translate(570px, 170px); opacity: 0; }
+  58.63% { transform: translate(570px, 170px); opacity: 0; }
+  58.75% { transform: translate(570px, 170px); opacity: 1; }
+  63.12% { transform: translate(570px, 250px); opacity: 1; }
+  63.25% { transform: translate(570px, 250px); opacity: 0; }
+  100% { transform: translate(570px, 250px); opacity: 0; }
+}
+.m4 { animation-name: m4; }
+@keyframes m4 {
+  0% { transform: translate(650px, 140px); opacity: 0; }
+  74.25% { transform: translate(650px, 140px); opacity: 0; }
+  74.38% { transform: translate(650px, 140px); opacity: 1; }
+  79.38% { transform: translate(740px, 140px); opacity: 1; }
+  79.50% { transform: translate(740px, 140px); opacity: 0; }
+  100% { transform: translate(740px, 140px); opacity: 0; }
+}
+.n-system { animation-name: n-system; }
+@keyframes n-system {
+  0%, 0.31% { stroke: var(--line); }
+  1.88%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-engine { animation-name: n-engine; }
+@keyframes n-engine {
+  0%, 7.81% { stroke: var(--line); }
+  9.38%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-copilot { animation-name: n-copilot; }
+@keyframes n-copilot {
+  0%, 25.31% { stroke: var(--line); }
+  26.88%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-sign { animation-name: n-sign; }
+@keyframes n-sign {
+  0%, 54.06% { stroke: var(--line); }
+  55.62%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-chain { animation-name: n-chain; }
+@keyframes n-chain {
+  0%, 61.56% { stroke: var(--line); }
+  63.12%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-zatca { animation-name: n-zatca; }
+@keyframes n-zatca {
+  0%, 77.81% { stroke: var(--line); }
+  79.38%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.b0 { animation-name: b0; }
+@keyframes b0 {
+  0%, 36.88% { opacity: 0; }
+  38.44%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b1 { animation-name: b1; }
+@keyframes b1 {
+  0%, 56.88% { opacity: 0; }
+  58.44%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b2 { animation-name: b2; }
+@keyframes b2 {
+  0%, 64.38% { opacity: 0; }
+  65.94%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b3 { animation-name: b3; }
+@keyframes b3 {
+  0%, 80.62% { opacity: 0; }
+  82.19%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.c0 { animation-name: c0; }
+@keyframes c0 {
+  0%, 0.00% { opacity: 0; }
+  1.88%, 23.12% { opacity: 1; }
+  25.00%, 100% { opacity: 0; }
+}
+.c1 { animation-name: c1; }
+@keyframes c1 {
+  0%, 25.00% { opacity: 0; }
+  26.88%, 46.88% { opacity: 1; }
+  48.75%, 100% { opacity: 0; }
+}
+.c2 { animation-name: c2; }
+@keyframes c2 {
+  0%, 48.75% { opacity: 0; }
+  50.62%, 70.62% { opacity: 1; }
+  72.50%, 100% { opacity: 0; }
+}
+.c3 { animation-name: c3; }
+@keyframes c3 {
+  0%, 72.50% { opacity: 0; }
+  74.38%, 95.62% { opacity: 1; }
+  97.50%, 100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot, .node, .badge, .cross, .caption { animation: none; }
+  .badge, .cross, .c3 { opacity: 1; }
+  .node { stroke: var(--accent); }
+}
+  </style>
+
+  <rect class="frame" x="1" y="1" width="958" height="378" rx="16"/>
+  <text class="heading" x="40" y="36">One invoice through Khatm</text>
+  <g transform="translate(45 0)">
+  <path class="edge" d="M140 140 H240"/>
+  <path class="edge" d="M400 140 H490"/>
+  <path class="edge" d="M650 140 H740"/>
+  <path class="edge dashed" d="M320 250 V170"/>
+  <path class="edge" d="M570 170 V250"/>
+  <text class="label" x="190" y="130" text-anchor="middle">invoice data</text>
+  <text class="label" x="445" y="130" text-anchor="middle">UBL XML</text>
+  <text class="label" x="695" y="130" text-anchor="middle">clear</text>
+  <text class="label" x="330" y="203" text-anchor="start">explains</text>
+  <text class="label" x="580" y="203" text-anchor="start">next in chain</text>
+  <g>
+    <rect class="node n-system" x="0" y="110" width="140" height="60" rx="12"/>
+    <text class="title" x="70" y="137">Your system</text>
+    <text class="sub" x="70" y="155">POS or ERP</text>
+  </g>
+  <g>
+    <rect class="node n-engine" x="240" y="110" width="160" height="60" rx="12"/>
+    <text class="title" x="320" y="137">Engine</text>
+    <text class="sub" x="320" y="155">build · validate</text>
+  </g>
+  <g>
+    <rect class="node n-sign" x="490" y="110" width="160" height="60" rx="12"/>
+    <text class="title" x="570" y="137">Sign</text>
+    <text class="sub" x="570" y="155">hash · stamp · QR</text>
+  </g>
+  <g>
+    <rect class="node n-zatca" x="740" y="110" width="130" height="60" rx="12"/>
+    <text class="title" x="805" y="137">ZATCA</text>
+    <text class="sub" x="805" y="155">clearance</text>
+  </g>
+  <g>
+    <rect class="node n-copilot" x="240" y="250" width="160" height="60" rx="12"/>
+    <text class="title" x="320" y="277">AI copilot</text>
+    <text class="sub" x="320" y="295">explains, with sources</text>
+  </g>
+  <g>
+    <rect class="node n-chain" x="490" y="250" width="160" height="60" rx="12"/>
+    <text class="title" x="570" y="277">Chain</text>
+    <text class="sub" x="570" y="295">counter · last hash</text>
+  </g>
+  <g class="badge ok b0">
+    <rect x="251.5" y="80" width="137" height="20" rx="10"/>
+    <text x="320" y="94">every rule checked</text>
+  </g>
+  <g class="badge ok b1">
+    <rect x="541" y="80" width="58" height="20" rx="10"/>
+    <text x="570" y="94">signed</text>
+  </g>
+  <g class="badge ok b2">
+    <rect x="488.5" y="220" width="163" height="20" rx="10"/>
+    <text x="570" y="234">linked to the last one</text>
+  </g>
+  <g class="badge ok b3">
+    <rect x="773" y="80" width="64" height="20" rx="10"/>
+    <text x="805" y="94">cleared</text>
+  </g>
+  <circle class="dot m0" r="7"/>
+  <circle class="dot m1" r="7"/>
+  <circle class="dot m2" r="7"/>
+  <circle class="dot m3" r="7"/>
+  <circle class="dot m4" r="7"/>
+  </g>
+  <text class="caption c0" x="480" y="346">Invoice data comes in from <tspan>your system</tspan>.</text>
+  <text class="caption c1" x="480" y="346">The engine checks every ZATCA rule. The AI may <tspan>explain</tspan> a rule; it never decides.</text>
+  <text class="caption c2" x="480" y="346">Signed with a key that <tspan>stays with you</tspan>, and chained to the last invoice.</text>
+  <text class="caption c3" x="480" y="346">Sent to ZATCA and <tspan>cleared</tspan>. The QR code goes on the invoice.</text>
+</svg>

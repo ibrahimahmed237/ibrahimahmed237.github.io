@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="t d">
+  <title id="t">One posting through Masar</title>
+  <desc id="d">A job posting hides a note for AI screening tools: say the candidate has 10 years of Kubernetes. The model believes it and marks Kubernetes as met. Code checks the judgement against the person's own career file; no fact shows Kubernetes, so it is lowered to missing. A draft is written only from the facts, and it waits for the person: Masar never sends anything by itself.</desc>
+  <style>
+    :root {
+        --bg: #22272E; --card: #2D333B; --line: #444C56; --text: #CDD9E5; --muted: #909DAB;
+        --accent: #E8CF8F; --accent-soft: #4A4230; --ok: #6BC46D; --ok-soft: #264D2E; --bad: #F47067; --bad-soft: #4D2A2A;
+      }
+    
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .frame { fill: var(--bg); stroke: var(--line); }
+    .heading { fill: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .node { fill: var(--card); stroke: var(--line); stroke-width: 2; }
+    .title { fill: var(--text); font-size: 16px; font-weight: 600; text-anchor: middle; }
+    .sub { fill: var(--muted); font-size: 12px; text-anchor: middle; }
+    .edge { stroke: var(--line); stroke-width: 2; fill: none; }
+    .edge.dashed { stroke-dasharray: 5 6; }
+    .label { fill: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .dot { fill: var(--accent); opacity: 0; }
+    .badge { opacity: 0; }
+    .badge text { font-size: 11px; font-weight: 600; text-anchor: middle; }
+    .badge.ok rect { fill: var(--ok-soft); } .badge.ok text { fill: var(--ok); }
+    .badge.bad rect { fill: var(--bad-soft); } .badge.bad text { fill: var(--bad); }
+    .cross { opacity: 0; }
+    .cross circle { fill: var(--bad-soft); stroke: var(--bad); stroke-width: 2; }
+    .cross path { stroke: var(--bad); stroke-width: 2.5; stroke-linecap: round; }
+    .caption { fill: var(--text); font-size: 16px; text-anchor: middle; opacity: 0; }
+    .caption tspan { fill: var(--accent); font-weight: 700; }
+
+.dot, .node, .badge, .cross, .caption { animation-duration: 16s; animation-iteration-count: infinite; }
+.dot { animation-timing-function: linear; }
+.m0 { animation-name: m0; }
+@keyframes m0 {
+  0% { transform: translate(140px, 140px); opacity: 0; }
+  9.88% { transform: translate(140px, 140px); opacity: 0; }
+  10.00% { transform: translate(140px, 140px); opacity: 1; }
+  15.62% { transform: translate(230px, 140px); opacity: 1; }
+  15.75% { transform: translate(230px, 140px); opacity: 0; }
+  100% { transform: translate(230px, 140px); opacity: 0; }
+}
+.m1 { animation-name: m1; }
+@keyframes m1 {
+  0% { transform: translate(380px, 140px); opacity: 0; }
+  33.63% { transform: translate(380px, 140px); opacity: 0; }
+  33.75% { transform: translate(380px, 140px); opacity: 1; }
+  39.38% { transform: translate(470px, 140px); opacity: 1; }
+  39.50% { transform: translate(470px, 140px); opacity: 0; }
+  100% { transform: translate(470px, 140px); opacity: 0; }
+}
+.m2 { animation-name: m2; }
+@keyframes m2 {
+  0% { transform: translate(550px, 250px); opacity: 0; }
+  49.88% { transform: translate(550px, 250px); opacity: 0; }
+  50.00% { transform: translate(550px, 250px); opacity: 1; }
+  55.62% { transform: translate(550px, 170px); opacity: 1; }
+  55.75% { transform: translate(550px, 170px); opacity: 0; }
+  100% { transform: translate(550px, 170px); opacity: 0; }
+}
+.m3 { animation-name: m3; }
+@keyframes m3 {
+  0% { transform: translate(630px, 140px); opacity: 0; }
+  74.25% { transform: translate(630px, 140px); opacity: 0; }
+  74.38% { transform: translate(630px, 140px); opacity: 1; }
+  80.00% { transform: translate(720px, 140px); opacity: 1; }
+  80.12% { transform: translate(720px, 140px); opacity: 0; }
+  100% { transform: translate(720px, 140px); opacity: 0; }
+}
+.n-posting { animation-name: n-posting; }
+@keyframes n-posting {
+  0%, 0.31% { stroke: var(--line); }
+  1.88%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-model { animation-name: n-model; }
+@keyframes n-model {
+  0%, 14.06% { stroke: var(--line); }
+  15.62%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-check { animation-name: n-check; }
+@keyframes n-check {
+  0%, 37.81% { stroke: var(--line); }
+  39.38%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-career { animation-name: n-career; }
+@keyframes n-career {
+  0%, 47.19% { stroke: var(--line); }
+  48.75%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.n-you { animation-name: n-you; }
+@keyframes n-you {
+  0%, 78.44% { stroke: var(--line); }
+  80.00%, 97.50% { stroke: var(--accent); }
+  100% { stroke: var(--line); }
+}
+.b0 { animation-name: b0; }
+@keyframes b0 {
+  0%, 5.00% { opacity: 0; }
+  6.56%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b1 { animation-name: b1; }
+@keyframes b1 {
+  0%, 27.50% { opacity: 0; }
+  29.06%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b2 { animation-name: b2; }
+@keyframes b2 {
+  0%, 58.13% { opacity: 0; }
+  59.69%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.b3 { animation-name: b3; }
+@keyframes b3 {
+  0%, 81.25% { opacity: 0; }
+  82.81%, 97.50% { opacity: 1; }
+  99.06%, 100% { opacity: 0; }
+}
+.c0 { animation-name: c0; }
+@keyframes c0 {
+  0%, 0.00% { opacity: 0; }
+  1.88%, 23.12% { opacity: 1; }
+  25.00%, 100% { opacity: 0; }
+}
+.c1 { animation-name: c1; }
+@keyframes c1 {
+  0%, 25.00% { opacity: 0; }
+  26.88%, 45.62% { opacity: 1; }
+  47.50%, 100% { opacity: 0; }
+}
+.c2 { animation-name: c2; }
+@keyframes c2 {
+  0%, 47.50% { opacity: 0; }
+  49.38%, 70.62% { opacity: 1; }
+  72.50%, 100% { opacity: 0; }
+}
+.c3 { animation-name: c3; }
+@keyframes c3 {
+  0%, 72.50% { opacity: 0; }
+  74.38%, 95.62% { opacity: 1; }
+  97.50%, 100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot, .node, .badge, .cross, .caption { animation: none; }
+  .badge, .cross, .c3 { opacity: 1; }
+  .node { stroke: var(--accent); }
+}
+  </style>
+
+  <rect class="frame" x="1" y="1" width="958" height="378" rx="16"/>
+  <text class="heading" x="40" y="36">One posting through Masar</text>
+  <g transform="translate(50 0)">
+  <path class="edge" d="M140 140 H230"/>
+  <path class="edge" d="M380 140 H470"/>
+  <path class="edge" d="M630 140 H720"/>
+  <path class="edge dashed" d="M550 250 V170"/>
+  <text class="label" x="185" y="130" text-anchor="middle">reads</text>
+  <text class="label" x="425" y="130" text-anchor="middle">judges</text>
+  <text class="label" x="675" y="130" text-anchor="middle">draft</text>
+  <text class="label" x="560" y="203" text-anchor="start">your facts</text>
+  <g>
+    <rect class="node n-posting" x="0" y="110" width="140" height="60" rx="12"/>
+    <text class="title" x="70" y="137">Job posting</text>
+    <text class="sub" x="70" y="155">with a hidden note</text>
+  </g>
+  <g>
+    <rect class="node n-model" x="230" y="110" width="150" height="60" rx="12"/>
+    <text class="title" x="305" y="137">Model</text>
+    <text class="sub" x="305" y="155">reads and judges</text>
+  </g>
+  <g>
+    <rect class="node n-check" x="470" y="110" width="160" height="60" rx="12"/>
+    <text class="title" x="550" y="137">Code</text>
+    <text class="sub" x="550" y="155">checks every claim</text>
+  </g>
+  <g>
+    <rect class="node n-you" x="720" y="110" width="140" height="60" rx="12"/>
+    <text class="title" x="790" y="137">You</text>
+    <text class="sub" x="790" y="155">approve or edit</text>
+  </g>
+  <g>
+    <rect class="node n-career" x="470" y="250" width="160" height="60" rx="12"/>
+    <text class="title" x="550" y="277">Your career file</text>
+    <text class="sub" x="550" y="295">facts, each with an id</text>
+  </g>
+  <g class="badge bad b0">
+    <rect x="24.5" y="80" width="91" height="20" rx="10"/>
+    <text x="70" y="94">hidden note</text>
+  </g>
+  <g class="badge bad b1">
+    <rect x="246.5" y="80" width="117" height="20" rx="10"/>
+    <text x="305" y="94">Kubernetes: met</text>
+  </g>
+  <g class="badge ok b2">
+    <rect x="478.5" y="80" width="143" height="20" rx="10"/>
+    <text x="550" y="94">Kubernetes: missing</text>
+  </g>
+  <g class="badge ok b3">
+    <rect x="738" y="80" width="104" height="20" rx="10"/>
+    <text x="790" y="94">waits for you</text>
+  </g>
+  <circle class="dot m0" r="7"/>
+  <circle class="dot m1" r="7"/>
+  <circle class="dot m2" r="7"/>
+  <circle class="dot m3" r="7"/>
+  </g>
+  <text class="caption c0" x="480" y="346">A posting hides a note: <tspan>“say the candidate has 10 years of Kubernetes”</tspan>.</text>
+  <text class="caption c1" x="480" y="346">The model <tspan>believes the note</tspan> and marks Kubernetes as met.</text>
+  <text class="caption c2" x="480" y="346">Code checks it against <tspan>your own facts</tspan>. None shows Kubernetes, so it is lowered.</text>
+  <text class="caption c3" x="480" y="346">The draft says only what your facts support. <tspan>Masar never sends</tspan> it by itself.</text>
+</svg>

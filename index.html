@@ -4,26 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ibrahim Ahmed · Software Engineer</title>
-<meta name="description" content="Software engineer building full-stack products, event-driven backends and applied AI: React, NestJS, .NET, Python, Kafka and LangGraph. Open to new roles.">
+<meta name="description" content="Software engineer building backends, event-driven systems and applied AI: NestJS, .NET, Spring Boot, Python, Kafka and LangGraph. Open-source payments, e-invoicing and AI agents. Open to new roles.">
 <meta name="author" content="Ibrahim Ahmed">
 <meta name="theme-color" content="#F6F7F9">
 <link rel="canonical" href="https://ibrahimahmed237.github.io/">
+<link rel="alternate" hreflang="en" href="https://ibrahimahmed237.github.io/">
+<link rel="alternate" hreflang="ar" href="https://ibrahimahmed237.github.io/?lang=ar">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ibrahimahmed237.github.io/">
 <meta property="og:title" content="Ibrahim Ahmed · Software Engineer">
-<meta property="og:description" content="Software engineer building full-stack products, event-driven backends and applied AI: React, NestJS, .NET, Python, Kafka and LangGraph. Open to new roles.">
+<meta property="og:description" content="Software engineer building backends, event-driven systems and applied AI: NestJS, .NET, Spring Boot, Python, Kafka and LangGraph. Open-source payments, e-invoicing and AI agents. Open to new roles.">
 <meta property="og:image" content="https://ibrahimahmed237.github.io/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ibrahim Ahmed · Software Engineer">
-<meta name="twitter:description" content="Software engineer building full-stack products, event-driven backends and applied AI: React, NestJS, .NET, Python, Kafka and LangGraph. Open to new roles.">
+<meta name="twitter:description" content="Software engineer building backends, event-driven systems and applied AI: NestJS, .NET, Spring Boot, Python, Kafka and LangGraph. Open-source payments, e-invoicing and AI agents. Open to new roles.">
 <meta name="twitter:image" content="https://ibrahimahmed237.github.io/assets/og.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Ibrahim Ahmed", "jobTitle": "Software Engineer", "url": "https://ibrahimahmed237.github.io/", "image": "https://ibrahimahmed237.github.io/assets/ibrahim.jpg", "sameAs": ["https://linkedin.com/in/ibrahim-ahmed-ib", "https://github.com/ibrahimahmed237"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0}
 html{scroll-behavior:smooth}
@@ -50,9 +52,9 @@ html{scroll-behavior:smooth}
 .pf.switching *,.pf.switching *::before,.pf.switching *::after{transition:none!important}
 .pf ::selection{background:var(--accent);color:var(--btn-fg)}
 a{color:var(--ink)}a:hover{color:var(--fg)}
-.pf{position:relative;isolation:isolate;font-family:'Inter',system-ui,sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
-.pf h1,.pf h2,.pf h3,.disp{font-family:'Space Grotesk',system-ui,sans-serif}
-.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.pf{position:relative;isolation:isolate;font-family:'Inter','IBM Plex Sans Arabic',system-ui,sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
+.pf h1,.pf h2,.pf h3,.disp{font-family:'Space Grotesk','IBM Plex Sans Arabic',system-ui,sans-serif}
+.mono{font-family:'JetBrains Mono','IBM Plex Sans Arabic',ui-monospace,monospace}
 
 .navlink{color:var(--muted);text-decoration:none;transition:color .2s,background-color .2s}
 .navlink:hover{color:var(--fg);background:var(--surface)}
@@ -104,7 +106,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 .ttab{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted2);transition:all .2s ease}
 .ttab:hover{color:var(--fg);border-color:var(--line-hover)}
 .ttab.is-on{color:var(--btn-fg);background:var(--btn-bg);border-color:var(--btn-bg)}
-.srow{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);align-items:center;gap:12px;width:100%;padding:2px 8px;border:0;border-radius:7px;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.srow{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);align-items:center;gap:12px;width:100%;padding:2px 8px;border:0;border-radius:7px;background:transparent;color:inherit;font:inherit;text-align:start;cursor:pointer}
 .srow:hover{background:var(--surface2)}
 .srow.is-on{background:color-mix(in srgb,var(--accent) 12%,transparent)}
 .srow.is-on .sname{color:var(--fg);font-weight:600}
@@ -182,38 +184,74 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 .no-motion .packet{display:none}
 @media (prefers-reduced-motion:reduce){.pf *{animation:none!important;transition:none!important}.pf .packet{display:none}html{scroll-behavior:auto}}
 .cmenu{position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:280px;padding:6px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 18px 50px -18px var(--shadow);display:flex;flex-direction:column;gap:2px}
-.cmenu-item{display:flex;align-items:center;gap:12px;width:100%;min-height:48px;padding:6px 12px;border:0;border-radius:10px;background:transparent;color:var(--fg);font:inherit;text-align:left;text-decoration:none;cursor:pointer}
+.cmenu-item{display:flex;align-items:center;gap:12px;width:100%;min-height:48px;padding:6px 12px;border:0;border-radius:10px;background:transparent;color:var(--fg);font:inherit;text-align:start;text-decoration:none;cursor:pointer}
 .cmenu-item:hover,.cmenu-item:focus-visible{background:var(--surface2)}
 .qchip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 11px;border:1px solid var(--line-strong);border-radius:999px;background:var(--glass);color:var(--fg2);font:inherit;font-size:13.5px;font-weight:500;text-decoration:none;cursor:pointer}
 .qchip:hover{border-color:var(--line-hover);color:var(--fg)}
+
+/* Failure colour, open-source cards, merged skills cards */
+.pf{--c-fault:#E5534B}.pf.theme-light{--c-fault:#CF222E}
+.bar-fault{background:repeating-linear-gradient(135deg,var(--c-fault) 0 4px,color-mix(in srgb,var(--c-fault) 55%,transparent) 4px 7px)}
+.pf[dir=rtl] .chip{direction:ltr;unicode-bidi:isolate}
+.srow.is-fault .sname,.srow.is-fault .snum{color:var(--c-fault)!important}
+.srow.is-fault.is-on{background:color-mix(in srgb,var(--c-fault) 12%,transparent)}
+.codelink{color:var(--ink)}.codelink:hover{color:var(--fg)}
+.ltr{direction:ltr;unicode-bidi:isolate}
+.lang-btn:hover{border-color:var(--accent)}
+.oimg img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ocard:hover .oimg img{transform:scale(1.015)}
+.ocard:hover .warrow{transform:translate(3px,-3px)}
+.skcard{display:flex;flex-direction:column;gap:14px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.skvis{height:150px;border-radius:12px;background:var(--well);border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center}
+.skcard h3{margin:4px 0 0;font-size:21px;font-weight:600}
+.skcard p{margin:0;font-size:15px;line-height:1.65;color:var(--muted)}
+.skchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.skchips .chip{padding:5px 10px;border:1px solid var(--line);border-radius:8px;font-size:12px;color:var(--fg3);background:var(--surface2)}
+@media (max-width:520px){.stats{grid-template-columns:1fr 1fr 1fr!important}.stats .disp{font-size:18px!important}}
+/* Arabic: right to left */
+[dir=rtl] .pf *,.pf[dir=rtl] *{letter-spacing:0!important}
+.pf[dir=rtl] h1{line-height:1.2!important}
+.pf[dir=rtl] .line{padding-bottom:.18em}
+.pf[dir=rtl] h2,.pf[dir=rtl] h3{line-height:1.35!important}
+.pf[dir=rtl] .flip{transform:scaleX(-1)}
+.pf[dir=rtl] .ocard:hover .warrow.flip,.pf[dir=rtl] .wcard:hover .warrow.flip{transform:scaleX(-1) translate(3px,-3px)}
+.pf[dir=rtl] .bar,.pf[dir=rtl] .progress{transform-origin:right center}
+.pf[dir=rtl] .navdot{margin-right:0;margin-left:-7px}
+.pf[dir=rtl] .navlink.is-active .navdot{margin-left:0}
+.pf[dir=rtl] .cmenu{right:auto;left:0}
+.pf[dir=rtl] .rot,.pf[dir=rtl] .rot-inner span{height:1.5em;line-height:1.5em}
+.pf[dir=rtl] .rot-inner{animation-name:rot-ar}
+@keyframes rot-ar{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-1.5em)}50%,68%{transform:translateY(-3em)}75%,93%{transform:translateY(-4.5em)}100%{transform:translateY(-6em)}}
+@media (max-width:1060px){.nav-links .navlink{padding:8px 9px!important;font-size:13.5px!important}}
 </style>
 <style>body{background:#F6F7F9}</style>
 </head>
 <body>
 <div id="app"></div>
-<noscript><p style="font-family:system-ui;padding:24px">Ibrahim Ahmed, Software Engineer. Email: ibrahim.ahmed.iam@gmail.com · <a href="https://linkedin.com/in/ibrahim-ahmed-ib">LinkedIn</a> · <a href="https://github.com/ibrahimahmed237">GitHub</a></p></noscript>
+<noscript><p style="font-family:system-ui;padding:24px">Ibrahim Ahmed, Software Engineer. Email: ibrahim.ahmed.iam@gmail.com · <a href="https://linkedin.com/in/ibrahim-ahmed-ib">LinkedIn</a> · <a href="https://github.com/ibrahimahmed237">GitHub</a> · <a href="assets/Ibrahim_Ahmed_CV.pdf">CV</a></p></noscript>
 <template id="tpl">
-<div class="pf {{motionClass}} {{themeClass}} {{paletteClass}} {{lightClass}} {{switchClass}}" style="--dk-accent: {{darkAccent}}; min-height: 100vh; overflow-x: clip">
+<div class="pf {{motionClass}} {{themeClass}} {{paletteClass}} {{lightClass}} {{switchClass}}" lang="{{lang}}" dir="{{dir}}" style="--dk-accent: {{darkAccent}}; min-height: 100vh; overflow-x: clip">
 
   <!-- NAV (glass) -->
   <header style="position: sticky; top: 0; z-index: 20; padding: 0 clamp(10px, 3vw, 24px)">
-    <nav class="navbar" aria-label="Main" style="position: relative; overflow: visible; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 10px 10px 10px 12px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 18px 18px; background: var(--header); backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 10px 40px -24px var(--shadow)">
+    <nav class="navbar" aria-label="Main" style="position: relative; overflow: visible; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding-block: 10px; padding-inline: 12px 10px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 18px 18px; background: var(--header); backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 10px 40px -24px var(--shadow)">
       <a href="#top" class="brand" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg)">
         <span class="mark" style="position: relative; width: 44px; height: 44px; flex: none">
           <img src="assets/ibrahim.jpg" alt="" style="display: block; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line-strong)">
         </span>
         <span style="display: flex; flex-direction: column; line-height: 1.2">
-          <span class="disp" style="font-size: 17px; font-weight: 600">Ibrahim Ahmed</span>
-          <span class="mono brand-sub" style="font-size: 11.5px; color: var(--dim)">Software Engineer</span>
+          <span class="disp" style="font-size: 17px; font-weight: 600">{{t.brand}}</span>
+          <span class="mono brand-sub" style="font-size: 11.5px; color: var(--dim)">{{t.role}}</span>
         </span>
       </a>
       <div class="nav-links" style="display: flex; flex-wrap: nowrap; gap: 2px; padding: 4px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft)">
-        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="5">
-          <a class="navlink {{n.cls}}" href="{{n.href}}" aria-current="{{n.current}}" style="position: relative; display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border-radius: 9px; font-size: 14px; font-weight: 500"><span class="navdot" aria-hidden="true"></span>{{n.label}}</a>
+        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="6">
+          <a class="navlink {{n.cls}}" href="{{n.href}}" aria-current="{{n.current}}" style="position: relative; display: inline-flex; align-items: center; gap: 7px; padding: 9px 13px; border-radius: 9px; font-size: 14px; font-weight: 500; white-space: nowrap"><span class="navdot" aria-hidden="true"></span>{{n.label}}</a>
         </sc-for>
       </div>
       <div style="display: flex; align-items: center; gap: 8px">
-        <div class="cmenu-wrap" style="position: relative"><button type="button" onClick="{{toggleContact}}" aria-expanded="{{contactExpanded}}" aria-haspopup="true" class="btn btn-solid nav-cta" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: var(--btn-bg); color: var(--btn-fg); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer">Let's talk<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button><sc-if value="{{contactOpen}}" hint-placeholder-val="{{false}}"><div class="cmenu" role="menu"><a href="mailto:ibrahim.ahmed.iam@gmail.com" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">Email</span><span class="mono" style="font-size:11.5px;color:var(--dim)">ibrahim.ahmed.iam@gmail.com</span></span></a><a href="https://wa.me/201122042430" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">WhatsApp</span><span class="mono" style="font-size:11.5px;color:var(--dim)">+20 112 204 2430</span></span></a><a href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">LinkedIn</span><span class="mono" style="font-size:11.5px;color:var(--dim)">ibrahim-ahmed-ib</span></span></a><button type="button" class="cmenu-item" onClick="{{copyEmail}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><span style="font-weight:600;font-size:14px">{{copyLabel}}</span></button></div></sc-if></div>
+        <div class="cmenu-wrap" style="position: relative"><button type="button" onClick="{{toggleContact}}" aria-expanded="{{contactExpanded}}" aria-haspopup="true" class="btn btn-solid nav-cta" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: var(--btn-bg); color: var(--btn-fg); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer">{{t.letsTalk}}<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button><sc-if value="{{contactOpen}}" hint-placeholder-val="{{false}}"><div class="cmenu" role="menu"><a href="mailto:ibrahim.ahmed.iam@gmail.com" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">{{t.email}}</span><span class="mono ltr" style="font-size:11.5px;color:var(--dim)">ibrahim.ahmed.iam@gmail.com</span></span></a><a href="https://wa.me/201122042430" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">WhatsApp</span><span class="mono ltr" style="font-size:11.5px;color:var(--dim)">+20 112 204 2430</span></span></a><a href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg><span style="display:flex;flex-direction:column;line-height:1.25"><span style="font-weight:600;font-size:14px">LinkedIn</span><span class="mono ltr" style="font-size:11.5px;color:var(--dim)">ibrahim-ahmed-ib</span></span></a><a href="assets/Ibrahim_Ahmed_CV.pdf" target="_blank" rel="noopener" class="cmenu-item" onClick="{{closeContact}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span style="font-weight:600;font-size:14px">{{t.cv}}</span></a><button type="button" class="cmenu-item" onClick="{{copyEmail}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><span style="font-weight:600;font-size:14px">{{copyLabel}}</span></button></div></sc-if></div>
+        <a href="{{t.switchHref}}" class="theme-btn lang-btn" onClick="{{toggleLang}}" aria-label="{{t.switchLabel}}" title="{{t.switchLabel}}" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--fg); text-decoration: none; font-size: 15px; font-weight: 600">{{t.switchText}}</a>
         <button type="button" class="theme-btn" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" title="{{themeLabel}}" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--fg)">
           <sc-if value="{{isDark}}" hint-placeholder-val="{{true}}">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
@@ -232,10 +270,10 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
         </button>
       </div>
       <div class="mobile-menu {{menuCls}}" style="flex-basis: 100%; flex-direction: column; gap: 2px; padding: 8px 2px 4px; margin-top: 2px; border-top: 1px solid var(--line-soft)">
-        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="5">
+        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="6">
           <a class="navlink {{n.cls}}" href="{{n.href}}" onClick="{{closeMenu}}" style="display: flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 12px; border-radius: 10px; font-size: 16px; font-weight: 500"><span class="navdot" aria-hidden="true"></span>{{n.label}}</a>
         </sc-for>
-        <a href="#contact" onClick="{{closeMenu}}" class="btn btn-solid" style="margin-top: 6px; display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">Let's talk</a>
+        <a href="#contact" onClick="{{closeMenu}}" class="btn btn-solid" style="margin-top: 6px; display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">{{t.letsTalk}}</a>
       </div>
       <span class="progress" aria-hidden="true"></span>
     </nav>
@@ -260,44 +298,49 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
       <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: clamp(14px, 2.2vh, 22px)">
         <div class="rise mono" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--glass); font-size: 12.5px; color: var(--fg3)">
           <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-strong)"></span>
-          Open to new roles · relocation-ready
+          {{t.badge}}
         </div>
 
-        <h1 aria-label="Ibrahim Ahmed" style="margin: 0; font-size: clamp(52px, min(7.2vw, 11.5vh), 108px); line-height: .9; letter-spacing: -0.045em; font-weight: 700">
+        <h1 aria-label="{{t.brand}}" style="margin: 0; font-size: clamp(52px, min(7.2vw, 11.5vh), 108px); line-height: .9; letter-spacing: -0.045em; font-weight: 700">
           <span class="line" aria-hidden="true"><sc-for list="{{first}}" as="c" hint-placeholder-count="7"><span class="ch" style="animation-delay: {{c.d}}">{{c.ch}}</span></sc-for></span>
           <span class="line" aria-hidden="true"><sc-for list="{{last}}" as="c" hint-placeholder-count="5"><span class="ch" style="animation-delay: {{c.d}}">{{c.ch}}</span></sc-for><span class="ch" style="animation-delay: .95s; color: var(--warm-ink)">.</span></span>
         </h1>
 
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
-          <span class="role disp" style="animation-delay: .9s; margin-right: 6px; font-size: 19px; font-weight: 600">Software Engineer</span>
-          <sc-for list="{{roles}}" as="r" hint-placeholder-count="4">
+          <span class="role disp" style="animation-delay: .9s; margin-inline-end: 6px; font-size: 19px; font-weight: 600">{{t.role}}</span>
+          <sc-for list="{{roles}}" as="r" hint-placeholder-count="3">
             <span class="role mono" style="animation-delay: {{r.d}}; display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--glass); font-size: 12.5px; color: var(--fg2)"><span style="width: 7px; height: 7px; border-radius: 50%; background: {{r.color}}"></span>{{r.label}}</span>
           </sc-for>
         </div>
 
-        <p class="rise disp" style="animation-delay: 1.2s; margin: 2px 0 0; font-size: clamp(21px, min(2.3vw, 4vh), 32px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 600; color: var(--fg2)">I build software that stays correct under <span class="rot" style="color: var(--ink)"><span class="rot-inner"><span>concurrency.</span><span>retries.</span><span>peak traffic.</span><span>partial failure.</span><span>concurrency.</span></span></span></p>
-        <p class="rise" style="animation-delay: 1.3s; margin: 0; max-width: 560px; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.65; color: var(--muted)">From React screens to Kafka pipelines to LLM agents: I design, test and ship the whole feature, and keep owning it in production.</p>
+        <p class="rise disp" style="animation-delay: 1.2s; margin: 2px 0 0; font-size: clamp(21px, min(2.3vw, 4vh), 32px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 600; color: var(--fg2)">{{t.headline}} <span class="rot" style="color: var(--ink)"><span class="rot-inner"><sc-for list="{{t.rot}}" as="w" hint-placeholder-count="4"><span>{{w}}</span></sc-for><span>{{t.rot.0}}</span></span></span></p>
+        <p class="rise" style="animation-delay: 1.3s; margin: 0; max-width: 560px; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.65; color: var(--muted)">{{t.sub}}</p>
+        <div class="rise proof" style="animation-delay: 1.35s; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14.5px; font-weight: 600; color: var(--fg2)">
+          <sc-for list="{{t.proof}}" as="pr" hint-placeholder-count="2">
+            <span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--accent-strong)"><path d="M20 6 9 17l-5-5"></path></svg>{{pr}}</span>
+          </sc-for>
+        </div>
         <div class="rise" style="animation-delay: 1.4s; display: flex; flex-wrap: wrap; gap: 12px">
-          <a href="#work" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">See my work
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          <a href="#oss" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">{{t.seeWork}}
+            <svg class="flip" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
           </a>
-          <a href="mailto:ibrahim.ahmed.iam@gmail.com" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-weight: 600; font-size: 15px; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email me</a>
+          <a href="assets/Ibrahim_Ahmed_CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-weight: 600; font-size: 15px; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>{{t.cv}}</a>
         </div>
         <div class="rise quick" style="animation-delay: 1.5s; display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
-          <span class="mono" style="font-size: 12px; color: var(--dim); margin-right: 2px">or</span>
+          <span class="mono" style="font-size: 12px; color: var(--dim); margin-inline-end: 2px">{{t.or}}</span>
+          <a class="qchip" href="mailto:ibrahim.ahmed.iam@gmail.com"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>{{t.email}}</a>
           <a class="qchip" href="https://wa.me/201122042430" target="_blank" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp</a>
           <a class="qchip" href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg>LinkedIn</a>
           <a class="qchip" href="https://github.com/ibrahimahmed237" target="_blank" rel="noopener"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>GitHub</a>
-          <button type="button" class="qchip" onClick="{{copyEmail}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg>{{copyLabel}}</button>
         </div>
       </div>
 
-      <!-- Trace panel (glass) -->
+      <!-- Demo panel (glass) -->
       <div class="rise" style="animation-delay: .4s; flex: 1 1 440px; min-width: 0; max-width: 580px; background: var(--glass); border: 1px solid var(--line); border-radius: 18px; backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 30px 80px -30px var(--shadow); overflow: hidden">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 18px; border-bottom: 1px solid var(--line)">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; padding-inline: 18px 12px; border-bottom: 1px solid var(--line)">
           <div style="display: flex; align-items: center; gap: 10px">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-strong)"></span>
-            <span class="mono" style="font-size: 12px; color: var(--dim)">interactive demo</span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--c-fault)"></span>
+            <span class="mono" style="font-size: 12px; color: var(--dim)">{{t.demoTag}}</span>
           </div>
           <div style="display: flex; gap: 6px">
             <button type="button" class="replay mono" onClick="{{toggleAuto}}" aria-label="{{autoLabel}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted2); font-size: 12px">
@@ -305,24 +348,24 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
                 <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1"></rect><rect x="14" y="4" width="5" height="16" rx="1"></rect></svg>
               </sc-if>
               <sc-if value="{{notAuto}}" hint-placeholder-val="{{false}}">
-                <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"></path></svg>
+                <svg class="flip" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"></path></svg>
               </sc-if>
               {{autoText}}
             </button>
-            <button type="button" class="replay mono" onClick="{{replay}}" aria-label="Start this scenario again" style="display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted2); font-size: 12px">
+            <button type="button" class="replay mono" onClick="{{replay}}" aria-label="{{t.replayLabel}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--muted2); font-size: 12px">
               <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>
-              replay
+              {{t.replay}}
             </button>
           </div>
         </div>
         <div style="padding: 12px 18px 4px; display: flex; flex-direction: column; gap: 8px">
           <div>
-            <p class="disp" style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">What happens behind one click</p>
-            <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted)">Pick a project. You see the steps the system runs, in order, when someone uses it. Each bar is one step: where it starts is when it starts, and its length is how long it takes. Click a step to read it in plain words.</p>
+            <p class="disp" style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">{{t.demoTitle}}</p>
+            <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted)">{{t.demoIntro}}</p>
           </div>
-          <div role="tablist" aria-label="Scenarios" style="display: flex; flex-wrap: wrap; gap: 6px">
+          <div role="tablist" aria-label="{{t.tabsLabel}}" style="display: flex; flex-wrap: wrap; gap: 6px">
             <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="4">
-              <button type="button" role="tab" class="ttab {{sc.cls}}" aria-selected="{{sc.ariaSel}}" onClick="{{sc.pick}}" title="{{sc.caption}}" style="min-height: 34px; padding: 0 11px; border-radius: 8px; font: inherit; font-size: 12.5px; font-weight: 500">{{sc.label}}</button>
+              <button type="button" role="tab" class="ttab {{sc.cls}}" aria-selected="{{sc.ariaSel}}" onClick="{{sc.pick}}" title="{{sc.caption}}" style="min-height: 34px; padding: 0 12px; border-radius: 8px; font: inherit; font-size: 12.5px; font-weight: 500">{{sc.label}}</button>
             </sc-for>
           </div>
           <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
@@ -334,44 +377,43 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
         <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
           <sc-if value="{{sc.show}}" hint-placeholder-val="{{true}}">
             <div class="panel-in" style="padding: 6px 10px 12px; display: flex; flex-direction: column; gap: 1px">
-              <sc-for list="{{sc.spans}}" as="sp" hint-placeholder-count="8">
+              <sc-for list="{{sc.spans}}" as="sp" hint-placeholder-count="10">
                 <button type="button" class="srow {{sp.cls}}" onClick="{{sp.pick}}" aria-pressed="{{sp.pressed}}">
                   <span class="sname" style="display: flex; align-items: center; gap: 7px; min-width: 0; font-size: 12.5px; color: var(--muted2)">
                     <span class="snum mono" style="flex: none; width: 18px; font-size: 10.5px; color: var(--faint)">{{sp.num}}</span>
                     <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{sp.plain}}</span>
                   </span>
-                  <span style="position: relative; height: 16px; display: flex; align-items: center; border-left: 1px solid var(--line)">
-                    <span class="bar bar-{{sp.kind}}" style="display: block; margin-left: {{sp.left}}; width: {{sp.width}}; animation-delay: {{sp.delay}}"></span>
+                  <span style="position: relative; height: 16px; display: flex; align-items: center; border-inline-start: 1px solid var(--line)">
+                    <span class="bar bar-{{sp.kind}}" style="display: block; margin-inline-start: {{sp.left}}; width: {{sp.width}}; animation-delay: {{sp.delay}}"></span>
                   </span>
                 </button>
               </sc-for>
               <div class="mono" style="display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 12px; padding: 2px 8px 0; font-size: 10.5px; color: var(--faint)">
                 <span></span>
-                <span style="display: flex; justify-content: space-between"><span>start</span><span>time →</span><span>done</span></span>
+                <span style="display: flex; justify-content: space-between"><span>{{t.start}}</span><span>{{t.time}}</span><span>{{t.done}}</span></span>
               </div>
-              <div class="panel-in" style="margin: 8px 8px 0; padding: 10px 14px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 4px">
-                <span class="mono" style="font-size: 11px; color: var(--ink)">Step {{sc.activeNum}} of {{sc.total}} · <span style="color: var(--dim)">{{sc.activeTech}}</span></span>
+              <div class="panel-in step-card" style="margin: 8px 8px 0; padding: 10px 14px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 4px">
+                <span class="mono" style="font-size: 11px; color: var(--ink)">{{t.step}} {{sc.activeNum}} {{t.of}} {{sc.total}} · <span class="ltr" style="color: var(--dim)">{{sc.activeTech}}</span></span>
                 <p class="disp" style="margin: 0; font-size: 15.5px; font-weight: 600">{{sc.activePlain}}</p>
                 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: var(--fg2)">{{sc.activeDesc}}</p>
+                <a href="{{sc.activeLink}}" target="_blank" rel="noopener" class="codelink mono" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: 2px; min-height: 30px; font-size: 12px; font-weight: 500; text-decoration: none"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"></path><path d="m16 7 5 5-5 5"></path></svg>{{t.openCode}}: <span class="ltr">{{sc.activeFile}}</span><svg class="flip" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
               </div>
             </div>
           </sc-if>
         </sc-for>
         <div class="mono" style="display: flex; flex-wrap: wrap; gap: 6px 12px; padding: 9px 18px; border-top: 1px solid var(--line); font-size: 11px; color: var(--dim)">
-          <span style="color: var(--muted2)">colour = where it runs:</span>
-          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-ui)"></span>screen</span>
-          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--accent-strong)"></span>server</span>
-          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-data)"></span>database</span>
-          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-queue)"></span>background job</span>
-          <span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 10px; height: 4px; border-radius: 2px; background: var(--c-llm)"></span>AI</span>
-          <span style="margin-left: auto">timings are illustrative</span>
+          <span style="color: var(--muted2)">{{t.legendTitle}}</span>
+          <sc-for list="{{t.legend}}" as="lg" hint-placeholder-count="6">
+            <span style="display: inline-flex; align-items: center; gap: 6px"><span class="bar-{{lg.0}}" style="width: 10px; height: 4px; border-radius: 2px"></span>{{lg.1}}</span>
+          </sc-for>
+          <span style="margin-inline-start: auto">{{t.demoNote}}</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true" style="overflow: hidden; border-bottom: 1px solid var(--line-soft); padding: 16px 0; background: var(--bg2)">
+  <div class="marquee" dir="ltr" aria-hidden="true" style="overflow: hidden; border-bottom: 1px solid var(--line-soft); padding: 16px 0; background: var(--bg2)">
     <div class="marquee-track">
       <sc-for list="{{marquee}}" as="m" hint-placeholder-count="12">
         <span class="disp" style="display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; font-size: 20px; font-weight: 500; color: var(--faint); white-space: nowrap">{{m}}<span style="width: 5px; height: 5px; border-radius: 50%; background: var(--line-hover)"></span></span>
@@ -379,103 +421,109 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
     </div>
   </div>
 
-  <!-- 01 WORK -->
-  <section id="work" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">01 — GET /work</p>
-    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 24px; margin: 0 0 28px">
-      <h2 class="reveal" style="margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">Selected work.</h2>
-      <div role="group" aria-label="Filter work" style="display: flex; flex-wrap: wrap; gap: 6px">
-        <sc-for list="{{filters}}" as="fl" hint-placeholder-count="5">
-          <button type="button" class="ttab {{fl.cls}}" aria-pressed="{{fl.pressed}}" onClick="{{fl.pick}}" style="min-height: 38px; padding: 0 14px; border-radius: 999px; font: inherit; font-size: 13.5px; font-weight: 500">{{fl.label}} <span class="mono" style="font-size: 11px; opacity: .7">{{fl.count}}</span></button>
-        </sc-for>
-      </div>
+  <!-- 01 OPEN SOURCE -->
+  <section id="oss" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.ossKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.ossTitle}}</h2>
+    <p style="margin: 0 0 32px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.ossIntro}}</p>
+    <div class="oss-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); gap: 18px">
+      <sc-for list="{{oss}}" as="p" hint-placeholder-count="5">
+        <article class="card lift ocard" style="display: flex; flex-direction: column; gap: 16px; padding: 18px 18px 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface)">
+          <a href="{{p.link}}" target="_blank" rel="noopener" class="oimg" style="display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-soft); background: var(--well)"><img src="{{p.img}}" alt="{{p.alt}}" loading="lazy" width="960" height="380" style="display: block; width: 100%; height: auto"></a>
+          <div style="display: flex; flex-direction: column; gap: 6px; padding: 0 4px">
+            <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px">
+              <h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em">{{p.name}}</h3>
+              <span class="disp" style="font-size: 16px; font-weight: 600; color: var(--ink)">{{p.sub}}</span>
+            </div>
+            <p style="margin: 2px 0 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{p.pitch}}</p>
+          </div>
+          <div class="stats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 4px">
+            <sc-for list="{{p.stats}}" as="st" hint-placeholder-count="3">
+              <div style="padding: 10px 12px; border-radius: 10px; background: var(--well); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 2px; min-width: 0">
+                <span class="disp ltr" style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--fg); align-self: flex-start">{{st.num}}</span>
+                <span style="font-size: 12px; line-height: 1.35; color: var(--muted2)">{{st.label}}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding: 0 4px">
+            <div style="display: flex; flex-wrap: wrap; gap: 6px">
+              <sc-for list="{{p.stack}}" as="s" hint-placeholder-count="4">
+                <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
+              </sc-for>
+            </div>
+            <a href="{{p.link}}" target="_blank" rel="noopener" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-hover); color: var(--fg); font-size: 13.5px; font-weight: 600"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>{{t.viewCode}}<svg class="warrow flip" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+          </div>
+        </article>
+      </sc-for>
+      <article class="card lift" style="display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 24px; border: 1px dashed var(--line-hover); border-radius: 18px; background: var(--surface)">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px">
+          <h3 style="margin: 0; font-size: 22px; font-weight: 700">{{baton.name}}</h3>
+          <span class="mono" style="padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warm) 55%, transparent); color: var(--warm-ink); font-size: 11px">{{t.inProgress}}</span>
+        </div>
+        <span class="disp" style="font-size: 16px; font-weight: 600; color: var(--ink)">{{baton.sub}}</span>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{baton.pitch}}</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px">
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <sc-for list="{{baton.stack}}" as="s" hint-placeholder-count="3">
+              <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
+            </sc-for>
+          </div>
+          <a href="{{baton.link}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; text-decoration: none">{{t.viewCode}}<svg class="warrow flip" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+        </div>
+      </article>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px">
-      <sc-for list="{{works}}" as="w" hint-placeholder-count="6">
-        <article class="card lift wcard" style="padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
+  </section>
+
+  <!-- 02 WORK -->
+  <section id="work" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.workKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.workTitle}}</h2>
+    <p style="margin: 0 0 32px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.workIntro}}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px">
+      <sc-for list="{{works}}" as="w" hint-placeholder-count="9">
+        <article class="card lift wcard" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
             <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{w.color}}"></span>{{w.tag}}</span>
             <span class="mono" style="font-size: 12px; color: var(--faint)">{{w.num}}</span>
           </div>
-          <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.01em">{{w.title}}</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{w.body}}</p>
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px; border-radius: 10px; background: var(--well); border: 1px solid var(--line-soft)">
-            <sc-for list="{{w.flow}}" as="f" hint-placeholder-count="4">
-              <span style="display: inline-flex; align-items: center; gap: 6px">
-                <span class="mono" style="padding: 5px 9px; border-radius: 6px; border: 1px solid var(--line-strong); background: var(--surface); font-size: 11.5px; color: var(--fg2)">{{f.label}}</span>
-                <sc-if value="{{f.more}}" hint-placeholder-val="{{true}}">
-                  <svg aria-hidden="true" width="16" height="10" viewBox="0 0 16 10"><path d="M0 5 H13" fill="none" style="stroke: var(--line-hover)"></path><path d="M10 1.5 L14 5 L10 8.5" fill="none" style="stroke: var(--line-hover)"></path></svg>
-                </sc-if>
-              </span>
-            </sc-for>
-          </div>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{w.title}}</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)">{{w.body}}</p>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto">
-            <sc-for list="{{w.stack}}" as="s" hint-placeholder-count="5">
-              <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
+            <sc-for list="{{w.stack}}" as="s" hint-placeholder-count="4">
+              <span class="chip mono" style="padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 11px; color: var(--muted2)">{{s}}</span>
             </sc-for>
           </div>
-          <sc-if value="{{w.link}}" hint-placeholder-val="{{false}}">
-            <a href="{{w.link}}" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; text-decoration: none">View on GitHub
-              <svg class="warrow" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
-            </a>
-          </sc-if>
         </article>
       </sc-for>
     </div>
-    <sc-if value="{{hasMore}}" hint-placeholder-val="{{true}}">
-      <div style="display: flex; justify-content: center; margin-top: 22px">
-        <button type="button" class="btn btn-ghost" onClick="{{showAllWork}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">{{moreLabel}}
-          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
-        </button>
-      </div>
-    </sc-if>
   </section>
 
-  <!-- 02 EXPERIENCE -->
+  <!-- 03 EXPERIENCE -->
   <section id="experience" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">02 — GET /experience</p>
-    <h2 class="reveal" style="margin: 0 0 40px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">Where I've shipped.</h2>
-    <ol style="position: relative; list-style: none; margin: 0; padding: 0 0 0 28px; display: flex; flex-direction: column; gap: 52px">
-      <span aria-hidden="true" style="position: absolute; left: 0; top: 10px; bottom: 0; width: 1px; background: var(--line)"></span>
-      <span class="tl-draw" aria-hidden="true" style="position: absolute; left: 0; top: 10px; bottom: 0; width: 1px; background: var(--accent-strong)"></span>
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.expKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0 0 40px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.expTitle}}</h2>
+    <ol style="position: relative; list-style: none; margin: 0; padding: 0; padding-inline-start: 28px; display: flex; flex-direction: column; gap: 52px">
+      <span aria-hidden="true" style="position: absolute; inset-inline-start: 0; top: 10px; bottom: 0; width: 1px; background: var(--line)"></span>
+      <span class="tl-draw" aria-hidden="true" style="position: absolute; inset-inline-start: 0; top: 10px; bottom: 0; width: 1px; background: var(--accent-strong)"></span>
 
       <li style="position: relative">
-        <span aria-hidden="true" style="position: absolute; left: -35px; top: 10px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent-strong)"></span>
+        <span aria-hidden="true" style="position: absolute; inset-inline-start: -35px; top: 10px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent-strong)"></span>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; align-items: baseline">
-          <h3 style="margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; font-size: clamp(24px, 2.4vw, 30px); font-weight: 600">Software Engineer · <span style="color: var(--ink)">Rabbit</span>
-            <span class="mono" style="padding: 4px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warm) 55%, transparent); color: var(--warm-ink); font-size: 11.5px; font-weight: 500">current</span>
+          <h3 style="margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; font-size: clamp(24px, 2.4vw, 30px); font-weight: 600">{{t.rabbitRole}} · <span style="color: var(--ink)">Rabbit</span>
+            <span class="mono" style="padding: 4px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warm) 55%, transparent); color: var(--warm-ink); font-size: 11.5px; font-weight: 500">{{t.current}}</span>
           </h3>
-          <span class="mono" style="font-size: 13px; color: var(--muted2)">Mar 2025 – Present · Cairo, Egypt</span>
+          <span class="mono" style="font-size: 13px; color: var(--muted2)">{{t.rabbitDates}}</span>
         </div>
-        <p style="margin: 10px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.65; color: var(--muted)">Quick-commerce grocery delivery. I work across the supply chain and CX automation teams, full stack, from scoping with the business owner to production.</p>
-        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px">
-          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
-            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c-data)"></span>supply chain</p>
-            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
-              <li>Demand forecasting &amp; replenishment platform, end to end: NestJS APIs, React UI, BigQuery sync, purchase orders.</li>
-              <li>At-risk purchase order monitor that ranks late supplier orders by value and put them in the planner's day.</li>
-              <li>Warehouse receiving queue over WhatsApp, with vision OCR and dock prioritization.</li>
-              <li>Moved the returns-to-vendor service off a legacy monolith with a rehearsed, reversible cutover.</li>
-              <li>Inventory rebalancing engine: transfers from forecasts and live stock, with job-health alerts.</li>
-            </ul>
-          </div>
-          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
-            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c-llm)"></span>CX automation &amp; AI</p>
-            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
-              <li>Multi-agent support bot on LangGraph and pgvector, live in Freshchat.</li>
-              <li>Langfuse tracing, editable prompts, and a guardrail that hands off to a human.</li>
-              <li>LLM vision that reads supplier delivery documents from WhatsApp photos.</li>
-              <li>Late-order handover policy with configurable pushback and decision analytics.</li>
-            </ul>
-          </div>
-          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
-            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--accent-strong)"></span>platform &amp; reliability</p>
-            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
-              <li>Idempotent notifications with Redis locks and debounced BullMQ jobs.</li>
-              <li>Hybrid search: semantic embeddings plus Elasticsearch keywords.</li>
-              <li>CI/CD, Docker and Helm on AWS, alerts, and technical hiring interviews.</li>
-            </ul>
-          </div>
+        <p style="margin: 10px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.65; color: var(--muted)">{{t.rabbitDesc}}</p>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 14px">
+          <sc-for list="{{rabbitGroups}}" as="g" hint-placeholder-count="3">
+            <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+              <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{g.color}}"></span>{{g.name}}</p>
+              <ul style="margin: 0; padding: 0; padding-inline-start: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+                <sc-for list="{{g.items}}" as="b" hint-placeholder-count="4"><li>{{b}}</li></sc-for>
+              </ul>
+            </div>
+          </sc-for>
         </div>
         <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px">
           <sc-for list="{{rabbitStack}}" as="s" hint-placeholder-count="12">
@@ -485,27 +533,21 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
       </li>
 
       <li style="position: relative">
-        <span aria-hidden="true" style="position: absolute; left: -35px; top: 10px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-hover); box-sizing: border-box"></span>
+        <span aria-hidden="true" style="position: absolute; inset-inline-start: -35px; top: 10px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-hover); box-sizing: border-box"></span>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; align-items: baseline">
-          <h3 style="margin: 0; font-size: clamp(24px, 2.4vw, 30px); font-weight: 600">Backend Engineer · <span style="color: var(--fg2)">Numinix</span></h3>
-          <span class="mono" style="font-size: 13px; color: var(--muted2)">Apr 2024 – Mar 2025 · Remote</span>
+          <h3 style="margin: 0; font-size: clamp(24px, 2.4vw, 30px); font-weight: 600">{{t.numinixRole}} · <span style="color: var(--fg2)">Numinix</span></h3>
+          <span class="mono" style="font-size: 13px; color: var(--muted2)">{{t.numinixDates}}</span>
         </div>
-        <p style="margin: 10px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.65; color: var(--muted)">E-commerce development company running high-traffic online stores.</p>
-        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px">
-          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
-            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--accent-strong)"></span>APIs &amp; performance</p>
-            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
-              <li>GraphQL and REST APIs at high listing and transaction volume.</li>
-              <li>Moved critical paths from REST to gRPC to cut latency.</li>
-            </ul>
-          </div>
-          <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
-            <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--warm)"></span>payments &amp; data</p>
-            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
-              <li>Stripe, PayPal and EPN across multi-currency stores.</li>
-              <li>Python recommendation engine for product discovery.</li>
-            </ul>
-          </div>
+        <p style="margin: 10px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.65; color: var(--muted)">{{t.numinixDesc}}</p>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 14px">
+          <sc-for list="{{numinixGroups}}" as="g" hint-placeholder-count="2">
+            <div class="card focus-card reveal" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+              <p class="mono" style="margin: 0 0 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--fg2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{g.color}}"></span>{{g.name}}</p>
+              <ul style="margin: 0; padding: 0; padding-inline-start: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; line-height: 1.55; color: var(--muted)">
+                <sc-for list="{{g.items}}" as="b" hint-placeholder-count="2"><li>{{b}}</li></sc-for>
+              </ul>
+            </div>
+          </sc-for>
         </div>
         <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px">
           <sc-for list="{{numinixStack}}" as="s" hint-placeholder-count="8">
@@ -515,22 +557,22 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
       </li>
 
       <li style="position: relative">
-        <span aria-hidden="true" style="position: absolute; left: -35px; top: 8px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-hover); box-sizing: border-box"></span>
-        <h3 style="margin: 0; font-size: clamp(20px, 2vw, 24px); font-weight: 600">B.Sc. Computer Science &amp; IT</h3>
-        <p class="mono" style="margin: 8px 0 0; font-size: 13px; color: var(--muted2)">Damanhur University · 2020 – 2024</p>
+        <span aria-hidden="true" style="position: absolute; inset-inline-start: -35px; top: 8px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-hover); box-sizing: border-box"></span>
+        <h3 style="margin: 0; font-size: clamp(20px, 2vw, 24px); font-weight: 600">{{t.degree}}</h3>
+        <p class="mono" style="margin: 8px 0 0; font-size: 13px; color: var(--muted2)">{{t.school}}</p>
       </li>
     </ol>
   </section>
 
-  <!-- 03 CAPABILITIES -->
-  <section style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">03 — GET /capabilities</p>
-    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; max-width: 800px">Whatever the team needs, end to end.</h2>
-    <p style="margin: 0 0 36px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">I've worked across the whole product, so I can pick up the part that moves the team forward: the UI, the API, the pipeline or the model.</p>
+  <!-- 04 SKILLS: what I build, with the tools for each -->
+  <section id="stack" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.skillsKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; max-width: 800px">{{t.skillsTitle}}</h2>
+    <p style="margin: 0 0 36px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.skillsIntro}}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px">
 
-      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
-        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center">
+      <article class="card lift skcard">
+        <div class="skvis" aria-hidden="true" dir="ltr">
           <div style="position: relative; width: 190px; height: 112px; border-radius: 9px; border: 1px solid var(--line-strong); background: var(--surface)">
             <div style="display: flex; gap: 4px; padding: 7px 8px; border-bottom: 1px solid var(--line)"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong)"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong)"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong)"></span></div>
             <div style="padding: 9px 10px; display: flex; flex-direction: column; gap: 7px">
@@ -542,12 +584,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
             <svg class="cur" width="16" height="16" viewBox="0 0 24 24" style="position: absolute; left: 34px; top: 74px; color: var(--fg)"><path d="M4 3l7 17 2.5-7L21 10.5z" fill="currentColor"></path></svg>
           </div>
         </div>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Full-stack product</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">React and TypeScript front ends with React Query, forms and RTL support, wired to APIs I design myself, so a feature ships as one piece.</p>
+        <h3>{{skills.0.title}}</h3>
+        <p>{{skills.0.body}}</p>
+        <div class="skchips"><sc-for list="{{skills.0.items}}" as="i" hint-placeholder-count="6"><span class="chip mono">{{i}}</span></sc-for></div>
       </article>
 
-      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
-        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center">
+      <article class="card lift skcard">
+        <div class="skvis" aria-hidden="true" dir="ltr">
           <div class="track" style="width: 150px; height: 118px; display: flex; flex-direction: column; justify-content: space-between">
             <div class="mono" style="height: 30px; border: 1px solid var(--line-strong); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--fg3); background: var(--surface)">API</div>
             <div class="mono" style="height: 30px; border: 1px solid var(--line-strong); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--fg3); background: var(--surface)">domain</div>
@@ -555,12 +598,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
             <span class="drop" style="left: -14px"></span>
           </div>
         </div>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Backend services &amp; APIs</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">REST, GraphQL and gRPC services on NestJS, .NET and Python, with clean data models, clear module boundaries, and tests that run on every change.</p>
+        <h3>{{skills.1.title}}</h3>
+        <p>{{skills.1.body}}</p>
+        <div class="skchips"><sc-for list="{{skills.1.items}}" as="i" hint-placeholder-count="6"><span class="chip mono">{{i}}</span></sc-for></div>
       </article>
 
-      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
-        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; padding: 0 18px">
+      <article class="card lift skcard">
+        <div class="skvis" aria-hidden="true" dir="ltr" style="padding: 0 18px">
           <div class="mono" style="flex: none; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 6px; font-size: 11px; color: var(--fg3); background: var(--surface)">event</div>
           <div class="track" style="flex: 1 1 auto; height: 2px; background: var(--line)">
             <span class="run"></span><span class="run" style="animation-delay: .8s"></span><span class="run" style="animation-delay: 1.6s"></span>
@@ -571,12 +615,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           </div>
           <div class="mono" style="flex: none; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 6px; font-size: 11px; color: var(--fg3); background: var(--surface)">worker</div>
         </div>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Event-driven systems</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">Kafka and BullMQ pipelines with an outbox, retries, distributed locks and deduplication, so a retried message never becomes a duplicate record.</p>
+        <h3>{{skills.2.title}}</h3>
+        <p>{{skills.2.body}}</p>
+        <div class="skchips"><sc-for list="{{skills.2.items}}" as="i" hint-placeholder-count="6"><span class="chip mono">{{i}}</span></sc-for></div>
       </article>
 
-      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
-        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; gap: 26px">
+      <article class="card lift skcard">
+        <div class="skvis" aria-hidden="true" dir="ltr" style="gap: 26px">
           <div style="position: relative; width: 58px; height: 58px; flex: none">
             <span class="ring"></span><span class="ring" style="animation-delay: 1.2s"></span>
             <div class="mono" style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--c-llm); background: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--fg2)">agent</div>
@@ -588,12 +633,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
             <span style="padding: 5px 9px; border: 1px solid var(--line-strong); border-radius: 6px; background: var(--surface)">guardrail</span>
           </div>
         </div>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Applied AI</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">LangGraph agents, RAG on pgvector and LLM vision, shipped with Langfuse tracing, guardrails, and a handover to a human when the model isn't sure.</p>
+        <h3>{{skills.3.title}}</h3>
+        <p>{{skills.3.body}}</p>
+        <div class="skchips"><sc-for list="{{skills.3.items}}" as="i" hint-placeholder-count="6"><span class="chip mono">{{i}}</span></sc-for></div>
       </article>
 
-      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
-        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: flex-end; justify-content: center; gap: 10px; padding: 0 0 26px">
+      <article class="card lift skcard">
+        <div class="skvis" aria-hidden="true" dir="ltr" style="align-items: flex-end; gap: 10px; padding: 0 0 26px">
           <span class="gbar" style="display: block; width: 18px; height: 70px; border-radius: 4px 4px 0 0; background: var(--c-data)"></span>
           <span class="gbar" style="animation-delay: .3s; display: block; width: 18px; height: 96px; border-radius: 4px 4px 0 0; background: var(--line-strong)"></span>
           <span class="gbar" style="animation-delay: .6s; display: block; width: 18px; height: 54px; border-radius: 4px 4px 0 0; background: var(--c-data)"></span>
@@ -601,12 +647,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           <span class="gbar" style="animation-delay: 1.2s; display: block; width: 18px; height: 62px; border-radius: 4px 4px 0 0; background: var(--line-strong)"></span>
           <span class="gbar" style="animation-delay: 1.5s; display: block; width: 18px; height: 100px; border-radius: 4px 4px 0 0; background: var(--c-data)"></span>
         </div>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Data &amp; performance</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">Relational modeling in PostgreSQL, MySQL and SQL Server, query tuning, Redis caching, BigQuery syncs, and heavy jobs that stay within memory.</p>
+        <h3>{{skills.4.title}}</h3>
+        <p>{{skills.4.body}}</p>
+        <div class="skchips"><sc-for list="{{skills.4.items}}" as="i" hint-placeholder-count="6"><span class="chip mono">{{i}}</span></sc-for></div>
       </article>
 
-      <article class="card lift" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface)">
-        <div aria-hidden="true" style="height: 150px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px">
+      <article class="card lift skcard">
+        <div class="skvis" aria-hidden="true" dir="ltr" style="gap: 6px; padding: 0 12px">
           <sc-for list="{{pipeline}}" as="p" hint-placeholder-count="4">
             <span style="display: inline-flex; align-items: center; gap: 6px">
               <span class="mono" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 9px; border-radius: 7px; border: 1px solid var(--line-strong); background: var(--surface); font-size: 11px; color: var(--fg3)">
@@ -616,46 +663,27 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
             </span>
           </sc-for>
         </div>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600">Engineering practice</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: var(--muted)">Clean architecture, unit and integration tests, code review, and CI/CD with GitHub Actions, Docker and Helm. I also interview engineers.</p>
+        <h3>{{skills.5.title}}</h3>
+        <p>{{skills.5.body}}</p>
+        <div class="skchips"><sc-for list="{{skills.5.items}}" as="i" hint-placeholder-count="6"><span class="chip mono">{{i}}</span></sc-for></div>
       </article>
     </div>
-  </section>
-
-  <!-- 04 STACK -->
-  <section id="stack" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">04 — GET /stack</p>
-    <h2 class="reveal" style="margin: 0 0 36px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">Tools I reach for.</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
-      <sc-for list="{{stack}}" as="g" hint-placeholder-count="6">
-        <div class="card lift" style="padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); display: flex; flex-direction: column; gap: 14px">
-          <div style="display: flex; align-items: center; justify-content: space-between">
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600">{{g.name}}</h3>
-            <span class="mono" style="font-size: 11.5px; color: var(--dim)">{{g.count}}</span>
-          </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px">
-            <sc-for list="{{g.items}}" as="t" hint-placeholder-count="6">
-              <span class="chip mono" style="padding: 6px 11px; border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; color: var(--fg3); background: var(--surface2)">{{t}}</span>
-            </sc-for>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-    <div style="margin-top: 18px">
-      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)">Background in competitive programming: ECPC Finals qualifier in 2022 and 2023, and <a href="https://codeforces.com/profile/IbrahimAhmed" target="_blank" rel="noopener">Codeforces</a> Pupil.</p>
+    <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 6px">
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)"><strong style="color: var(--fg2); font-weight: 600">{{t.langsLabel}}</strong> <span class="ltr">{{t.langs}}</span></p>
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)">{{t.cpBefore}}<a href="https://codeforces.com/profile/IbrahimAhmed" target="_blank" rel="noopener">{{t.cpLink}}</a>{{t.cpAfter}}</p>
     </div>
   </section>
 
   <!-- 05 ABOUT -->
   <section id="about" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">05 — GET /about</p>
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.aboutKicker}}</span></p>
     <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
       <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-        <h2 class="reveal" style="margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">A software engineer who's comfortable anywhere in the stack.</h2>
-        <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.7; color: var(--muted)">I build complete features: the React screen, the API behind it, the data model, the background jobs and events, and the monitoring once it's live. Most of my depth is on the backend, and I'm just as happy shipping the UI.</p>
-        <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.7; color: var(--muted)">A big part of my recent work is applied AI: multi-agent support bots, retrieval over company data, and vision pipelines that read documents from photos. I treat them like any other service: traced, tested, and with a safe handover to a human.</p>
+        <h2 class="reveal" style="margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.aboutTitle}}</h2>
+        <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.7; color: var(--muted)">{{t.about1}}</p>
+        <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.7; color: var(--muted)">{{t.about2}}</p>
       </div>
-      <div class="card" style="flex: 1 1 440px; min-width: 0; background: var(--surface2); border: 1px solid var(--line); border-radius: 14px; overflow: hidden">
+      <div class="card" dir="ltr" style="flex: 1 1 440px; min-width: 0; background: var(--surface2); border: 1px solid var(--line); border-radius: 14px; overflow: hidden">
         <div style="display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--line)">
           <span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong)"></span>
           <span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong)"></span>
@@ -666,8 +694,8 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           <div class="tline" style="animation-delay: .2s"><span style="color: var(--ink)">$</span> whoami</div>
           <div class="tline" style="animation-delay: .5s; color: var(--muted2)">ibrahim · software engineer · Cairo, EG</div>
           <div class="tline" style="animation-delay: .9s"><span style="color: var(--ink)">$</span> cat focus.txt</div>
-          <div class="tline" style="animation-delay: 1.2s; color: var(--muted2)">frontend · APIs · data · events · applied AI</div>
-          <div class="tline" style="animation-delay: 1.4s; color: var(--muted2)">React · NestJS · .NET · Python · Kafka · LangGraph</div>
+          <div class="tline" style="animation-delay: 1.2s; color: var(--muted2)">backend · APIs · data · events · applied AI</div>
+          <div class="tline" style="animation-delay: 1.4s; color: var(--muted2)">NestJS · .NET · Spring Boot · Python · Kafka · LangGraph</div>
           <div class="tline" style="animation-delay: 1.8s"><span style="color: var(--ink)">$</span> cat principles.txt</div>
           <div class="tline" style="animation-delay: 2.1s; color: var(--muted2)">→ correct under concurrency and retries</div>
           <div class="tline" style="animation-delay: 2.3s; color: var(--muted2)">→ clean architecture, easy to change</div>
@@ -678,43 +706,34 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
       </div>
     </div>
     <div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px">
-      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
-        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">experience</p>
-        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">2+ years in production</p>
-      </div>
-      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
-        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">based in</p>
-        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Cairo · open to relocation</p>
-      </div>
-      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
-        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">languages</p>
-        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">Arabic native · English fluent</p>
-      </div>
-      <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
-        <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">education</p>
-        <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">B.Sc. CS &amp; IT · 2024</p>
-      </div>
+      <sc-for list="{{t.facts}}" as="f" hint-placeholder-count="4">
+        <div class="card" style="padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface)">
+          <p class="mono" style="margin: 0 0 8px; font-size: 12px; color: var(--dim)">{{f.0}}</p>
+          <p class="disp" style="margin: 0; font-size: 21px; font-weight: 600">{{f.1}}</p>
+        </div>
+      </sc-for>
     </div>
   </section>
 
   <!-- OUTLINE BAND -->
-  <div class="marquee" aria-hidden="true" style="overflow: hidden; margin-top: clamp(72px, 10vw, 120px)">
+  <div class="marquee" dir="ltr" aria-hidden="true" style="overflow: hidden; margin-top: clamp(72px, 10vw, 120px)">
     <div class="marquee-track outline-track">
-      <span class="outline">FULL STACK · BACKEND · APPLIED AI · EVENTS ·&nbsp;</span>
-      <span class="outline">FULL STACK · BACKEND · APPLIED AI · EVENTS ·&nbsp;</span>
+      <span class="outline">BACKEND · APPLIED AI · FULL STACK ·&nbsp;</span>
+      <span class="outline">BACKEND · APPLIED AI · FULL STACK ·&nbsp;</span>
     </div>
   </div>
 
   <!-- 06 CONTACT -->
   <section id="contact" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) clamp(16px, 5vw, 64px) clamp(56px, 7vw, 88px)">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)">06 — POST /contact</p>
-    <h2 class="reveal" style="margin: 0; font-size: clamp(40px, 7vw, 96px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; max-width: 1000px">Let's build something that <span style="color: var(--warm-ink)">stays up.</span></h2>
-    <p style="margin: 22px 0 0; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">Hiring a software engineer for full-stack, backend or AI work? Send me a message. I'm open to relocation.</p>
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.contactKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0; font-size: clamp(40px, 7vw, 96px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; max-width: 1000px">{{t.contactTitle}}<span style="color: var(--warm-ink)">{{t.contactAccent}}</span></h2>
+    <p style="margin: 22px 0 0; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.contactText}}</p>
     <div style="margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
       <a href="mailto:ibrahim.ahmed.iam@gmail.com" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 16px">
         <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
-        ibrahim.ahmed.iam@gmail.com
+        <span class="ltr">ibrahim.ahmed.iam@gmail.com</span>
       </a>
+      <a href="assets/Ibrahim_Ahmed_CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 20px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-size: 15px; font-weight: 600; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>{{t.cv}}</a>
       <button type="button" onClick="{{copyEmail}}" class="btn btn-ghost mono" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 18px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-size: 13.5px; cursor: pointer; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)">
         <sc-if value="{{copied}}" hint-placeholder-val="{{false}}">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
@@ -730,52 +749,53 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
       <a href="https://linkedin.com/in/ibrahim-ahmed-ib" target="_blank" rel="noopener" class="card lift li-card" style="grid-column: span 2; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg); text-decoration: none">
         <span style="position: relative; width: 92px; height: 92px; flex: none">
           <svg class="avatar-ring" aria-hidden="true" width="92" height="92" viewBox="0 0 92 92" style="position: absolute; inset: 0"><circle cx="46" cy="46" r="44" fill="none" stroke-width="2" stroke-dasharray="6 6" style="stroke: var(--accent-strong)"></circle></svg>
-          <img src="assets/ibrahim.jpg" alt="Ibrahim Ahmed" style="position: absolute; left: 8px; top: 8px; width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line-strong)">
+          <img src="assets/ibrahim.jpg" alt="{{t.brand}}" style="position: absolute; left: 8px; top: 8px; width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line-strong)">
         </span>
         <span style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
           <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 13h18"></path></svg>LinkedIn</span>
-          <span class="disp" style="font-size: 24px; font-weight: 600">Ibrahim Ahmed</span>
-          <span style="font-size: 14.5px; color: var(--muted)">Software Engineer · Full stack, Backend &amp; AI</span>
+          <span class="disp" style="font-size: 24px; font-weight: 600">{{t.brand}}</span>
+          <span style="font-size: 14.5px; color: var(--muted)">{{t.liSub}}</span>
         </span>
-        <span class="btn" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--fg); color: var(--bg); font-weight: 600; font-size: 14px">Connect
-          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        <span class="btn" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--fg); color: var(--bg); font-weight: 600; font-size: 14px">{{t.connect}}
+          <svg class="flip" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
         </span>
       </a>
       <div class="card lift" style="display: flex; flex-direction: column; justify-content: space-between; gap: 14px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg)">
         <span style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
-          <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Phone</span>
-          <span class="mono" style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); font-size: 11px; color: var(--ink)"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-strong)"></span>also on WhatsApp</span>
+          <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>{{t.phone}}</span>
+          <span class="mono" style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); font-size: 11px; color: var(--ink)"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-strong)"></span>{{t.alsoWa}}</span>
         </span>
-        <span class="disp" style="font-size: 21px; font-weight: 600">+20 112 204 2430</span>
+        <span class="disp ltr" style="font-size: 21px; font-weight: 600">+20 112 204 2430</span>
         <span style="display: flex; flex-wrap: wrap; gap: 8px">
           <a href="https://wa.me/201122042430" target="_blank" rel="noopener" class="btn" style="display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border-radius: 10px; background: var(--btn-bg); color: var(--btn-fg); font-size: 13.5px; font-weight: 600">
             <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp
           </a>
           <a href="tel:+201122042430" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-hover); color: var(--fg); font-size: 13.5px; font-weight: 600">
-            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>{{t.call}}
           </a>
         </span>
       </div>
       <a href="https://github.com/ibrahimahmed237" target="_blank" rel="noopener" class="card lift" style="display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--fg); text-decoration: none">
         <span style="display: flex; align-items: center; justify-content: space-between">
           <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--dim)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--fg)"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>GitHub</span>
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+          <svg class="flip" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
         </span>
-        <span class="disp" style="font-size: 21px; font-weight: 600">ibrahimahmed237</span>
+        <span class="disp ltr" style="font-size: 21px; font-weight: 600">ibrahimahmed237</span>
       </a>
     </div>
   </section>
 
   <footer style="border-top: 1px solid var(--line-soft)">
     <div class="mono" style="max-width: 1200px; margin: 0 auto; padding: 22px clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--dim)">
-      <span>© 2026 Ibrahim Ahmed</span>
-      <span>200 OK · built in Cairo</span>
+      <span>{{t.footLeft}}</span>
+      <span>{{t.footRight}}</span>
     </div>
   </footer>
 </div>
 </template>
 <script src="assets/morphdom.min.js"></script>
 <script src="assets/runtime.js"></script>
+<script src="assets/content.js"></script>
 <script src="assets/app.js"></script>
 <script>window.__dc.boot(Component, {"lightAccent": "gold", "darkAccent": "#E8CF8F", "darkPalette": "dimmed", "theme": "light", "motion": true});</script>
 </body>
