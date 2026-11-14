@@ -28,7 +28,7 @@ class Component extends DCLogic {
       this.setState({ span: (s.span + 1) % n });
     }, 2800);
     try {
-      const ids = ['oss', 'work', 'experience', 'stack', 'about', 'contact'];
+      const ids = ['experience', 'work', 'oss', 'stack', 'about', 'contact'];
       this.spy = new IntersectionObserver((entries) => {
         entries.forEach((e) => { if (e.isIntersecting) this.setState({ active: e.target.id }); });
       }, { rootMargin: '-45% 0px -50% 0px' });

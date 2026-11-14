@@ -321,7 +321,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
           </sc-for>
         </div>
         <div class="rise" style="animation-delay: 1.4s; display: flex; flex-wrap: wrap; gap: 12px">
-          <a href="#oss" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">{{t.seeWork}}
+          <a href="#experience" class="btn btn-solid" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: 15px">{{t.seeWork}}
             <svg class="flip" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
           </a>
           <a href="assets/Ibrahim_Ahmed_CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 1px solid var(--line-hover); background: var(--surface); color: var(--fg); font-weight: 600; font-size: 15px; box-shadow: inset 0 1px 0 var(--hl), 0 8px 22px -12px var(--shadow)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>{{t.cv}}</a>
@@ -421,84 +421,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
     </div>
   </div>
 
-  <!-- 01 OPEN SOURCE -->
-  <section id="oss" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.ossKicker}}</span></p>
-    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.ossTitle}}</h2>
-    <p style="margin: 0 0 32px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.ossIntro}}</p>
-    <div class="oss-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); gap: 18px">
-      <sc-for list="{{oss}}" as="p" hint-placeholder-count="5">
-        <article class="card lift ocard" style="display: flex; flex-direction: column; gap: 16px; padding: 18px 18px 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface)">
-          <a href="{{p.link}}" target="_blank" rel="noopener" class="oimg" style="display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-soft); background: var(--well)"><img src="{{p.img}}" alt="{{p.alt}}" loading="lazy" width="960" height="380" style="display: block; width: 100%; height: auto"></a>
-          <div style="display: flex; flex-direction: column; gap: 6px; padding: 0 4px">
-            <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px">
-              <h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em">{{p.name}}</h3>
-              <span class="disp" style="font-size: 16px; font-weight: 600; color: var(--ink)">{{p.sub}}</span>
-            </div>
-            <p style="margin: 2px 0 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{p.pitch}}</p>
-          </div>
-          <div class="stats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 4px">
-            <sc-for list="{{p.stats}}" as="st" hint-placeholder-count="3">
-              <div style="padding: 10px 12px; border-radius: 10px; background: var(--well); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                <span class="disp ltr" style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--fg); align-self: flex-start">{{st.num}}</span>
-                <span style="font-size: 12px; line-height: 1.35; color: var(--muted2)">{{st.label}}</span>
-              </div>
-            </sc-for>
-          </div>
-          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding: 0 4px">
-            <div style="display: flex; flex-wrap: wrap; gap: 6px">
-              <sc-for list="{{p.stack}}" as="s" hint-placeholder-count="4">
-                <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
-              </sc-for>
-            </div>
-            <a href="{{p.link}}" target="_blank" rel="noopener" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-hover); color: var(--fg); font-size: 13.5px; font-weight: 600"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>{{t.viewCode}}<svg class="warrow flip" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
-          </div>
-        </article>
-      </sc-for>
-      <article class="card lift" style="display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 24px; border: 1px dashed var(--line-hover); border-radius: 18px; background: var(--surface)">
-        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px">
-          <h3 style="margin: 0; font-size: 22px; font-weight: 700">{{baton.name}}</h3>
-          <span class="mono" style="padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warm) 55%, transparent); color: var(--warm-ink); font-size: 11px">{{t.inProgress}}</span>
-        </div>
-        <span class="disp" style="font-size: 16px; font-weight: 600; color: var(--ink)">{{baton.sub}}</span>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{baton.pitch}}</p>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px">
-          <div style="display: flex; flex-wrap: wrap; gap: 6px">
-            <sc-for list="{{baton.stack}}" as="s" hint-placeholder-count="3">
-              <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
-            </sc-for>
-          </div>
-          <a href="{{baton.link}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; text-decoration: none">{{t.viewCode}}<svg class="warrow flip" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- 02 WORK -->
-  <section id="work" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
-    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.workKicker}}</span></p>
-    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.workTitle}}</h2>
-    <p style="margin: 0 0 32px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.workIntro}}</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px">
-      <sc-for list="{{works}}" as="w" hint-placeholder-count="9">
-        <article class="card lift wcard" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
-            <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{w.color}}"></span>{{w.tag}}</span>
-            <span class="mono" style="font-size: 12px; color: var(--faint)">{{w.num}}</span>
-          </div>
-          <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{w.title}}</h3>
-          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)">{{w.body}}</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto">
-            <sc-for list="{{w.stack}}" as="s" hint-placeholder-count="4">
-              <span class="chip mono" style="padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 11px; color: var(--muted2)">{{s}}</span>
-            </sc-for>
-          </div>
-        </article>
-      </sc-for>
-    </div>
-  </section>
-
-  <!-- 03 EXPERIENCE -->
+  <!-- 01 EXPERIENCE -->
   <section id="experience" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
     <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.expKicker}}</span></p>
     <h2 class="reveal" style="margin: 0 0 40px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.expTitle}}</h2>
@@ -562,6 +485,83 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
         <p class="mono" style="margin: 8px 0 0; font-size: 13px; color: var(--muted2)">{{t.school}}</p>
       </li>
     </ol>
+  </section>
+
+  <!-- 02 WORK -->
+  <section id="work" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.workKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.workTitle}}</h2>
+    <p style="margin: 0 0 32px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.workIntro}}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px">
+      <sc-for list="{{works}}" as="w" hint-placeholder-count="9">
+        <article class="card lift wcard" style="padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface)">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
+            <span class="mono" style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted2)"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{w.color}}"></span>{{w.tag}}</span>
+            <span class="mono" style="font-size: 12px; color: var(--faint)">{{w.num}}</span>
+          </div>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{w.title}}</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--muted)">{{w.body}}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto">
+            <sc-for list="{{w.stack}}" as="s" hint-placeholder-count="4">
+              <span class="chip mono" style="padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 11px; color: var(--muted2)">{{s}}</span>
+            </sc-for>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 03 OPEN SOURCE -->
+  <section id="oss" style="max-width: 1200px; margin: 0 auto; padding: clamp(72px, 10vw, 120px) clamp(16px, 5vw, 64px) 0">
+    <p class="mono reveal" style="margin: 0 0 16px; font-size: 13px; color: var(--muted2)"><span class="ltr">{{t.ossKicker}}</span></p>
+    <h2 class="reveal" style="margin: 0 0 14px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600">{{t.ossTitle}}</h2>
+    <p style="margin: 0 0 32px; max-width: 62ch; font-size: 17px; line-height: 1.65; color: var(--muted)">{{t.ossIntro}}</p>
+    <div class="oss-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); gap: 18px">
+      <sc-for list="{{oss}}" as="p" hint-placeholder-count="5">
+        <article class="card lift ocard" style="display: flex; flex-direction: column; gap: 16px; padding: 18px 18px 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface)">
+          <a href="{{p.link}}" target="_blank" rel="noopener" class="oimg" style="display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-soft); background: var(--well)"><img src="{{p.img}}" alt="{{p.alt}}" loading="lazy" width="960" height="380" style="display: block; width: 100%; height: auto"></a>
+          <div style="display: flex; flex-direction: column; gap: 6px; padding: 0 4px">
+            <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px">
+              <h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em">{{p.name}}</h3>
+              <span class="disp" style="font-size: 16px; font-weight: 600; color: var(--ink)">{{p.sub}}</span>
+            </div>
+            <p style="margin: 2px 0 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{p.pitch}}</p>
+          </div>
+          <div class="stats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 4px">
+            <sc-for list="{{p.stats}}" as="st" hint-placeholder-count="3">
+              <div style="padding: 10px 12px; border-radius: 10px; background: var(--well); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 2px; min-width: 0">
+                <span class="disp ltr" style="font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--fg); align-self: flex-start">{{st.num}}</span>
+                <span style="font-size: 12px; line-height: 1.35; color: var(--muted2)">{{st.label}}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding: 0 4px">
+            <div style="display: flex; flex-wrap: wrap; gap: 6px">
+              <sc-for list="{{p.stack}}" as="s" hint-placeholder-count="4">
+                <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
+              </sc-for>
+            </div>
+            <a href="{{p.link}}" target="_blank" rel="noopener" class="btn btn-ghost" style="display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-hover); color: var(--fg); font-size: 13.5px; font-weight: 600"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"></circle><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="8" r="2"></circle><path d="M6 7v10"></path><path d="M18 10c0 4-6 3-11.5 7"></path></svg>{{t.viewCode}}<svg class="warrow flip" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+          </div>
+        </article>
+      </sc-for>
+      <article class="card lift" style="display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 24px; border: 1px dashed var(--line-hover); border-radius: 18px; background: var(--surface)">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px">
+          <h3 style="margin: 0; font-size: 22px; font-weight: 700">{{baton.name}}</h3>
+          <span class="mono" style="padding: 3px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--warm) 55%, transparent); color: var(--warm-ink); font-size: 11px">{{t.inProgress}}</span>
+        </div>
+        <span class="disp" style="font-size: 16px; font-weight: 600; color: var(--ink)">{{baton.sub}}</span>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted)">{{baton.pitch}}</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px">
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <sc-for list="{{baton.stack}}" as="s" hint-placeholder-count="3">
+              <span class="chip mono" style="padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted2)">{{s}}</span>
+            </sc-for>
+          </div>
+          <a href="{{baton.link}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; text-decoration: none">{{t.viewCode}}<svg class="warrow flip" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- 04 SKILLS: what I build, with the tools for each -->
