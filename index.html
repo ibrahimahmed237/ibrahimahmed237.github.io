@@ -195,6 +195,13 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 .pf[dir=rtl] .chip{direction:ltr;unicode-bidi:isolate}
 .srow.is-fault .sname,.srow.is-fault .snum{color:var(--c-fault)!important}
 .srow.is-fault.is-on{background:color-mix(in srgb,var(--c-fault) 12%,transparent)}
+
+/* The demo keeps one height: captions and step cards are stacked in one cell, only the current one shows */
+.dstack{display:grid}
+.dstack>*{grid-area:1/1;visibility:hidden}
+.dstack>.is-on{visibility:visible}
+.step-card.is-on{animation:fadeup .35s cubic-bezier(.2,.7,.2,1)}
+.drows{min-height:209px}
 .codelink{color:var(--ink)}.codelink:hover{color:var(--fg)}
 .ltr{direction:ltr;unicode-bidi:isolate}
 .lang-btn:hover{border-color:var(--accent)}
@@ -368,15 +375,16 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
               <button type="button" role="tab" class="ttab {{sc.cls}}" aria-selected="{{sc.ariaSel}}" onClick="{{sc.pick}}" title="{{sc.caption}}" style="min-height: 34px; padding: 0 12px; border-radius: 8px; font: inherit; font-size: 12.5px; font-weight: 500">{{sc.label}}</button>
             </sc-for>
           </div>
-          <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
-            <sc-if value="{{sc.show}}" hint-placeholder-val="{{true}}">
-              <p style="margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--fg2)"><span class="mono" style="font-size: 11px; color: var(--ink)">{{sc.project}} ·</span> {{sc.caption}}</p>
-            </sc-if>
-          </sc-for>
+          <div class="dstack">
+            <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="4">
+              <p class="dcap {{sc.cls}}" aria-hidden="{{sc.hidden}}" style="margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--fg2)"><span class="mono" style="font-size: 11px; color: var(--ink)">{{sc.project}} ·</span> {{sc.caption}}</p>
+            </sc-for>
+          </div>
         </div>
         <sc-for list="{{scenarios}}" as="sc" hint-placeholder-count="1">
           <sc-if value="{{sc.show}}" hint-placeholder-val="{{true}}">
             <div class="panel-in" style="padding: 6px 10px 12px; display: flex; flex-direction: column; gap: 1px">
+              <div class="drows" style="display: flex; flex-direction: column; gap: 1px">
               <sc-for list="{{sc.spans}}" as="sp" hint-placeholder-count="10">
                 <button type="button" class="srow {{sp.cls}}" onClick="{{sp.pick}}" aria-pressed="{{sp.pressed}}">
                   <span class="sname" style="display: flex; align-items: center; gap: 7px; min-width: 0; font-size: 12.5px; color: var(--muted2)">
@@ -388,15 +396,20 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
                   </span>
                 </button>
               </sc-for>
+              </div>
               <div class="mono" style="display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 12px; padding: 2px 8px 0; font-size: 10.5px; color: var(--faint)">
                 <span></span>
                 <span style="display: flex; justify-content: space-between"><span>{{t.start}}</span><span>{{t.time}}</span><span>{{t.done}}</span></span>
               </div>
-              <div class="panel-in step-card" style="margin: 8px 8px 0; padding: 10px 14px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 4px">
-                <span class="mono" style="font-size: 11px; color: var(--ink)">{{t.step}} {{sc.activeNum}} {{t.of}} {{sc.total}} · <span class="ltr" style="color: var(--dim)">{{sc.activeTech}}</span></span>
-                <p class="disp" style="margin: 0; font-size: 15.5px; font-weight: 600">{{sc.activePlain}}</p>
-                <p style="margin: 0; font-size: 13px; line-height: 1.5; color: var(--fg2)">{{sc.activeDesc}}</p>
-                <a href="{{sc.activeLink}}" target="_blank" rel="noopener" class="codelink mono" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: 2px; min-height: 30px; font-size: 12px; font-weight: 500; text-decoration: none"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"></path><path d="m16 7 5 5-5 5"></path></svg>{{t.openCode}}: <span class="ltr">{{sc.activeFile}}</span><svg class="flip" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+              <div class="dstack" style="margin: 8px 8px 0">
+                <sc-for list="{{sc.cards}}" as="cd" hint-placeholder-count="10">
+                <div class="step-card {{cd.cls}}" aria-hidden="{{cd.hidden}}" style="padding: 10px 14px; border-radius: 12px; background: var(--surface2); border: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 4px">
+                  <span class="mono" style="font-size: 11px; color: var(--ink)">{{t.step}} {{cd.num}} {{t.of}} {{sc.total}} · <span class="ltr" style="color: var(--dim)">{{cd.tech}}</span></span>
+                  <p class="disp" style="margin: 0; font-size: 15.5px; font-weight: 600">{{cd.plain}}</p>
+                  <p style="margin: 0; font-size: 13px; line-height: 1.5; color: var(--fg2)">{{cd.desc}}</p>
+                  <a href="{{cd.link}}" target="_blank" rel="noopener" class="codelink mono" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: auto; min-height: 30px; font-size: 12px; font-weight: 500; text-decoration: none"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"></path><path d="m16 7 5 5-5 5"></path></svg>{{t.openCode}}: <span class="ltr">{{cd.file}}</span><svg class="flip" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+                </div>
+                </sc-for>
               </div>
             </div>
           </sc-if>

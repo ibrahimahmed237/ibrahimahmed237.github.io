@@ -94,7 +94,6 @@ class Component extends DCLogic {
     const scenarios = C.demo.map((sc, i) => {
       const on = s.trace === i;
       const idx = Math.min(s.span, sc.steps.length - 1);
-      const active = sc.steps[idx];
       const words = (x) => (ar ? x[6] : x[5]);
       return {
         label: ar ? sc.project[1].split(' · ')[0] : sc.label,
@@ -104,14 +103,14 @@ class Component extends DCLogic {
         ariaSel: on ? 'true' : 'false',
         cls: on ? 'is-on' : '',
         pick: () => this.setState({ trace: i, span: 0, auto: true }),
-        activeNum: String(idx + 1),
+        hidden: on ? 'false' : 'true',
         total: String(sc.steps.length),
-        activeTech: active[0],
-        activePlain: words(active)[0],
-        activeDesc: words(active)[1],
-        activeFile: active[4].split('/').pop(),
-        activeLink: C.code(sc.repo, active[4]),
-        activeFault: active[1] === 'fault',
+        // Every step's card is drawn, stacked in one place; only the current one shows, so the panel never changes height.
+        cards: sc.steps.map((x, j) => ({
+          cls: j === idx ? 'is-on' : '', hidden: j === idx ? 'false' : 'true',
+          num: String(j + 1), tech: x[0], plain: words(x)[0], desc: words(x)[1],
+          file: x[4].split('/').pop(), link: C.code(sc.repo, x[4])
+        })),
         spans: sc.steps.map((x, j) => ({
           num: String(j + 1).padStart(2, '0'),
           plain: words(x)[0], kind: x[1], left: x[2] + '%', width: x[3] + '%', delay: (j * 0.16).toFixed(2) + 's',
