@@ -222,6 +222,27 @@ class Component extends DCLogic {
         link: 'https://github.com/ibrahimahmed237/qist'
       },
       {
+        title: 'Khatm: ZATCA e-invoicing with an AI copilot', tag: 'Open source · .NET + AI', color: 'var(--c-llm)', cats: ['backend', 'ai'],
+        body: 'An open-source toolkit for Saudi e-invoicing (ZATCA Phase 2). It builds, validates and signs invoices, keeps each device’s invoice chain correct under parallel requests and crashes, and delivers them to ZATCA with safe retries. An AI copilot turns a receipt photo into a draft and explains a rejection with its source, but the engine, not the model, decides what is valid. Run against ZATCA’s live developer sandbox; 774 tests.',
+        flow: ['Invoice data', 'Validate', 'Sign + QR', 'Chain', 'ZATCA clears'],
+        stack: ['.NET 10', 'ASP.NET Core', 'PostgreSQL', 'pgvector', 'MCP', 'Testcontainers'],
+        link: 'https://github.com/ibrahimahmed237/khatm-einvoicing'
+      },
+      {
+        title: 'Mizan: payments that stay correct when calls fail', tag: 'Open source · Java + Spring Boot', color: 'var(--accent-strong)', cats: ['backend', 'data'],
+        body: 'The payments service of an online store: cards, Apple Pay and pay later, a double-entry ledger, and a check of every gateway payout against the books. Built for the boring failures: a call that times out after the card was charged, a webhook that comes twice or never, a customer with two tabs. A simulator breaks things on purpose, and a proof run of 10,000 orders with over 6,000 faults ends with Mizan’s books equal to the gateway’s. About 880 tests.',
+        flow: ['Store', 'Mizan', 'Gateway', 'Ledger', 'Payout check'],
+        stack: ['Java 21', 'Spring Boot', 'PostgreSQL', 'Testcontainers', 'Docker'],
+        link: 'https://github.com/ibrahimahmed237/mizan-payments'
+      },
+      {
+        title: 'Masar: a job-hunt agent that cannot lie for you', tag: 'Open source · Python + LLM', color: 'var(--c-llm)', cats: ['ai', 'backend'],
+        body: 'A personal job-hunt agent that may only say about you what you wrote yourself. An LLM screens postings and drafts CVs and cover letters; code checks every technology, number, employer and title against your own facts, so a hidden instruction in a posting cannot make it claim a skill you lack. Nothing is sent without you. 654 tests, and an evaluation set that breaks the build if a check gets weaker.',
+        flow: ['Posting', 'Model judges', 'Code checks', 'Draft', 'You approve'],
+        stack: ['Python', 'LangGraph', 'SQLite', 'MCP', 'pytest'],
+        link: 'https://github.com/ibrahimahmed237/masar-job-agent'
+      },
+      {
         title: 'Mawrid: procure-to-pay API', tag: 'Open source · .NET', color: 'var(--c-data)', cats: ['backend'],
         body: 'An open-source procure-to-pay API for Saudi companies: approvals, sealed RFQs, purchase orders, receipts and ZATCA invoices checked with a three-way match. About 370 tests.',
         flow: ['Requisition', 'RFQ', 'PO', 'Receipt', '3-way match'],
@@ -233,13 +254,16 @@ class Component extends DCLogic {
     const rankOrder = [
       'Demand forecasting & replenishment platform',
       'Multi-agent customer support (LLM)',
+      'Mizan: payments that stay correct when calls fail',
+      'Khatm: ZATCA e-invoicing with an AI copilot',
       'Inventory rebalancing engine',
       'At-risk purchase order monitor',
       'Returns-to-vendor service: monolith migration',
       'Warehouse receiving queue with vision OCR',
+      'Masar: a job-hunt agent that cannot lie for you',
       'Qist: buy-now-pay-later platform',
-      'Baton: AI coding-agent chat handoff',
       'Mawrid: procure-to-pay API',
+      'Baton: AI coding-agent chat handoff',
       'Hybrid semantic + keyword search',
       'Product recommendation engine (ML)',
       'Payment gateways & gRPC migration'
