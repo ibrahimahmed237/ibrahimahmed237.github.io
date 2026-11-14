@@ -221,6 +221,8 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 .scroll-hint span{position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--accent-strong);animation:wheel 1.8s cubic-bezier(.6,0,.4,1) infinite}
 @keyframes wheel{0%{transform:translateY(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(14px);opacity:0}}
 @media (max-height:700px),(max-width:640px){.scroll-hint{display:none}}
+/* Phones and tablets: no pointer to lean toward, so a card answers the finger instead */
+@media (hover:none){.lift.rv.done:active,.tilt.done:active{transform:scale(.98);transition-duration:.15s}}
 .no-motion .rv,.no-motion .pop,.no-motion .stbox{opacity:1!important;transform:none!important;clip-path:none!important}
 @media (prefers-reduced-motion:reduce){.pf .rv,.pf .pop,.pf .stbox,.pf .kick .ltr{opacity:1!important;transform:none!important;clip-path:none!important}.scroll-hint{display:none}}
 /* Failure colour, open-source cards, merged skills cards */
