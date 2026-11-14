@@ -22,7 +22,7 @@ class Component extends DCLogic {
     this.applyLang(this.state.lang, false);
     this.autoTimer = setInterval(() => {
       const s = this.state;
-      if (!s.auto || s.replaying || this.props.motion === false) return;
+      if (!s.auto || s.replaying || this.props.motion === false || document.hidden) return;
       try { if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (e) {}
       const n = this.lens[s.trace] || 1;
       this.setState({ span: (s.span + 1) % n });
@@ -30,13 +30,13 @@ class Component extends DCLogic {
     try {
       const ids = ['experience', 'work', 'oss', 'stack', 'about', 'contact'];
       this.spy = new IntersectionObserver((entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) this.setState({ active: e.target.id }); });
+        entries.forEach((e) => { if (e.isIntersecting && this.state.active !== e.target.id) this.setState({ active: e.target.id }); });
       }, { rootMargin: '-45% 0px -50% 0px' });
       ids.forEach((id) => { const el = document.getElementById(id); if (el) this.spy.observe(el); });
       const top = document.getElementById('top');
       if (top) {
         this.topSpy = new IntersectionObserver((entries) => {
-          entries.forEach((e) => { if (e.isIntersecting) this.setState({ active: '' }); });
+          entries.forEach((e) => { if (e.isIntersecting && this.state.active !== '') this.setState({ active: '' }); });
         }, { rootMargin: '-45% 0px -50% 0px' });
         this.topSpy.observe(top);
       }

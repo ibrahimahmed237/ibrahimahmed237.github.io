@@ -25,7 +25,9 @@
 <meta name="twitter:image" content="https://ibrahimahmed237.github.io/assets/og.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Ibrahim Ahmed", "jobTitle": "Software Engineer", "url": "https://ibrahimahmed237.github.io/", "image": "https://ibrahimahmed237.github.io/assets/ibrahim.jpg", "sameAs": ["https://linkedin.com/in/ibrahim-ahmed-ib", "https://github.com/ibrahimahmed237"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"></noscript>
 <style>
 body{margin:0}
 html{scroll-behavior:smooth}
@@ -86,10 +88,10 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 .chip:hover{border-color:var(--accent);color:var(--fg);background:color-mix(in srgb,var(--accent) 10%,transparent)}
 .gridbg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 55% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse at 55% 40%,#000 20%,transparent 75%)}
 .orbs{-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
-.orb{position:absolute;border-radius:50%;filter:blur(90px)}
-.orb-a{width:560px;height:560px;left:-140px;top:-120px;background:var(--orb1);animation:drift-a 40s ease-in-out infinite alternate}
-.orb-b{width:480px;height:480px;right:-120px;top:10%;background:var(--orb2);animation:drift-b 46s ease-in-out infinite alternate}
-.orb-c{width:420px;height:420px;left:38%;top:40%;background:var(--orb3);animation:drift-c 52s ease-in-out infinite alternate}
+.orb{position:absolute;border-radius:50%;will-change:transform}
+.orb-a{width:760px;height:760px;left:-240px;top:-220px;background:radial-gradient(closest-side,var(--orb1),transparent);animation:drift-a 40s ease-in-out infinite alternate}
+.orb-b{width:680px;height:680px;right:-220px;top:calc(10% - 100px);background:radial-gradient(closest-side,var(--orb2),transparent);animation:drift-b 46s ease-in-out infinite alternate}
+.orb-c{width:620px;height:620px;left:calc(38% - 100px);top:calc(40% - 100px);background:radial-gradient(closest-side,var(--orb3),transparent);animation:drift-c 52s ease-in-out infinite alternate}
 .pulse{animation:pulse 2.4s ease-out infinite}
 
 .line{display:block;overflow:hidden;padding-bottom:.06em}
@@ -343,7 +345,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
       </div>
 
       <!-- Demo panel (glass) -->
-      <div class="rise" style="animation-delay: .4s; flex: 1 1 440px; min-width: 0; max-width: 580px; background: var(--glass); border: 1px solid var(--line); border-radius: 18px; backdrop-filter: blur(24px) saturate(170%); -webkit-backdrop-filter: blur(24px) saturate(170%); box-shadow: inset 0 1px 0 var(--hl), 0 30px 80px -30px var(--shadow); overflow: hidden">
+      <div class="rise" style="animation-delay: .4s; flex: 1 1 440px; min-width: 0; max-width: 580px; background: color-mix(in srgb, var(--surface) 94%, transparent); border: 1px solid var(--line); border-radius: 18px; box-shadow: inset 0 1px 0 var(--hl), 0 30px 80px -30px var(--shadow); overflow: hidden">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; padding-inline: 18px 12px; border-bottom: 1px solid var(--line)">
           <div style="display: flex; align-items: center; gap: 10px">
             <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--c-fault)"></span>
