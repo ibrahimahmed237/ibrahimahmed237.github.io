@@ -4,7 +4,7 @@
  * - Numbers in the open-source cards count up the first time they are seen.
  * - The hero drifts apart as you scroll, the timeline draws itself, and the top bar shows how far you are.
  * - Cards marked .tilt lean a little toward the pointer.
- * With "reduce motion" on, everything is shown at once and nothing moves.
+ * With "reduce motion" on, nothing slides, zooms or follows the pointer: things only fade in.
  */
 (function () {
   'use strict';
@@ -27,7 +27,7 @@
 
   var io = null;
   var proxies = new Map();
-  if (!reduce && 'IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window) {
     io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
@@ -57,7 +57,7 @@
   function countUp(el, order) {
     var text = el.textContent.trim();
     var m = /^(~?)(\d[\d,]*)([+%]?)$/.exec(text);
-    if (!m || reduce) return;
+    if (!m) return;
     var target = parseInt(m[2].replace(/,/g, ''), 10);
     var start = null;
     var wait = 350 + order * 90;
@@ -90,7 +90,7 @@
     if (bar) bar.style.transform = 'scaleX(' + clamp(y / Math.max(1, doc.scrollHeight - vh)).toFixed(4) + ')';
 
     var p = clamp(y / vh);
-    if (p < 1) {
+    if (p < 1 && !reduce) {
       var copy = q('.hero-copy'), panel = q('.hero-panel'), orbs = q('.orbs');
       if (copy) { copy.style.transform = 'translate3d(0,' + (-p * 70).toFixed(1) + 'px,0)'; copy.style.opacity = (1 - p * 0.65).toFixed(3); }
       if (panel) panel.style.transform = 'translate3d(0,' + (-p * 30).toFixed(1) + 'px,0)';
@@ -104,7 +104,7 @@
     }
   }
 
-  if (!reduce) {
+  {
     window.addEventListener('scroll', function () {
       if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
     }, { passive: true });

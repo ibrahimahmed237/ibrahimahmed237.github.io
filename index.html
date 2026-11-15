@@ -180,7 +180,11 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 @media (max-width:640px){.li-card{grid-column:auto!important}}
 .no-motion *{animation:none!important;transition:none!important}
 .no-motion .packet{display:none}
-@media (prefers-reduced-motion:reduce){.pf *{animation:none!important;transition:none!important}.pf .packet{display:none}html{scroll-behavior:auto}}
+/* Reduce motion on: nothing slides, zooms, loops or follows the pointer. Things still fade in, softly. */
+@media (prefers-reduced-motion:reduce){.pf *{animation:none!important}.pf .packet{display:none}html{scroll-behavior:auto}
+.pf .rise,.pf .role,.pf .ch,.pf .tline,.pf .panel-in,.pf .step-card.is-on{animation:fadeonly .7s ease backwards!important}
+.pf .lift:hover,.pf .btn:hover,.pf .tilt.done,.pf .tilt.done:hover{transform:none!important}.pf .tilt::before{display:none}}
+@keyframes fadeonly{from{opacity:0}to{opacity:1}}
 .cmenu{position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:280px;padding:6px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 18px 50px -18px var(--shadow);display:flex;flex-direction:column;gap:2px}
 .cmenu-item{display:flex;align-items:center;gap:12px;width:100%;min-height:48px;padding:6px 12px;border:0;border-radius:10px;background:transparent;color:var(--fg);font:inherit;text-align:start;text-decoration:none;cursor:pointer}
 .cmenu-item:hover,.cmenu-item:focus-visible{background:var(--surface2)}
@@ -224,7 +228,7 @@ a{color:var(--ink)}a:hover{color:var(--fg)}
 /* Phones and tablets: no pointer to lean toward, so a card answers the finger instead */
 @media (hover:none){.lift.rv.done:active,.tilt.done:active{transform:scale(.98);transition-duration:.15s}}
 .no-motion .rv,.no-motion .pop,.no-motion .stbox{opacity:1!important;transform:none!important;clip-path:none!important}
-@media (prefers-reduced-motion:reduce){.pf .rv,.pf .pop,.pf .stbox,.pf .kick .ltr{opacity:1!important;transform:none!important;clip-path:none!important}.scroll-hint{display:none}}
+@media (prefers-reduced-motion:reduce){.pf .rv,.pf .pop,.pf .stbox{transform:none!important;clip-path:none!important;transition:opacity .7s ease!important}.pf .kick{opacity:0}.pf .kick.in{opacity:1}.pf .kick .ltr{clip-path:none!important}.pf .kick .ltr::after{display:none}.pf .rv .oimg img{transform:none!important}.scroll-hint{display:none}}
 /* Failure colour, open-source cards, merged skills cards */
 .pf{--c-fault:#E5534B}.pf.theme-light{--c-fault:#CF222E}
 .bar-fault{background:repeating-linear-gradient(135deg,var(--c-fault) 0 4px,color-mix(in srgb,var(--c-fault) 55%,transparent) 4px 7px)}
